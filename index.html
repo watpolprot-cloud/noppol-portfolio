@@ -1,0 +1,1064 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:title" content="นพพล ภาณุสุวัฒน์ E-Portfolio">
+<meta property="og:image" content="assets/img/w/portrait.jpg">
+<title>นพพล ภาณุสุวัฒน์ E-Portfolio</title>
+<meta name="description" content="แฟ้มสะสมผลงานอิเล็กทรอนิกส์ของครูนพพล ภาณุสุวัฒน์ ครูชำนาญการพิเศษ กลุ่มสาระการเรียนรู้วิทยาศาสตร์และเทคโนโลยี โรงเรียนพรตพิทยพยัต">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Noto+Serif+Thai:wght@500;600;700;800&display=swap">
+<style>
+/* Layout concept: a physics teacher's lab notebook — graph-paper ground, a measuring-scale rule that marks
+   every section, and the career laid out on a ruler from 2557 to 2569. School violet carries identity,
+   gold marks recognition only. */
+:root{
+  --paper:#F6F5FA; --surface:#FFFFFF; --ink:#1C1930; --muted:#5E5873; --line:#E1DDEB; --line-strong:#C9C2DB;
+  --violet:#4A2C8F; --violet-ink:#3A2272; --violet-soft:#EDE8F8; --gold:#A87A1E; --gold-soft:#F6EEDB;
+  --grid:rgba(74,44,143,.065); --shadow:0 1px 2px rgba(28,25,48,.06),0 8px 24px rgba(28,25,48,.06);
+  --on-violet:#FFFFFF; --foot-bg:#1C1930; --foot-fg:#F6F5FA;
+  --font-display:"Noto Serif Thai","Sarabun",Georgia,serif;
+  --font-body:"IBM Plex Sans Thai","Sarabun","Leelawadee UI","Thonburi",system-ui,sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+  --step--1:clamp(.8rem,.78rem + .1vw,.86rem); --step-0:clamp(.98rem,.95rem + .15vw,1.06rem);
+  --step-1:clamp(1.15rem,1.08rem + .35vw,1.35rem); --step-2:clamp(1.4rem,1.25rem + .8vw,1.9rem);
+  --step-3:clamp(1.8rem,1.5rem + 1.6vw,2.7rem); --step-4:clamp(2.3rem,1.8rem + 2.8vw,4rem);
+  --radius:6px; --maxw:1180px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#121019; --surface:#1A1725; --ink:#ECE9F5; --muted:#A8A1BC; --line:#2C2839; --line-strong:#3D3750;
+    --violet:#B7A2F6; --violet-ink:#D4C8FB; --violet-soft:#241E38; --gold:#E2B85C; --gold-soft:#2A2315;
+    --grid:rgba(183,162,246,.055); --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 28px rgba(0,0,0,.35);
+    --on-violet:#160F2A; --foot-bg:#0B0A11; --foot-fg:#ECE9F5; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#121019; --surface:#1A1725; --ink:#ECE9F5; --muted:#A8A1BC; --line:#2C2839; --line-strong:#3D3750;
+  --violet:#B7A2F6; --violet-ink:#D4C8FB; --violet-soft:#241E38; --gold:#E2B85C; --gold-soft:#2A2315;
+  --grid:rgba(183,162,246,.055); --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 28px rgba(0,0,0,.35);
+  --on-violet:#160F2A; --foot-bg:#0B0A11; --foot-fg:#ECE9F5; color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{
+  margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);font-size:var(--step-0);line-height:1.75;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:28px 28px;background-attachment:fixed;
+  -webkit-font-smoothing:antialiased;
+}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--surface)}
+img{max-width:100%;display:block}
+a{color:var(--violet);text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{color:var(--violet-ink)}
+:focus-visible{outline:2px solid var(--violet);outline-offset:3px;border-radius:3px}
+h1,h2,h3,h4{font-family:var(--font-display);line-height:1.3;margin:0;text-wrap:balance;font-weight:700;letter-spacing:0}
+p{margin:0}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mono{font-family:var(--font-mono)}
+.eyebrow{font-family:var(--font-mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--violet);font-weight:500}
+.muted{color:var(--muted)}
+.tnum{font-variant-numeric:tabular-nums}
+
+/* ---------- top bar ---------- */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:saturate(1.2) blur(10px);-webkit-backdrop-filter:saturate(1.2) blur(10px);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;gap:20px;min-height:60px}
+.brand{display:flex;flex-direction:column;line-height:1.2;text-decoration:none;color:var(--ink);flex:none}
+.brand b{font-family:var(--font-display);font-size:1.02rem;font-weight:700}
+.brand span{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
+.nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;margin-left:auto;min-width:0}
+.nav::-webkit-scrollbar{display:none}
+.nav a{white-space:nowrap;text-decoration:none;color:var(--muted);font-size:.9rem;padding:6px 10px;border-radius:4px;font-weight:500}
+.nav a:hover,.nav a.on{color:var(--violet);background:var(--violet-soft)}
+@media (max-width:760px){.topbar .wrap{flex-direction:column;align-items:stretch;gap:2px;padding-block:8px 4px}.nav{margin-left:-6px}}
+
+/* ---------- scale rule (signature) ---------- */
+.scale{height:18px;border-top:1.5px solid var(--ink);
+  background-image:
+    repeating-linear-gradient(90deg,var(--ink) 0 1.5px,transparent 1.5px 100px),
+    repeating-linear-gradient(90deg,var(--ink) 0 1px,transparent 1px 50px),
+    repeating-linear-gradient(90deg,var(--line-strong) 0 1px,transparent 1px 10px);
+  background-size:100% 14px,100% 9px,100% 6px;background-repeat:no-repeat;opacity:.9}
+
+/* ---------- hero ---------- */
+.hero{padding-block:48px 40px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:56px;align-items:center}
+.hero h1{font-size:var(--step-4);font-weight:800;line-height:1.15;margin-top:14px}
+.hero .en{font-family:var(--font-mono);font-size:.92rem;letter-spacing:.06em;color:var(--muted);margin-top:6px}
+.hero .role{font-size:var(--step-1);margin-top:18px;max-width:34em;line-height:1.6}
+.hero .role strong{font-weight:600}
+.thesis{margin-top:28px;padding:18px 22px;border-left:3px solid var(--gold);background:var(--surface);border-radius:0 var(--radius) var(--radius) 0;box-shadow:var(--shadow);max-width:34em}
+.thesis q{font-family:var(--font-display);font-size:var(--step-2);font-weight:700;quotes:"“" "”";color:var(--ink);display:block;line-height:1.35}
+.thesis .src{margin-top:8px;font-size:var(--step--1);color:var(--muted)}
+.thesis .eq{font-family:var(--font-mono);color:var(--violet);font-weight:500}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:4px;font-weight:600;text-decoration:none;font-size:.96rem;border:1.5px solid var(--violet);transition:background .15s,color .15s}
+.btn.primary{background:var(--violet);color:var(--on-violet)}
+.btn.primary:hover{background:var(--violet-ink);border-color:var(--violet-ink);color:var(--on-violet)}
+.btn.ghost{color:var(--violet);background:transparent}
+.btn.ghost:hover{background:var(--violet-soft)}
+.portrait{position:relative;margin:0;justify-self:center;width:min(100%,400px)}
+.portrait .frame{position:relative;background:#5c5c60;border-radius:var(--radius);overflow:hidden;aspect-ratio:3/4;box-shadow:var(--shadow);max-width:100%}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+.portrait .ticks{position:absolute;left:-14px;top:0;bottom:0;width:10px;
+  background-image:repeating-linear-gradient(180deg,var(--ink) 0 1px,transparent 1px 20px),repeating-linear-gradient(180deg,var(--line-strong) 0 1px,transparent 1px 5px);
+  background-size:10px 100%,5px 100%;background-repeat:no-repeat;background-position:0 0,5px 0;opacity:.7}
+.portrait figcaption{display:flex;justify-content:space-between;gap:12px;margin-top:10px;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.06em;color:var(--muted)}
+.facts{margin-top:40px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1.5px solid var(--ink);border-bottom:1px solid var(--line)}
+.facts div{padding:14px 16px 16px 0;min-width:0}
+.facts div+div{padding-left:16px;border-left:1px solid var(--line)}
+.facts dt{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.facts dd{margin:4px 0 0;font-weight:600;line-height:1.5}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr;gap:36px}.portrait{order:-1;width:min(100%,320px)}.facts{grid-template-columns:repeat(2,minmax(0,1fr))}.facts div:nth-child(3){padding-left:0;border-left:0}.facts div:nth-child(n+3){border-top:1px solid var(--line)}}
+@media (max-width:420px){.facts{grid-template-columns:1fr}.facts div{padding-left:0!important;border-left:0!important}.facts div+div{border-top:1px solid var(--line)}}
+
+/* ---------- sections ---------- */
+section.block{padding-block:56px}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;margin-bottom:32px}
+.sec-head .scale{margin-bottom:14px}
+.sec-head h2{font-size:var(--step-3)}
+.sec-head p{color:var(--muted);max-width:44em}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius)}
+
+/* ---------- about ---------- */
+.about-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px}
+.about-grid .panel{padding:24px 26px}
+.about-grid h3{font-size:var(--step-1);margin-bottom:14px}
+.edu{list-style:none;margin:0;padding:0;display:grid;gap:16px}
+.edu li{display:grid;grid-template-columns:72px minmax(0,1fr);gap:14px}
+.edu .yr{font-family:var(--font-mono);font-size:.82rem;color:var(--violet);padding-top:3px;font-weight:500}
+.edu b{display:block;font-weight:600}
+.edu span{color:var(--muted);font-size:.94rem}
+.roles{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.roles li{padding-left:18px;position:relative}
+.roles li::before{content:"";position:absolute;left:0;top:.8em;width:8px;height:1.5px;background:var(--violet)}
+@media (max-width:860px){.about-grid{grid-template-columns:1fr}}
+
+/* career ruler */
+.ruler-box{margin-top:28px;padding:24px 26px 22px}
+.ruler-box h3{font-size:var(--step-1)}
+.ruler-scroll{overflow-x:auto;margin-top:18px;padding-bottom:6px}
+.ruler{position:relative;min-width:760px;height:100px}
+.ruler .bar{position:absolute;left:0;right:0;top:34px;height:16px;border-top:1.5px solid var(--ink);
+  background-image:repeating-linear-gradient(90deg,var(--line-strong) 0 1px,transparent 1px calc(100%/60));background-size:100% 6px;background-repeat:no-repeat}
+.ruler .yr{position:absolute;top:24px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center}
+.ruler .yr i{display:block;width:1.5px;height:24px;background:var(--ink)}
+.ruler .yr span{font-family:var(--font-mono);font-size:.74rem;margin-top:4px;color:var(--muted)}
+.ruler .yr.ev span{color:var(--ink);font-weight:500}
+.ruler .yr.ev::before{content:"";position:absolute;top:-14px;width:10px;height:10px;border-radius:50%;background:var(--violet);box-shadow:0 0 0 3px var(--violet-soft)}
+.ruler .yr.gold::before{background:var(--gold);box-shadow:0 0 0 3px var(--gold-soft)}
+.ruler .span-label{position:absolute;top:78px;font-size:.74rem;color:var(--muted);font-family:var(--font-mono);border-top:1px dashed var(--line-strong);padding-top:3px;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.timeline{list-style:none;margin:22px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 32px}
+.timeline li{display:grid;grid-template-columns:56px minmax(0,1fr);gap:12px;padding:10px 0;border-top:1px solid var(--line)}
+.timeline .y{font-family:var(--font-mono);font-weight:500;color:var(--violet)}
+.timeline p{font-size:.95rem;line-height:1.6}
+@media (max-width:760px){.timeline{grid-template-columns:1fr}}
+
+/* ---------- featured ---------- */
+.feature{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:0;overflow:hidden}
+.feature .body{padding:30px 32px;min-width:0}
+.feature .media{background:var(--violet-soft);border-left:1px solid var(--line);padding:22px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.feature .media button{all:unset;cursor:zoom-in;display:block;border-radius:4px;overflow:hidden;border:1px solid var(--line);background:var(--surface)}
+.feature .media button:focus-visible{outline:2px solid var(--violet);outline-offset:3px}
+.feature .media img{width:100%;height:auto}
+.feature .media small{font-size:.78rem;color:var(--muted)}
+.tagrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.tag{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.04em;padding:3px 9px;border:1px solid var(--line-strong);border-radius:3px;color:var(--muted);background:var(--surface)}
+.tag.v{border-color:transparent;background:var(--violet-soft);color:var(--violet)}
+.tag.g{border-color:transparent;background:var(--gold-soft);color:var(--gold)}
+.feature h3{font-size:var(--step-2);margin-top:10px}
+.feature .alt{color:var(--muted);margin-top:6px;font-size:.95rem}
+.feature .lead{margin-top:16px}
+.pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:20px}
+.pillars div{border-top:1.5px solid var(--violet);padding-top:8px;min-width:0}
+.pillars b{display:block;font-family:var(--font-mono);font-size:.82rem;color:var(--violet)}
+.pillars span{font-size:.88rem;color:var(--muted);line-height:1.5;display:block}
+.chart{margin-top:24px}
+.chart h4{font-family:var(--font-body);font-size:.92rem;font-weight:600}
+.bars{margin-top:10px;display:grid;gap:10px}
+.barrow{display:grid;grid-template-columns:82px minmax(0,1fr) 64px;align-items:center;gap:12px;font-size:.88rem}
+.barrow .track{position:relative;height:16px;background:repeating-linear-gradient(90deg,var(--line) 0 1px,transparent 1px 25%);border-left:1px solid var(--line-strong);border-right:1px solid var(--line-strong)}
+.barrow .fill{position:absolute;inset:3px auto 3px 0;background:var(--line-strong);border-radius:0 2px 2px 0}
+.barrow.post .fill{background:var(--violet)}
+.barrow .v{font-family:var(--font-mono);font-weight:500;text-align:right}
+.axis{display:grid;grid-template-columns:82px minmax(0,1fr) 64px;gap:12px;font-family:var(--font-mono);font-size:.68rem;color:var(--muted)}
+.axis div{display:flex;justify-content:space-between}
+.readings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:20px;border-top:1px solid var(--line)}
+.readings div{padding:12px 14px 4px 0;min-width:0}
+.readings div+div{padding-left:14px;border-left:1px solid var(--line)}
+.readings b{font-family:var(--font-mono);font-size:1.35rem;font-weight:500;display:block;color:var(--ink)}
+.readings span{font-size:.82rem;color:var(--muted);line-height:1.45;display:block}
+.honors{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:8px}
+.honors li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;align-items:baseline;font-size:.95rem;line-height:1.55}
+.links{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:20px;font-size:.92rem}
+.links a{font-weight:600}
+@media (max-width:900px){.feature{grid-template-columns:1fr}.feature .media{border-left:0;border-top:1px solid var(--line)}.feature .body{padding:24px 20px}}
+@media (max-width:480px){.pillars,.readings{grid-template-columns:1fr}.readings div+div{padding-left:0;border-left:0;border-top:1px solid var(--line)}}
+
+.works{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:24px}
+.work{display:flex;flex-direction:column;overflow:hidden;min-width:0}
+.work .cover{all:unset;cursor:zoom-in;display:block;aspect-ratio:16/9;overflow:hidden;background:var(--violet-soft);border-bottom:1px solid var(--line)}
+.work .cover img{width:100%;height:100%;object-fit:cover;object-position:50% 0;transition:transform .4s}
+.work .cover:hover img{transform:scale(1.02)}
+.work .cover:focus-visible{outline:2px solid var(--violet);outline-offset:-2px}
+.work .in{padding:22px 24px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.work h3{font-size:var(--step-1)}
+.work p{font-size:.95rem}
+.work .meta{margin-top:auto;padding-top:10px;border-top:1px solid var(--line);font-size:.88rem;color:var(--muted);line-height:1.6}
+.work .stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 16px;margin:4px 0}
+.work .stats b{font-family:var(--font-mono);font-weight:500;font-size:1.1rem;display:block}
+.work .stats span{font-size:.8rem;color:var(--muted);line-height:1.4;display:block}
+@media (max-width:820px){.works{grid-template-columns:1fr}}
+
+/* ---------- teaching ---------- */
+.teach-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:24px}
+.teach-grid .panel{padding:24px 26px;min-width:0}
+.teach-grid h3{font-size:var(--step-1);margin-bottom:12px}
+.tbl-wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.93rem}
+th,td{text-align:left;padding:10px 10px 10px 0;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500;border-bottom:1.5px solid var(--ink)}
+td.code{font-family:var(--font-mono);color:var(--violet);white-space:nowrap;font-weight:500}
+.ach{display:grid;gap:9px;margin-top:6px}
+.ach .row{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) 58px;gap:10px;align-items:center;font-size:.86rem}
+.ach .row .lab{line-height:1.35}
+.ach .row .lab small{display:block;color:var(--muted);font-family:var(--font-mono);font-size:.7rem}
+.ach .t{height:10px;background:var(--line);border-radius:5px;overflow:hidden}
+.ach .t i{display:block;height:100%;background:var(--violet);border-radius:5px}
+.ach .row b{font-family:var(--font-mono);font-weight:500;text-align:right}
+.ach .grp{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.1em;color:var(--violet);margin-top:8px;padding-top:8px;border-top:1px solid var(--line)}
+.ach .grp:first-child{border-top:0;margin-top:0;padding-top:0}
+.methods{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:24px}
+.methods div{border-top:1.5px solid var(--ink);padding-top:12px;min-width:0}
+.methods h4{font-family:var(--font-body);font-size:1rem;font-weight:600}
+.methods p{font-size:.92rem;color:var(--muted);margin-top:6px;line-height:1.65}
+.photo-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:24px}
+.photo-pair button{all:unset;cursor:zoom-in;border-radius:4px;overflow:hidden;aspect-ratio:4/3;display:block}
+.photo-pair img{width:100%;height:100%;object-fit:cover}
+.photo-pair button:focus-visible{outline:2px solid var(--violet);outline-offset:3px}
+@media (max-width:900px){.teach-grid{grid-template-columns:1fr}.methods{grid-template-columns:1fr}}
+
+/* ---------- research ---------- */
+.research{list-style:none;margin:0;padding:0;border-top:1.5px solid var(--ink)}
+.research li{display:grid;grid-template-columns:112px minmax(0,1fr) auto;gap:20px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.research .y{font-family:var(--font-mono);color:var(--violet);font-weight:500;font-size:.9rem}
+.research h3{font-family:var(--font-body);font-size:1.02rem;font-weight:600;line-height:1.55}
+.research p{font-size:.9rem;color:var(--muted);margin-top:4px;line-height:1.6}
+.research .kind{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.08em;color:var(--muted);white-space:nowrap;text-align:right}
+.research .kind a{display:block;margin-top:6px;font-family:var(--font-body);font-size:.88rem;letter-spacing:0;font-weight:600}
+.research li.era{display:block}
+.era{font-family:var(--font-mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:22px 0 6px;border-bottom:1px solid var(--line)}
+@media (max-width:700px){.research li{grid-template-columns:1fr;gap:4px}.research .kind{text-align:left}}
+
+/* ---------- awards ---------- */
+.awards-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:28px;align-items:start}
+.award-list{list-style:none;margin:0;padding:0}
+.award-list li{display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.award-list li:first-child{border-top:1.5px solid var(--ink)}
+.award-list .y{font-family:var(--font-mono);font-weight:500;color:var(--gold);font-size:.95rem}
+.award-list h3{font-family:var(--font-body);font-size:1rem;font-weight:600;line-height:1.55}
+.award-list p{font-size:.9rem;color:var(--muted);margin-top:3px;line-height:1.6}
+.lvl{display:inline-block;font-family:var(--font-mono);font-size:.68rem;letter-spacing:.06em;padding:2px 8px;border-radius:3px;margin-top:8px;border:1px solid var(--line-strong);color:var(--muted)}
+.lvl.nat{background:var(--gold);border-color:var(--gold);color:var(--surface)}
+.lvl.prov{background:var(--gold-soft);border-color:var(--gold);color:var(--gold)}
+.lvl.area{background:var(--violet-soft);border-color:transparent;color:var(--violet)}
+.award-photos{display:grid;gap:14px;position:sticky;top:96px}
+.award-photos button{all:unset;cursor:zoom-in;display:block;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line)}
+.award-photos button:focus-visible{outline:2px solid var(--violet);outline-offset:3px}
+.award-photos img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 20%}
+.award-photos figcaption{font-size:.82rem;color:var(--muted);margin-top:6px;line-height:1.5}
+.award-photos figure{margin:0}
+@media (max-width:900px){.awards-grid{grid-template-columns:1fr}.award-photos{position:static;grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.award-photos{grid-template-columns:1fr}}
+
+/* ---------- roles / development ---------- */
+.dev-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.dev-grid .panel{padding:22px 24px;min-width:0}
+.dev-grid h3{font-size:var(--step-1);margin-bottom:12px}
+.dlist{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.dlist li{font-size:.93rem;line-height:1.6;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.dlist li:last-child{border-bottom:0;padding-bottom:0}
+.dlist .d{display:block;font-family:var(--font-mono);font-size:.74rem;color:var(--violet);margin-bottom:2px}
+@media (max-width:980px){.dev-grid{grid-template-columns:1fr}}
+
+/* ---------- archive ---------- */
+.arch-tools{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:18px}
+.sem-tabs{display:flex;flex-wrap:wrap;gap:6px;margin:0}
+.sem-tabs .tab{font-family:var(--font-mono);font-size:.84rem;padding:6px 12px}
+.sem-tabs .tab small{font-size:.7rem;opacity:.7;margin-left:6px}
+.arch-tools input{font:inherit;font-size:.9rem;padding:7px 10px;border:1px solid var(--line-strong);border-radius:4px;background:var(--surface);color:var(--ink);min-width:0;flex:1 1 220px}
+.arch-count{font-family:var(--font-mono);font-size:.78rem;color:var(--muted);margin-left:auto}
+.arch-sem{font-size:var(--step-1);margin:6px 0 4px}
+.agroup{margin-top:18px}
+.agroup h4{font-family:var(--font-body);font-size:.9rem;font-weight:700;color:var(--violet);padding-bottom:6px;border-bottom:1.5px solid var(--ink)}
+.arch{list-style:none;margin:0;padding:0}
+.arch li{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:2px 16px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);font-size:.93rem}
+.athumb,.afold{grid-row:1/3;width:44px;height:56px;border-radius:2px;overflow:hidden}
+.athumb{all:unset;box-sizing:border-box;grid-row:1/3;width:44px;height:56px;border:1px solid var(--line-strong);border-radius:2px;overflow:hidden;background:#fff;cursor:zoom-in;transition:transform .15s}
+.athumb:hover{transform:scale(1.06)}
+.athumb:focus-visible{outline:2px solid var(--violet);outline-offset:2px}
+.athumb img{width:100%;height:100%;object-fit:cover;object-position:50% 0}
+.athumb.wide,.athumb.site{background:#0f0e17}.athumb.wide img{object-fit:contain;object-position:50% 50%}.athumb.site img{object-fit:cover;object-position:0 0}
+.afold{box-sizing:border-box;border:1px dashed var(--line-strong);background:var(--paper);display:grid;place-items:center;font-family:var(--font-mono);font-size:.56rem;letter-spacing:.04em;color:var(--muted);text-align:center;line-height:1.2}
+.arch .at{grid-column:2;align-self:end;line-height:1.5}
+.arch .src{grid-column:2;align-self:start;font-family:var(--font-mono);font-size:.72rem;color:var(--muted)}
+.arch .sem{font-family:var(--font-mono);font-size:.78rem;color:var(--violet);margin-right:8px}
+.arch .aact{grid-column:3;grid-row:1/3;display:flex;align-items:center;gap:16px;font-weight:600;font-size:.86rem;white-space:nowrap}
+.arch .empty{grid-column:1/-1;display:block;color:var(--muted);padding:20px 0}
+@media (max-width:700px){.arch .aact{flex-direction:column;align-items:flex-end;gap:2px}}
+
+/* ---------- semester dossier ---------- */
+.dossier{padding-block:8px 24px}
+.nw{white-space:nowrap}
+.docket{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--violet);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.docket-tabs{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:12px 28px;border-bottom:1px solid var(--line)}
+.docket-tabs .lbl{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.12em;color:var(--muted);margin-right:4px}
+.docket-tabs .tab{font-family:var(--font-mono);font-size:.86rem;padding:6px 12px}
+.docket-tabs .tab small{font-family:var(--font-body);font-size:.74rem;margin-left:8px;opacity:.8}
+.docket-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:end;padding:26px 28px 22px;background:var(--violet-soft);border-bottom:1px solid var(--line)}
+.docket-head h2{font-size:var(--step-3);margin-top:6px}
+.docket-head p{margin-top:8px;color:var(--muted);max-width:48em;font-size:.96rem}
+.dh-count{display:flex;gap:0;margin:0}
+.dh-count div{padding:0 18px;border-left:1px solid var(--line-strong);text-align:right}
+.dh-count div:first-child{border-left:0}
+.dh-count dt{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.12em;color:var(--muted)}
+.dh-count dd{margin:0;font-family:var(--font-mono);font-size:1.9rem;font-weight:500;line-height:1.1;color:var(--violet)}
+.dgroup2{padding:22px 28px 26px;border-top:1px solid var(--line)}
+.docket-head+.dgroup2{border-top:0}
+.dgroup2 h3{font-family:var(--font-body);font-size:1.02rem;font-weight:700;display:flex;align-items:baseline;gap:12px;padding-bottom:8px;border-bottom:1.5px solid var(--ink);margin-bottom:18px}
+.dgroup2 h3 .n{font-family:var(--font-mono);font-size:.78rem;font-weight:500;color:var(--muted);margin-left:auto}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:24px 20px}
+.dcard{display:flex;flex-direction:column;min-width:0}
+.dthumb{all:unset;box-sizing:border-box;display:block;position:relative;aspect-ratio:4/5;border:1px solid var(--line-strong);border-radius:3px;background:#fff;overflow:hidden;cursor:zoom-in;box-shadow:0 1px 0 var(--line),0 6px 16px rgba(28,25,48,.08);transition:transform .18s,box-shadow .18s}
+.dthumb:hover{transform:translateY(-3px);box-shadow:0 1px 0 var(--line),0 14px 28px rgba(28,25,48,.16)}
+.dthumb:focus-visible{outline:2px solid var(--violet);outline-offset:3px}
+.dthumb img{width:100%;height:100%;object-fit:cover;object-position:50% 0}
+.dthumb.wide,.dthumb.site{background:#0f0e17;border-color:#0f0e17}.dthumb.wide img{object-fit:contain;object-position:50% 50%}.dthumb.site img{object-fit:cover;object-position:0 0}
+.dpg{position:absolute;left:8px;bottom:8px;font-family:var(--font-mono);font-size:.66rem;letter-spacing:.04em;background:rgba(28,25,48,.84);color:#fff;padding:2px 7px;border-radius:2px}
+.dbody{display:flex;flex-direction:column;gap:3px;padding-top:12px;flex:1;min-width:0}
+.dsub{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.03em;color:var(--violet)}
+.dcard .dt{font-family:var(--font-body);font-size:.92rem;font-weight:600;line-height:1.5;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.dcard .dm{font-family:var(--font-mono);font-size:.68rem;color:var(--muted)}
+.dact{display:flex;flex-wrap:wrap;gap:4px 16px;margin-top:auto;padding-top:8px;font-size:.86rem;font-weight:600}
+.lnk{all:unset;cursor:pointer;color:var(--violet);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.lnk:hover{color:var(--violet-ink)}
+.lnk:focus-visible{outline:2px solid var(--violet);outline-offset:2px;border-radius:2px}
+.docket-foot{display:flex;flex-wrap:wrap;gap:6px 10px;padding:14px 28px;border-top:1px solid var(--line);font-size:.9rem;color:var(--muted)}
+.docket-foot a{font-weight:600}
+.docket-foot .upd{margin-left:auto;font-family:var(--font-mono);font-size:.74rem}
+@media (max-width:860px){.docket-tabs{padding:12px 20px}.docket-head{grid-template-columns:1fr;padding:22px 20px 18px}.dh-count div{text-align:left}.dh-count div:first-child{padding-left:0}.dgroup2{padding:18px 20px 22px}.cards{grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:20px 14px}.docket-foot{padding:14px 20px}.docket-foot .upd{margin-left:0;width:100%}}
+
+/* ---------- online course systems ---------- */
+.sys{margin-top:40px}
+.sys-head{border-top:1.5px solid var(--ink);padding-top:14px;margin-bottom:18px}
+.sys-head h3{font-size:var(--step-1)}
+.sys-head p{color:var(--muted);font-size:.94rem;margin-top:6px;max-width:48em}
+.sys-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.sys-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.sys-shot{all:unset;box-sizing:border-box;display:block;aspect-ratio:16/10;background:#0f0e17;cursor:zoom-in;overflow:hidden;border-bottom:1px solid var(--line)}
+.sys-shot img{width:100%;height:100%;object-fit:cover;object-position:50% 0;transition:transform .3s}
+.sys-shot:hover img{transform:scale(1.03)}
+.sys-shot:focus-visible{outline:2px solid var(--violet);outline-offset:-2px}
+.sys-b{padding:16px 18px 18px;display:flex;flex-direction:column;gap:4px;flex:1}
+.sys-b h4{font-size:var(--step-1)}
+.sys-b p{font-size:.9rem;color:var(--muted);line-height:1.65}
+@media (max-width:900px){.sys-grid{grid-template-columns:1fr}}
+
+/* ---------- gallery ---------- */
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px}
+.tab{font:inherit;font-size:.9rem;padding:7px 14px;border:1px solid var(--line-strong);background:var(--surface);color:var(--muted);border-radius:4px;cursor:pointer}
+.tab:hover{color:var(--violet);border-color:var(--violet)}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.gal-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:12px}
+.gal-head h3{font-size:var(--step-1)}
+.gal-head a{font-size:.9rem;font-weight:600}
+.gallery{columns:3 260px;column-gap:12px}
+.gallery button{all:unset;cursor:zoom-in;display:block;margin:0 0 12px;break-inside:avoid;border-radius:4px;overflow:hidden;position:relative;background:var(--violet-soft);width:100%}
+.gallery button:focus-visible{outline:2px solid var(--violet);outline-offset:2px}
+.gallery img{width:100%;height:auto;transition:transform .35s}
+.gallery button:hover img{transform:scale(1.025)}
+.gallery .cap{position:absolute;left:0;right:0;bottom:0;padding:22px 10px 8px;font-size:.8rem;line-height:1.45;color:#fff;background:linear-gradient(transparent,rgba(10,8,20,.72));opacity:0;transition:opacity .2s}
+.gallery button:hover .cap,.gallery button:focus-visible .cap{opacity:1}
+@media (hover:none){.gallery .cap{opacity:1}}
+
+/* ---------- lightbox ---------- */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(8,6,16,.92);display:grid;grid-template-rows:minmax(0,1fr) auto;padding:calc(env(safe-area-inset-top,0px) + 56px) max(16px,env(safe-area-inset-right,0px)) calc(env(safe-area-inset-bottom,0px) + 16px) max(16px,env(safe-area-inset-left,0px))}
+.lb img{max-width:100%;max-height:100%;margin:auto;object-fit:contain;border-radius:3px}
+.lb .lb-bar{display:flex;align-items:center;gap:12px;color:#EDEAF5;padding-top:12px;max-width:1100px;width:100%;margin:0 auto}
+.lb .lb-cap{flex:1;min-width:0;font-size:.92rem;line-height:1.5}
+.lb .lb-cap small{display:block;font-family:var(--font-mono);font-size:.72rem;color:#B9B3CC;letter-spacing:.06em}
+.lb button{font:inherit;font-size:.88rem;background:transparent;color:#EDEAF5;border:1px solid rgba(237,234,245,.35);border-radius:4px;padding:7px 12px;cursor:pointer}
+.lb button:hover{background:rgba(237,234,245,.12)}
+.lb .lb-close{position:absolute;top:calc(env(safe-area-inset-top,0px) + 12px);right:max(16px,env(safe-area-inset-right,0px))}
+
+
+/* ---------- document preview ---------- */
+.pv{position:fixed;inset:0;z-index:110;background:rgba(10,8,20,.8);display:grid;place-items:center;padding:calc(env(safe-area-inset-top,0px) + 16px) max(16px,env(safe-area-inset-right,0px)) calc(env(safe-area-inset-bottom,0px) + 16px) max(16px,env(safe-area-inset-left,0px))}
+.pv-box{width:min(1100px,100%);height:100%;max-height:960px;background:var(--surface);color:var(--ink);border-radius:var(--radius);display:grid;grid-template-rows:auto minmax(0,1fr) auto;overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,.45);border-top:4px solid var(--violet)}
+.pv-head{display:flex;gap:16px;align-items:flex-start;padding:14px 20px;border-bottom:1px solid var(--line)}
+.pv-ht{flex:1;min-width:0}
+.pv-meta{display:block;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.05em;color:var(--violet)}
+.pv-head h3{font-family:var(--font-body);font-size:1.04rem;font-weight:700;line-height:1.5;margin-top:2px}
+.pv button{font:inherit;font-size:.88rem;background:var(--surface);color:var(--ink);border:1px solid var(--line-strong);border-radius:4px;padding:6px 12px;cursor:pointer}
+.pv button:hover{border-color:var(--violet);color:var(--violet)}
+.pv button:disabled{opacity:.4;cursor:default;border-color:var(--line-strong);color:var(--ink)}
+.pv-body{display:grid;grid-template-columns:minmax(0,1fr) 136px;min-height:0;background:var(--paper)}
+.pv-body.one{grid-template-columns:minmax(0,1fr)}
+.pv-body.one .pv-strip{display:none}
+.pv-stage{overflow:auto;padding:22px;min-height:0;overscroll-behavior:contain}
+.pv-stage img{width:100%;max-width:820px;height:auto;margin:0 auto;background:#fff;border:1px solid var(--line);box-shadow:0 8px 24px rgba(28,25,48,.12)}
+.pv-stage.wide img{max-width:1000px}
+.pv-strip{overflow:auto;border-left:1px solid var(--line);padding:12px;display:flex;flex-direction:column;gap:10px;background:var(--surface);overscroll-behavior:contain}
+.pv .pv-strip button{padding:3px;border:2px solid transparent;border-radius:3px;background:none;display:block;flex:none}
+.pv .pv-strip button[aria-current="true"]{border-color:var(--violet)}
+.pv-strip img{width:100%;height:auto;border:1px solid var(--line);background:#fff}
+.pv-strip span{display:block;font-family:var(--font-mono);font-size:.64rem;color:var(--muted);padding-top:3px;text-align:center}
+.pv-foot{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;padding:12px 20px;border-top:1px solid var(--line)}
+.pv-note{flex:1 1 220px;font-size:.84rem;color:var(--muted);line-height:1.5}
+.pv-nav{display:flex;align-items:center;gap:8px}
+.pv-pos{font-family:var(--font-mono);font-size:.76rem;color:var(--muted);min-width:7.5em;text-align:center}
+@media (max-width:760px){
+  .pv{padding:0}
+  .pv-box{max-height:none;border-radius:0}
+  .pv-head{padding:calc(env(safe-area-inset-top,0px) + 12px) 16px 12px}
+  .pv-body{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto}
+  .pv-strip{flex-direction:row;border-left:0;border-top:1px solid var(--line);padding:8px 12px}
+  .pv .pv-strip button{width:60px}
+  .pv-stage{padding:12px}
+  .pv-foot{padding:10px 16px calc(env(safe-area-inset-bottom,0px) + 10px)}
+  .pv-nav{flex:1 1 100%;justify-content:space-between}
+  .pv-foot .btn{flex:1 1 100%;justify-content:center}
+}
+
+/* ---------- footer ---------- */
+footer{margin-top:24px;background:var(--foot-bg);color:var(--foot-fg);border-top:1px solid var(--line)}
+footer .wrap{padding-block:44px 36px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) minmax(0,1fr);gap:32px}
+footer h2{font-size:var(--step-2);color:var(--foot-fg)}
+footer p,footer li{font-size:.93rem;line-height:1.7;color:color-mix(in srgb,var(--foot-fg) 78%,transparent)}
+footer .eyebrow{color:color-mix(in srgb,var(--foot-fg) 65%,transparent)}
+footer a{color:var(--foot-fg)}
+footer ul{list-style:none;margin:8px 0 0;padding:0}
+footer .copy{grid-column:1/-1;border-top:1px solid color-mix(in srgb,var(--foot-fg) 20%,transparent);padding-top:18px;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.06em;color:color-mix(in srgb,var(--foot-fg) 55%,transparent)}
+.copybtn{font:inherit;font-size:.8rem;margin-left:8px;padding:2px 10px;border-radius:3px;border:1px solid color-mix(in srgb,var(--foot-fg) 40%,transparent);background:transparent;color:var(--foot-fg);cursor:pointer}
+@media (max-width:860px){footer .wrap{grid-template-columns:1fr}}
+</style>
+
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top"><b>นพพล ภาณุสุวัฒน์</b><span>E-Portfolio · Physics Teacher</span></a>
+    <nav class="nav" aria-label="ส่วนต่าง ๆ ของหน้า">
+      <a href="#semester">เอกสาร 2/2569</a>
+      <a href="#profile">ประวัติ</a>
+      <a href="#works">ผลงานเด่น</a>
+      <a href="#teaching">การจัดการเรียนรู้</a>
+      <a href="#research">วิจัยและนวัตกรรม</a>
+      <a href="#awards">รางวัล</a>
+      <a href="#development">บทบาทวิชาชีพ</a>
+      <a href="#archive">คลังเอกสาร</a>
+      <a href="#gallery">ภาพกิจกรรม</a>
+      <a href="#contact">ติดต่อ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">E-Portfolio · ครูชำนาญการพิเศษ</div>
+          <h1>นพพล ภาณุสุวัฒน์</h1>
+          <div class="en">NOPPOL PANUSUWAT · ครูต้น</div>
+          <p class="role">ครูกลุ่มสาระการเรียนรู้<strong>วิทยาศาสตร์และเทคโนโลยี</strong> สอนฟิสิกส์และวิทยาศาสตร์โลกและอวกาศ ระดับมัธยมศึกษาตอนปลาย <strong>โรงเรียนพรตพิทยพยัต</strong> สำนักงานเขตพื้นที่การศึกษามัธยมศึกษากรุงเทพมหานคร เขต 2</p>
+          <div class="thesis">
+            <q>ประสบการณ์ต้องมาก่อนสมการ</q>
+            <p class="src">หลักคิดของนวัตกรรม iEXP Model ให้นักเรียนลงมือทดลองจนเห็นปรากฏการณ์ ก่อนสังเคราะห์ความสัมพันธ์ <span class="eq">R = ρL/A</span> ได้ด้วยตนเอง</p>
+          </div>
+          <div class="actions">
+            <a class="btn primary" href="#semester">เอกสารประกอบการประเมิน 2/2569</a>
+            <a class="btn ghost" href="#works">ดูผลงานเด่น</a>
+          </div>
+        </div>
+        <figure class="portrait">
+          <span class="ticks" aria-hidden="true"></span>
+          <div class="frame"><img src="assets/img/w/portrait.jpg" alt="ครูนพพล ภาณุสุวัฒน์ สวมเสื้อสูทตราโรงเรียนพรตพิทยพยัต" width="900" height="1350"></div>
+          <figcaption><span>โรงเรียนพรตพิทยพยัต</span><span>สพม.กรุงเทพมหานคร เขต 2</span></figcaption>
+        </figure>
+      </div>
+      <dl class="facts">
+        <div><dt>ตำแหน่ง</dt><dd>ครู วิทยฐานะครูชำนาญการพิเศษ</dd></div>
+        <div><dt>รับราชการครู</dt><dd>ตั้งแต่ 27 พฤษภาคม 2557</dd></div>
+        <div><dt>วุฒิการศึกษาสูงสุด</dt><dd>กศ.ม. การวัด ประเมิน และวิจัยการศึกษา มศว</dd></div>
+        <div><dt>ความเชี่ยวชาญ</dt><dd>ฟิสิกส์ · การวัดและประเมินผล · STEM และ IS</dd></div>
+      </dl>
+    </div>
+  </section>
+
+
+  <!-- ===== SEMESTER DOSSIER (for evaluators) ===== -->
+  <section class="dossier" id="semester">
+    <div class="wrap">
+      <div class="docket">
+        <div class="docket-tabs" role="tablist" aria-label="เลือกภาคเรียน">
+          <span class="lbl">ภาคเรียน</span>
+          <button type="button" class="tab" role="tab" id="dp-2569-2-t" aria-controls="dp-2569-2" aria-selected="true">2/2569<small>ภาคเรียนปัจจุบัน</small></button>
+          <button type="button" class="tab" role="tab" id="dp-2569-1-t" aria-controls="dp-2569-1" aria-selected="false">1/2569<small>ภาคเรียนที่ผ่านมา</small></button>
+        </div>
+        <div class="dpanel" id="dp-2569-2" role="tabpanel" aria-labelledby="dp-2569-2-t"><div class="docket-head"><div class="dh-text"><div class="eyebrow">เอกสารประกอบการประเมิน</div><h2><span class="nw">ภาคเรียนที่ 2</span> <span class="nw">ปีการศึกษา 2569</span></h2><p>ภาคเรียนเปิดวันที่ 26 ตุลาคม 2569 รวมเอกสารหลักสูตร แผนการจัดการเรียนรู้ การวิเคราะห์ผู้เรียน สื่อ และระบบการเรียนรู้ออนไลน์ที่เตรียมไว้สำหรับภาคเรียนนี้ กดที่ภาพเพื่อดูตัวอย่างเอกสาร หรือกด “เปิดไฟล์” เพื่ออ่านฉบับเต็ม</p></div><dl class="dh-count"><div><dt>เอกสาร</dt><dd class="tnum">15</dd></div><div><dt>หมวด</dt><dd class="tnum">4</dd></div><div><dt>รายวิชา</dt><dd class="tnum">3</dd></div></dl></div><div class="dgroup2"><h3>หลักสูตรและแผนการจัดการเรียนรู้<span class="n tnum">5</span></h3><div class="cards"><article class="dcard"><button type="button" class="dthumb" data-pv="docs/2569-2/structure-physics4.pdf" aria-label="ดูตัวอย่าง โครงสร้างรายวิชาฟิสิกส์เพิ่มเติม 4 (ว32204) ชั้นมัธยมศึกษาปีที่ 5"><img src="assets/prev/2569-2_structure-physics4/t.jpg" alt="" loading="lazy" width="420" height="595"><span class="dpg">24 หน้า</span></button><div class="dbody"><span class="dsub">ว32204 · ม.5/2 ม.5/4</span><h4 class="dt" title="โครงสร้างรายวิชาฟิสิกส์เพิ่มเติม 4 (ว32204) ชั้นมัธยมศึกษาปีที่ 5">โครงสร้างรายวิชาฟิสิกส์เพิ่มเติม 4 (ว32204) ชั้นมัธยมศึกษาปีที่ 5</h4><span class="dm">PDF · 24 หน้า</span><div class="dact"><button type="button" class="lnk" data-pv="docs/2569-2/structure-physics4.pdf">ดูตัวอย่าง</button><a href="docs/2569-2/structure-physics4.pdf" target="_blank" rel="noopener">เปิดไฟล์</a></div></div></article><article class="dcard"><button type="button" class="dthumb" data-pv="docs/2569-2/structure-earthspace.pdf" aria-label="ดูตัวอย่าง โครงสร้างรายวิชาวิทยาศาสตร์โลกและอวกาศ (ว30114) ชั้นมัธยมศึกษาปีที่ 4"><img src="assets/prev/2569-2_structure-earthspace/t.jpg" alt="" loading="lazy" width="420" height="595"><span class="dpg">21 หน้า</span></button><div class="dbody"><span class="dsub">ว30114 · ม.4/8–4/10</span><h4 class="dt" title="โครงสร้างรายวิชาวิทยาศาสตร์โลกและอวกาศ (ว30114) ชั้นมัธยมศึกษาปีที่ 4">โครงสร้างรายวิชาวิทยาศาสตร์โลกและอวกาศ (ว30114) ชั้นมัธยมศึกษาปีที่ 4</h4><span class="dm">PDF · 21 หน้า</span><div class="dact"><button type="button" class="lnk" data-pv="docs/2569-2/structure-earthspace.pdf">ดูตัวอย่าง</button><a href="docs/2569-2/structure-earthspace.pdf" target="_blank" rel="noopener">เปิดไฟล์</a></div></div></article><article class="dcard"><button type="button" class="dthumb" data-pv="docs/2569-2/structure-is2.pdf" aria-label="ดูตัวอย่าง โครงสร้างรายวิชาการสื่อสารและการนำเสนอ (I30202) IS2 THE PITCH"><img src="assets/prev/2569-2_structure-is2/t.jpg" alt="" loading="lazy" width="420" height="595"><span class="dpg">16 หน้า</span></button><div class="dbody"><span class="dsub">I30202 · ม.5/4</span><h4 class="dt" title="โครงสร้างรายวิชาการสื่อสารและการนำเสนอ (I30202) IS2 THE PITCH">โครงสร้างรายวิชาการสื่อสารและการนำเสนอ (I30202) IS2 THE PITCH</h4><span class="dm">PDF · 16 หน้า</span><div class="dact"><button type="button" class="lnk" data-pv="docs/2569-2/structure-is2.pdf">ดูตัวอย่าง</button><a href="docs/2569-2/structure-is2.pdf" target="_blank" rel="noopener">เปิดไฟล์</a></div></div></article><article class="dcard"><button type="button" class="dthumb" data-pv="docs/2569-2/lesson-plan-physics4.pdf" aria-label="ดูตัวอย่าง แผนการจัดการเรียนรู้ ฟิสิกส์เพิ่มเติม 4 ภาคเรียนที่ 2/2569 (36 แผน ฉบับรวมเล่ม)"><img src="assets/prev/2569-2_lesson-plan-physics4/t.jpg" alt="" loading="lazy" width="420" height="595"><span class="dpg">364 หน้า</span></button><div class="dbody"><span class="dsub">ว32204 · ม.5/2 ม.5/4</span><h4 class="dt" title="แผนการจัดการเรียนรู้ ฟิสิกส์เพิ่มเติม 4 ภาคเรียนที่ 2/2569 (36 แผน ฉบับรวมเล่ม)">แผนการจัดการเรียนรู้ ฟิสิกส์เพิ่มเติม 4 ภาคเรียนที่ 2/2569 (36 แผน ฉบับรวมเล่ม)</h4><span class="dm">PDF · 364 หน้า · 7.4 MB</span><div class="dact"><button type="button" class="lnk" data-pv="docs/2569-2/lesson-plan-physics4.pdf">ดูตัวอย่าง</button><a href="docs/2569-2/lesson-plan-physics4.pdf" target="_blank" rel="noopener">เปิดไฟล์</a></div></div></article><article class="dcard"><button type="button" class="dthumb" data-pv="docs/2569-2/is2-weekly-teaching-guides.pdf" aria-label="ดูตัวอย่าง คู่มือการจัดการเรียนรู้รายสัปดาห์ IS2 THE PITCH สัปดาห์ที่ 1–19"><img src="assets/prev/2569-2_is2-weekly-teaching-guides/t.jpg" alt="" loading="lazy" width="420" height="595"><span class="dpg">102 หน้า</span></button><div class="dbody"><span class="dsub">I30202 · ม.5/4</span><h4 class="dt" title="คู่มือการจัดการเรียนรู้รายสัปดาห์ IS2 THE PITCH สัปดาห์ที่ 1–19">คู่มือการจัดการเรียนรู้รายสัปดาห์ IS2 THE PITCH สัปดาห์ที่ 1–19</h4><span class="dm">PDF · 102 หน้า · 3.6 MB</span><div class="dact"><button type="button" class="lnk" data-pv="docs/2569-2/is2-weekly-teaching-guides.pdf">ดูตัวอย่าง</button><a href="docs/2569-2/is2-weekly-teaching-guides.pdf" target="_blank" rel="noopener">เปิดไฟล์</a></div></div></article></div></div><div class="dgroup2"><h3>การวิเคราะห์ผู้เรียนรายบุคคล<span class="n tnum">3</span></h3><div class="cards"><article class="dcard"><button type="button" class="dthumb" data-pv="docs/2569-2/analysis-physics4.pdf" aria-label="ดูตัวอย่าง รายงานผลการวิเคราะห์ผู้เรียน ว32204 ฟิสิกส์เพิ่มเติม 4 ม.5"><img src="assets/prev/2569-2_analysis-physics4/t.jpg" alt="" loading="lazy" width="420" height="595"><span class="dpg">5 หน้า</span></button><div class="dbody"><span class="dsub">ว32204 · ม.5/2 ม.5/4</span><h4 class="dt" title="รายงานผลการวิเคราะห์ผู้เรียน ว32204 ฟิสิกส์เพิ่มเติม 4 ม.5">รายงานผลการวิเคราะห์ผู้เรียน ว32204 ฟิสิกส์เพิ่มเติม 4 ม.5</h4><span class="dm">PDF · 5 หน้า</span><div class="dact"><button type="button" class="lnk" data-pv="docs/2569-2/analysis-physics4.pdf">ดูตัวอย่าง</button><a href="docs/2569-2/analysis-physics4.pdf" target="_blank" rel="noopener">เปิดไฟล์</a></div></div></article><article class="dcard"><button type="button" class="dthumb" data-pv="docs/2569-2/analysis-earthspace-m4.pdf" aria-label="ดูตัวอย่าง รายงานผลการวิเคราะห์ผู้เรียน ว30114 วิทยาศาสตร์โลกและอวกาศ ม.4"><img src="assets/prev/2569-2_analysis-earthspace-m4/t.jpg" alt="" loading="lazy" width="420" height="595"><span class="dpg">7 หน้า</span></button><div class="dbody"><span class="dsub">ว30114 · ม.4/8–4/10</span><h4 class="dt" title="รายงานผลการวิเคราะห์ผู้เรียน ว30114 วิทยาศาสตร์โลกและอวกาศ ม.4">รายงานผลการวิเคราะห์ผู้เรียน ว30114 วิทยาศาสตร์โลกและอวกาศ ม.4</h4><span class="dm">PDF · 7 หน้า</span><div class="dact"><button type="button" class="lnk" data-pv="docs/2569-2/analysis-earthspace-m4.pdf">ดูตัวอย่าง</button><a href="docs/2569-2/analysis-earthspace-m4.pdf" target="_blank" rel="noopener">เปิดไฟล์</a></div></div></article><article class="dcard"><button type="button" class="dthumb" data-pv="docs/2569-2/analysis-is2.pdf" aria-label="ดูตัวอย่าง รายงานผลการวิเคราะห์ผู้เรียน I30202 การสื่อสารและการนำเสนอ (IS2) ม.5/4"><img src="assets/prev/2569-2_analysis-is2/t.jpg" alt="" loading="lazy" width="420" height="595"><span class="dpg">4 หน้า</span></button><div class="dbody"><span class="dsub">I30202 · ม.5/4</span><h4 class="dt" title="รายงานผลการวิเคราะห์ผู้เรียน I30202 การสื่อสารและการนำเสนอ (IS2) ม.5/4">รายงานผลการวิเคราะห์ผู้เรียน I30202 การสื่อสารและการนำเสนอ (IS2) ม.5/4</h4><span class="dm">PDF · 4 หน้า</span><div class="dact"><button type="button" class="lnk" data-pv="docs/2569-2/analysis-is2.pdf">ดูตัวอย่าง</button><a href="docs/2569-2/analysis-is2.pdf" target="_blank" rel="noopener">เปิดไฟล์</a></div></div></article></div></div><div class="dgroup2"><h3>สื่อและใบงาน<span class="n tnum">4</span></h3><div class="cards"><article class="dcard"><button type="button" class="dthumb" data-pv="docs/2569-2/worksheets-physics4.pdf" aria-label="ดูตัวอย่าง ชุดใบงาน P4 Journey ฟิสิกส์เพิ่มเติม 4 ใบงานที่ 1–36 (ไล่ระดับ Level)"><img src="assets/prev/2569-2_worksheets-physics4/t.jpg" alt="" loading="lazy" width="420" height="594"><span class="dpg">216 หน้า</span></button><div class="dbody"><span class="dsub">ว32204 · ม.5/2 ม.5/4</span><h4 class="dt" title="ชุดใบงาน P4 Journey ฟิสิกส์เพิ่มเติม 4 ใบงานที่ 1–36 (ไล่ระดับ Level)">ชุดใบงาน P4 Journey ฟิสิกส์เพิ่มเติม 4 ใบงานที่ 1–36 (ไล่ระดับ Level)</h4><span class="dm">PDF · 216 หน้า · 13 MB</span><div class="dact"><button type="button" class="lnk" data-pv="docs/2569-2/worksheets-physics4.pdf">ดูตัวอย่าง</button><a href="docs/2569-2/worksheets-physics4.pdf" target="_blank" rel="noopener">เปิดไฟล์</a></div></div></article><article class="dcard"><button type="button" class="dthumb wide" data-pv="docs/2569-2/slides-physics4-plan01.pdf" aria-label="ดูตัวอย่าง สไลด์ประกอบการสอน แผนที่ 1 ปฐมนิเทศระบบ P4 Journey"><img src="assets/prev/2569-2_slides-physics4-plan01/t.jpg" alt="" loading="lazy" width="420" height="237"><span class="dpg">22 หน้า</span></button><div class="dbody"><span class="dsub">ว32204 · ม.5/2 ม.5/4</span><h4 class="dt" title="สไลด์ประกอบการสอน แผนที่ 1 ปฐมนิเทศระบบ P4 Journey">สไลด์ประกอบการสอน แผนที่ 1 ปฐมนิเทศระบบ P4 Journey</h4><span class="dm">PDF · 22 หน้า</span><div class="dact"><button type="button" class="lnk" data-pv="docs/2569-2/slides-physics4-plan01.pdf">ดูตัวอย่าง</button><a href="docs/2569-2/slides-physics4-plan01.pdf" target="_blank" rel="noopener">เปิดไฟล์</a></div></div></article><article class="dcard"><button type="button" class="dthumb" data-pv="docs/2569-2/worksheets-earthspace.pdf" aria-label="ดูตัวอย่าง ชุดใบงานภารกิจ ES Journey หน่วยโลก บรรยากาศ และอวกาศ พร้อมใบสรุปทบทวนก่อนสอบ"><img src="assets/prev/2569-2_worksheets-earthspace/t.jpg" alt="" loading="lazy" width="420" height="595"><span class="dpg">40 หน้า</span></button><div class="dbody"><span class="dsub">ว30114 · ม.4/8–4/10</span><h4 class="dt" title="ชุดใบงานภารกิจ ES Journey หน่วยโลก บรรยากาศ และอวกาศ พร้อมใบสรุปทบทวนก่อนสอบ">ชุดใบงานภารกิจ ES Journey หน่วยโลก บรรยากาศ และอวกาศ พร้อมใบสรุปทบทวนก่อนสอบ</h4><span class="dm">PDF · 40 หน้า · 3.9 MB</span><div class="dact"><button type="button" class="lnk" data-pv="docs/2569-2/worksheets-earthspace.pdf">ดูตัวอย่าง</button><a href="docs/2569-2/worksheets-earthspace.pdf" target="_blank" rel="noopener">เปิดไฟล์</a></div></div></article><article class="dcard"><button type="button" class="dthumb" data-pv="docs/2569-2/worksheets-is2-masterclass.pdf" aria-label="ดูตัวอย่าง ชุดใบงานและการ์ดกิจกรรม Masterclass IS2 THE PITCH สัปดาห์ที่ 1–19"><img src="assets/prev/2569-2_worksheets-is2-masterclass/t.jpg" alt="" loading="lazy" width="420" height="595"><span class="dpg">109 หน้า</span></button><div class="dbody"><span class="dsub">I30202 · ม.5/4</span><h4 class="dt" title="ชุดใบงานและการ์ดกิจกรรม Masterclass IS2 THE PITCH สัปดาห์ที่ 1–19">ชุดใบงานและการ์ดกิจกรรม Masterclass IS2 THE PITCH สัปดาห์ที่ 1–19</h4><span class="dm">PDF · 109 หน้า · 8.4 MB</span><div class="dact"><button type="button" class="lnk" data-pv="docs/2569-2/worksheets-is2-masterclass.pdf">ดูตัวอย่าง</button><a href="docs/2569-2/worksheets-is2-masterclass.pdf" target="_blank" rel="noopener">เปิดไฟล์</a></div></div></article></div></div><div class="dgroup2"><h3>ระบบการเรียนรู้ออนไลน์ประจำรายวิชา<span class="n tnum">3</span></h3><div class="cards"><article class="dcard"><button type="button" class="dthumb site" data-pv="https://watpolprot-cloud.github.io/p4-journey/" aria-label="ดูตัวอย่าง P4 Journey เว็บไซต์รายวิชาฟิสิกส์เพิ่มเติม 4"><img src="assets/prev/site_p4-journey/t.jpg" alt="" loading="lazy" width="420" height="262"><span class="dpg">เว็บไซต์</span></button><div class="dbody"><span class="dsub">ว32204 · ม.5/2 ม.5/4</span><h4 class="dt" title="P4 Journey เว็บไซต์รายวิชาฟิสิกส์เพิ่มเติม 4">P4 Journey เว็บไซต์รายวิชาฟิสิกส์เพิ่มเติม 4</h4><span class="dm">เว็บไซต์ · GitHub Pages</span><div class="dact"><button type="button" class="lnk" data-pv="https://watpolprot-cloud.github.io/p4-journey/">ดูตัวอย่าง</button><a href="https://watpolprot-cloud.github.io/p4-journey/" target="_blank" rel="noopener">เปิดเว็บไซต์</a></div></div></article><article class="dcard"><button type="button" class="dthumb site" data-pv="https://watpolprot-cloud.github.io/es-journey/" aria-label="ดูตัวอย่าง ES Journey เว็บไซต์รายวิชาวิทยาศาสตร์โลกและอวกาศ"><img src="assets/prev/site_es-journey/t.jpg" alt="" loading="lazy" width="420" height="262"><span class="dpg">เว็บไซต์</span></button><div class="dbody"><span class="dsub">ว30114 · ม.4/8–4/10</span><h4 class="dt" title="ES Journey เว็บไซต์รายวิชาวิทยาศาสตร์โลกและอวกาศ">ES Journey เว็บไซต์รายวิชาวิทยาศาสตร์โลกและอวกาศ</h4><span class="dm">เว็บไซต์ · GitHub Pages</span><div class="dact"><button type="button" class="lnk" data-pv="https://watpolprot-cloud.github.io/es-journey/">ดูตัวอย่าง</button><a href="https://watpolprot-cloud.github.io/es-journey/" target="_blank" rel="noopener">เปิดเว็บไซต์</a></div></div></article><article class="dcard"><button type="button" class="dthumb site" data-pv="https://watpolprot-cloud.github.io/is2-the-pitch/" aria-label="ดูตัวอย่าง IS2 THE PITCH เว็บไซต์รายวิชาการสื่อสารและการนำเสนอ"><img src="assets/prev/site_is2-the-pitch/t.jpg" alt="" loading="lazy" width="420" height="262"><span class="dpg">เว็บไซต์</span></button><div class="dbody"><span class="dsub">I30202 · ม.5/4</span><h4 class="dt" title="IS2 THE PITCH เว็บไซต์รายวิชาการสื่อสารและการนำเสนอ">IS2 THE PITCH เว็บไซต์รายวิชาการสื่อสารและการนำเสนอ</h4><span class="dm">เว็บไซต์ · GitHub Pages</span><div class="dact"><button type="button" class="lnk" data-pv="https://watpolprot-cloud.github.io/is2-the-pitch/">ดูตัวอย่าง</button><a href="https://watpolprot-cloud.github.io/is2-the-pitch/" target="_blank" rel="noopener">เปิดเว็บไซต์</a></div></div></article></div></div></div>
+        <div class="dpanel" id="dp-2569-1" role="tabpanel" aria-labelledby="dp-2569-1-t" hidden><div class="docket-head"><div class="dh-text"><div class="eyebrow">เอกสารประกอบการประเมิน</div><h2><span class="nw">ภาคเรียนที่ 1</span> <span class="nw">ปีการศึกษา 2569</span></h2><p>รวมเอกสารหลักฐานการปฏิบัติงานของภาคเรียนที่ผ่านมาไว้ในที่เดียว กดที่ภาพเพื่อดูตัวอย่างเอกสาร หรือกด “เปิดไฟล์” เพื่ออ่านฉบับเต็มในแท็บใหม่</p></div><dl class="dh-count"><div><dt>เอกสาร</dt><dd class="tnum">24</dd></div><div><dt>หมวด</dt><dd class="tnum">6</dd></div><div><dt>รายวิชา</dt><dd class="tnum">3</dd></div></dl></div><div class="dgroup2"><h3>หลักสูตรและแผนการจัดการเรียนรู้<span class="n tnum">5</span></h3><div class="cards"><article class="dcard"><button type="button" class="dthumb" data-pv="docs/2569-1/structure-physics3.pdf" aria-label="ดูตัวอย่าง โครงสร้างรายวิชาฟิสิกส์เพิ่มเติม 3 (ว32203) ชั้นมัธยมศึกษาปีที่ 5"><img src="assets/prev/2569-1_structure-physics3/t.jpg" alt="" loading="lazy" width="420" height="594"><span class="dpg">19 หน้า</span></button><div class="dbody"><span class="dsub">ว32203</span><h4 class="dt" title="โครงสร้างรายวิชาฟิสิกส์เพิ่มเติม 3 (ว32203) ชั้นมัธยมศึกษาปีที่ 5">โครงสร้างรายวิชาฟิสิกส์เพิ่มเติม 3 (ว32203) ชั้นมัธยมศึกษาปีที่ 5</h4><span class="dm">PDF · 19 หน้า</span><div class="dact"><button type="button" class="lnk" data-pv="docs/2569-1/structure-physics3.pdf">ดูตัวอย่าง</button><a href="docs/2569-1/structure-physics3.pdf" target="_blank" rel="noopener">เปิดไฟล์</a></div></div></article><article class="dcard"><button type="button" class="dthumb" data-pv="docs/2569-1/structure-earthspace.pdf" aria-label="ดูตัวอย่าง โครงสร้างรายวิชาวิทยาศาสตร์โลกและอวกาศ (ว30114)"><img src="assets/prev/2569-1_structure-earthspace/t.jpg" alt="" loading="lazy" width="420" height="594"><span class="dpg">20 หน้า</span></button><div class="dbody"><span class="dsub">ว30114</span><h4 class="dt" title="โครงสร้างรายวิชาวิทยาศาสตร์โลกและอวกาศ (ว30114)">โครงสร้างรายวิชาวิทยาศาสตร์โลกและอวกาศ (ว30114)</h4><span class="dm">PDF · 20 หน้า</span><div class="dact"><button type="button" class="lnk" data-pv="docs/2569-1/structure-earthspace.pdf">ดูตัวอย่าง</button><a href="docs/2569-1/structure-earthspace.pdf" target="_blank" rel="noopener">เปิดไฟล์</a></div></div></article><article class="dcard"><button type="button" class="dthumb" data-pv="docs/2569-1/structure-is1.pdf" aria-label="ดูตัวอย่าง โครงสร้างรายวิชาการศึกษาค้นคว้าและสร้างองค์ความรู้ (I30201)"><img src="assets/prev/2569-1_structure-is1/t.jpg" alt="" loading="lazy" width="420" height="594"><span class="dpg">7 หน้า</span></button><div class="dbody"><span class="dsub">I30201</span><h4 class="dt" title="โครงสร้างรายวิชาการศึกษาค้นคว้าและสร้างองค์ความรู้ (I30201)">โครงสร้างรายวิชาการศึกษาค้นคว้าและสร้างองค์ความรู้ (I30201)</h4><span class="dm">PDF · 7 หน้า</span><div class="dact"><button type="button" class="lnk" data-pv="docs/2569-1/structure-is1.pdf">ดูตัวอย่าง</button><a href="docs/2569-1/structure-is1.pdf" target="_blank" rel="noopener">เปิดไฟล์</a></div></div></article><article class="dcard"><button type="button" class="dthumb" data-pv="docs/2569-1/lesson-plan-physics3.pdf" aria-label="ดูตัวอย่าง แผนการจัดการเรียนรู้ ฟิสิกส์เพิ่มเติม 3 ภาคเรียนที่ 1/2569 (ฉบับรวมเล่ม)"><img src="assets/prev/2569-1_lesson-plan-physics3/t.jpg" alt="" loading="lazy" width="420" height="595"><span class="dpg">409 หน้า</span></button><div class="dbody"><h4 class="dt" title="แผนการจัดการเรียนรู้ ฟิสิกส์เพิ่มเติม 3 ภาคเรียนที่ 1/2569 (ฉบับรวมเล่ม)">แผนการจัดการเรียนรู้ ฟิสิกส์เพิ่มเติม 3 ภาคเรียนที่ 1/2569 (ฉบับรวมเล่ม)</h4><span class="dm">PDF · 409 หน้า · 10 MB</span><div class="dact"><button type="button" class="lnk" data-pv="docs/2569-1/lesson-plan-physics3.pdf">ดูตัวอย่าง</button><a href="docs/2569-1/lesson-plan-physics3.pdf" target="_blank" rel="noopener">เปิดไฟล์</a></div></div></article><article class="dcard"><button type="button" class="dthumb" data-pv="docs/2569-1/grading-criteria.pdf" aria-label="ดูตัวอย่าง เกณฑ์การให้คะแนนรายวิชาในระบบ PROT CARE"><img src="assets/prev/2569-1_grading-criteria/t.jpg" alt="" loading="lazy" width="420" height="594"><span class="dpg">3 หน้า</span></button><div class="dbody"><h4 class="dt" title="เกณฑ์การให้คะแนนรายวิชาในระบบ PROT CARE">เกณฑ์การให้คะแนนรายวิชาในระบบ PROT CARE</h4><span class="dm">PDF · 3 หน้า</span><div class="dact"><button type="button" class="lnk" data-pv="docs/2569-1/grading-criteria.pdf">ดูตัวอย่าง</button><a href="docs/2569-1/grading-criteria.pdf" target="_blank" rel="noopener">เปิดไฟล์</a></div></div></article></div></div><div class="dgroup2"><h3>การวิเคราะห์ผู้เรียนรายบุคคล<span class="n tnum">4</span></h3><div class="cards"><article class="dcard"><button type="button" class="dthumb" data-pv="https://drive.google.com/file/d/1x9UpIhoT3Zy3p9plEqtZUYDRfDFC-Prp/view" aria-label="ดูตัวอย่าง รายงานผลการวิเคราะห์ผู้เรียน รายวิชาฟิสิกส์เพิ่มเติม 3"><img src="assets/prev/g_1x9UpIhoT3Zy3p9plEqtZUYDRfDFC-Prp/t.jpg" alt="" loading="lazy" width="420" height="543"><span class="dpg">Google Drive</span></button><div class="dbody"><h4 class="dt" title="รายงานผลการวิเคราะห์ผู้เรียน รายวิชาฟิสิกส์เพิ่มเติม 3">รายงานผลการวิเคราะห์ผู้เรียน รายวิชาฟิสิกส์เพิ่มเติม 3</h4><span class="dm">Google Drive</span><div class="dact"><button type="button" class="lnk" data-pv="https://drive.google.com/file/d/1x9UpIhoT3Zy3p9plEqtZUYDRfDFC-Prp/view">ดูตัวอย่าง</button><a href="https://drive.google.com/file/d/1x9UpIhoT3Zy3p9plEqtZUYDRfDFC-Prp/view" target="_blank" rel="noopener">เปิดไฟล์</a></div></div></article><article class="dcard"><button type="button" class="dthumb" data-pv="https://drive.google.com/file/d/1YBQUFTkguDQbILkGAIEq-bV_2DvUP5Th/view" aria-label="ดูตัวอย่าง รายงานผลการวิเคราะห์ผู้เรียน รายวิชาวิทยาศาสตร์โลกและอวกาศ ม.4"><img src="assets/prev/g_1YBQUFTkguDQbILkGAIEq-bV_2DvUP5Th/t.jpg" alt="" loading="lazy" width="420" height="543"><span class="dpg">Google Drive</span></button><div class="dbody"><h4 class="dt" title="รายงานผลการวิเคราะห์ผู้เรียน รายวิชาวิทยาศาสตร์โลกและอวกาศ ม.4">รายงานผลการวิเคราะห์ผู้เรียน รายวิชาวิทยาศาสตร์โลกและอวกาศ ม.4</h4><span class="dm">Google Drive</span><div class="dact"><button type="button" class="lnk" data-pv="https://drive.google.com/file/d/1YBQUFTkguDQbILkGAIEq-bV_2DvUP5Th/view">ดูตัวอย่าง</button><a href="https://drive.google.com/file/d/1YBQUFTkguDQbILkGAIEq-bV_2DvUP5Th/view" target="_blank" rel="noopener">เปิดไฟล์</a></div></div></article><article class="dcard"><button type="button" class="dthumb" data-pv="https://drive.google.com/file/d/1sPfwS8B092_QDxCKrbrKWAsonCDZGEQs/view" aria-label="ดูตัวอย่าง รายงานผลการวิเคราะห์ผู้เรียน รายวิชาวิทยาศาสตร์โลกและอวกาศ ม.6"><img src="assets/prev/g_1sPfwS8B092_QDxCKrbrKWAsonCDZGEQs/t.jpg" alt="" loading="lazy" width="420" height="543"><span class="dpg">Google Drive</span></button><div class="dbody"><h4 class="dt" title="รายงานผลการวิเคราะห์ผู้เรียน รายวิชาวิทยาศาสตร์โลกและอวกาศ ม.6">รายงานผลการวิเคราะห์ผู้เรียน รายวิชาวิทยาศาสตร์โลกและอวกาศ ม.6</h4><span class="dm">Google Drive</span><div class="dact"><button type="button" class="lnk" data-pv="https://drive.google.com/file/d/1sPfwS8B092_QDxCKrbrKWAsonCDZGEQs/view">ดูตัวอย่าง</button><a href="https://drive.google.com/file/d/1sPfwS8B092_QDxCKrbrKWAsonCDZGEQs/view" target="_blank" rel="noopener">เปิดไฟล์</a></div></div></article><article class="dcard"><button type="button" class="dthumb" data-pv="https://drive.google.com/file/d/1kMEA1iv5OFqoX1Kmiedqij-vxqY8aG3s/view" aria-label="ดูตัวอย่าง รายงานผลการวิเคราะห์ผู้เรียน รายวิชาการศึกษาค้นคว้าอิสระ 1"><img src="assets/prev/g_1kMEA1iv5OFqoX1Kmiedqij-vxqY8aG3s/t.jpg" alt="" loading="lazy" width="420" height="543"><span class="dpg">Google Drive</span></button><div class="dbody"><h4 class="dt" title="รายงานผลการวิเคราะห์ผู้เรียน รายวิชาการศึกษาค้นคว้าอิสระ 1">รายงานผลการวิเคราะห์ผู้เรียน รายวิชาการศึกษาค้นคว้าอิสระ 1</h4><span class="dm">Google Drive</span><div class="dact"><button type="button" class="lnk" data-pv="https://drive.google.com/file/d/1kMEA1iv5OFqoX1Kmiedqij-vxqY8aG3s/view">ดูตัวอย่าง</button><a href="https://drive.google.com/file/d/1kMEA1iv5OFqoX1Kmiedqij-vxqY8aG3s/view" target="_blank" rel="noopener">เปิดไฟล์</a></div></div></article></div></div><div class="dgroup2"><h3>รายงานผลการพัฒนาผู้เรียน<span class="n tnum">4</span></h3><div class="cards"><article class="dcard"><button type="button" class="dthumb" data-pv="https://drive.google.com/file/d/1qnPro78_NUCvm_bz6UoZCSOB9WicxNOv/view" aria-label="ดูตัวอย่าง รายงานผลการพัฒนาผู้เรียน ว32203 ฟิสิกส์เพิ่มเติม 3 ม.5"><img src="assets/prev/g_1qnPro78_NUCvm_bz6UoZCSOB9WicxNOv/t.jpg" alt="" loading="lazy" width="420" height="594"><span class="dpg">Google Drive</span></button><div class="dbody"><span class="dsub">ว32203</span><h4 class="dt" title="รายงานผลการพัฒนาผู้เรียน ว32203 ฟิสิกส์เพิ่มเติม 3 ม.5">รายงานผลการพัฒนาผู้เรียน ว32203 ฟิสิกส์เพิ่มเติม 3 ม.5</h4><span class="dm">Google Drive</span><div class="dact"><button type="button" class="lnk" data-pv="https://drive.google.com/file/d/1qnPro78_NUCvm_bz6UoZCSOB9WicxNOv/view">ดูตัวอย่าง</button><a href="https://drive.google.com/file/d/1qnPro78_NUCvm_bz6UoZCSOB9WicxNOv/view" target="_blank" rel="noopener">เปิดไฟล์</a></div></div></article><article class="dcard"><button type="button" class="dthumb" data-pv="https://drive.google.com/file/d/1zmHV99xD9H-oyHXP3sUtL8JIlkvU5rMI/view" aria-label="ดูตัวอย่าง รายงานผลการพัฒนาผู้เรียน ว30114 วิทยาศาสตร์โลกและอวกาศ ม.4"><img src="assets/prev/g_1zmHV99xD9H-oyHXP3sUtL8JIlkvU5rMI/t.jpg" alt="" loading="lazy" width="420" height="594"><span class="dpg">Google Drive</span></button><div class="dbody"><span class="dsub">ว30114</span><h4 class="dt" title="รายงานผลการพัฒนาผู้เรียน ว30114 วิทยาศาสตร์โลกและอวกาศ ม.4">รายงานผลการพัฒนาผู้เรียน ว30114 วิทยาศาสตร์โลกและอวกาศ ม.4</h4><span class="dm">Google Drive</span><div class="dact"><button type="button" class="lnk" data-pv="https://drive.google.com/file/d/1zmHV99xD9H-oyHXP3sUtL8JIlkvU5rMI/view">ดูตัวอย่าง</button><a href="https://drive.google.com/file/d/1zmHV99xD9H-oyHXP3sUtL8JIlkvU5rMI/view" target="_blank" rel="noopener">เปิดไฟล์</a></div></div></article><article class="dcard"><button type="button" class="dthumb" data-pv="https://drive.google.com/file/d/1djUKzkpvyMvQxhDvC0fcC1GZIsGd0SBo/view" aria-label="ดูตัวอย่าง รายงานผลการพัฒนาผู้เรียน ว30114 วิทยาศาสตร์โลกและอวกาศ ม.6"><img src="assets/prev/g_1djUKzkpvyMvQxhDvC0fcC1GZIsGd0SBo/t.jpg" alt="" loading="lazy" width="420" height="594"><span class="dpg">Google Drive</span></button><div class="dbody"><span class="dsub">ว30114</span><h4 class="dt" title="รายงานผลการพัฒนาผู้เรียน ว30114 วิทยาศาสตร์โลกและอวกาศ ม.6">รายงานผลการพัฒนาผู้เรียน ว30114 วิทยาศาสตร์โลกและอวกาศ ม.6</h4><span class="dm">Google Drive</span><div class="dact"><button type="button" class="lnk" data-pv="https://drive.google.com/file/d/1djUKzkpvyMvQxhDvC0fcC1GZIsGd0SBo/view">ดูตัวอย่าง</button><a href="https://drive.google.com/file/d/1djUKzkpvyMvQxhDvC0fcC1GZIsGd0SBo/view" target="_blank" rel="noopener">เปิดไฟล์</a></div></div></article><article class="dcard"><button type="button" class="dthumb" data-pv="https://drive.google.com/file/d/1sMnVZF963bdzLyRH6ohTHQ-XyyXdwowO/view" aria-label="ดูตัวอย่าง รายงานผลการพัฒนาผู้เรียน I30201 การศึกษาค้นคว้าและสร้างองค์ความรู้ ม.5"><img src="assets/prev/g_1sMnVZF963bdzLyRH6ohTHQ-XyyXdwowO/t.jpg" alt="" loading="lazy" width="420" height="594"><span class="dpg">Google Drive</span></button><div class="dbody"><span class="dsub">I30201</span><h4 class="dt" title="รายงานผลการพัฒนาผู้เรียน I30201 การศึกษาค้นคว้าและสร้างองค์ความรู้ ม.5">รายงานผลการพัฒนาผู้เรียน I30201 การศึกษาค้นคว้าและสร้างองค์ความรู้ ม.5</h4><span class="dm">Google Drive</span><div class="dact"><button type="button" class="lnk" data-pv="https://drive.google.com/file/d/1sMnVZF963bdzLyRH6ohTHQ-XyyXdwowO/view">ดูตัวอย่าง</button><a href="https://drive.google.com/file/d/1sMnVZF963bdzLyRH6ohTHQ-XyyXdwowO/view" target="_blank" rel="noopener">เปิดไฟล์</a></div></div></article></div></div><div class="dgroup2"><h3>วิจัยในชั้นเรียนและนวัตกรรม<span class="n tnum">4</span></h3><div class="cards"><article class="dcard"><button type="button" class="dthumb" data-pv="https://drive.google.com/file/d/1HYNhoixUTa8DSVOT7fbaTIXPUVnjAF_L/view" aria-label="ดูตัวอย่าง งานวิจัยหน้าเดียว การจัดการเรียนรู้เชิงรุกด้วย iEXP Model"><img src="assets/prev/g_1HYNhoixUTa8DSVOT7fbaTIXPUVnjAF_L/t.jpg" alt="" loading="lazy" width="420" height="594"><span class="dpg">Google Drive</span></button><div class="dbody"><h4 class="dt" title="งานวิจัยหน้าเดียว การจัดการเรียนรู้เชิงรุกด้วย iEXP Model">งานวิจัยหน้าเดียว การจัดการเรียนรู้เชิงรุกด้วย iEXP Model</h4><span class="dm">Google Drive</span><div class="dact"><button type="button" class="lnk" data-pv="https://drive.google.com/file/d/1HYNhoixUTa8DSVOT7fbaTIXPUVnjAF_L/view">ดูตัวอย่าง</button><a href="https://drive.google.com/file/d/1HYNhoixUTa8DSVOT7fbaTIXPUVnjAF_L/view" target="_blank" rel="noopener">เปิดไฟล์</a></div></div></article><article class="dcard"><button type="button" class="dthumb" data-pv="https://drive.google.com/file/d/105TXRCzx4bMgFdMSXHFmI91jcbMIdt2f/view" aria-label="ดูตัวอย่าง เค้าโครงการวิจัยในชั้นเรียน iEXP Model"><img src="assets/prev/g_105TXRCzx4bMgFdMSXHFmI91jcbMIdt2f/t.jpg" alt="" loading="lazy" width="420" height="594"><span class="dpg">Google Drive</span></button><div class="dbody"><h4 class="dt" title="เค้าโครงการวิจัยในชั้นเรียน iEXP Model">เค้าโครงการวิจัยในชั้นเรียน iEXP Model</h4><span class="dm">Google Drive</span><div class="dact"><button type="button" class="lnk" data-pv="https://drive.google.com/file/d/105TXRCzx4bMgFdMSXHFmI91jcbMIdt2f/view">ดูตัวอย่าง</button><a href="https://drive.google.com/file/d/105TXRCzx4bMgFdMSXHFmI91jcbMIdt2f/view" target="_blank" rel="noopener">เปิดไฟล์</a></div></div></article><article class="dcard"><button type="button" class="dthumb" data-pv="docs/2569-1/iexp-best-practice.pdf" aria-label="ดูตัวอย่าง รายงานผลการปฏิบัติที่เป็นเลิศ (Best Practice) iEXP Model ชุดประสบการณ์เรียนรู้แบบลูปซ้อนลูป"><img src="assets/prev/2569-1_iexp-best-practice/t.jpg" alt="" loading="lazy" width="420" height="544"><span class="dpg">61 หน้า</span></button><div class="dbody"><h4 class="dt" title="รายงานผลการปฏิบัติที่เป็นเลิศ (Best Practice) iEXP Model ชุดประสบการณ์เรียนรู้แบบลูปซ้อนลูป">รายงานผลการปฏิบัติที่เป็นเลิศ (Best Practice) iEXP Model ชุดประสบการณ์เรียนรู้แบบลูปซ้อนลูป</h4><span class="dm">PDF · 61 หน้า · 8.2 MB</span><div class="dact"><button type="button" class="lnk" data-pv="docs/2569-1/iexp-best-practice.pdf">ดูตัวอย่าง</button><a href="docs/2569-1/iexp-best-practice.pdf" target="_blank" rel="noopener">เปิดไฟล์</a></div></div></article><article class="dcard"><button type="button" class="dthumb" data-pv="docs/2569-1/iexp-manual.pdf" aria-label="ดูตัวอย่าง คู่มือการใช้นวัตกรรม iEXP Model"><img src="assets/prev/2569-1_iexp-manual/t.jpg" alt="" loading="lazy" width="420" height="594"><span class="dpg">29 หน้า</span></button><div class="dbody"><h4 class="dt" title="คู่มือการใช้นวัตกรรม iEXP Model">คู่มือการใช้นวัตกรรม iEXP Model</h4><span class="dm">PDF · 29 หน้า · 3.5 MB</span><div class="dact"><button type="button" class="lnk" data-pv="docs/2569-1/iexp-manual.pdf">ดูตัวอย่าง</button><a href="docs/2569-1/iexp-manual.pdf" target="_blank" rel="noopener">เปิดไฟล์</a></div></div></article></div></div><div class="dgroup2"><h3>สื่อและใบงาน<span class="n tnum">3</span></h3><div class="cards"><article class="dcard"><button type="button" class="dthumb" data-pv="docs/2569-1/worksheets-physics3.pdf" aria-label="ดูตัวอย่าง เอกสารประกอบการเรียนและใบงานฟิสิกส์ เรื่อง คลื่นกล"><img src="assets/prev/2569-1_worksheets-physics3/t.jpg" alt="" loading="lazy" width="420" height="595"><span class="dpg">47 หน้า</span></button><div class="dbody"><h4 class="dt" title="เอกสารประกอบการเรียนและใบงานฟิสิกส์ เรื่อง คลื่นกล">เอกสารประกอบการเรียนและใบงานฟิสิกส์ เรื่อง คลื่นกล</h4><span class="dm">PDF · 47 หน้า</span><div class="dact"><button type="button" class="lnk" data-pv="docs/2569-1/worksheets-physics3.pdf">ดูตัวอย่าง</button><a href="docs/2569-1/worksheets-physics3.pdf" target="_blank" rel="noopener">เปิดไฟล์</a></div></div></article><article class="dcard"><button type="button" class="dthumb" data-pv="docs/2569-1/worksheets-earthspace.pdf" aria-label="ดูตัวอย่าง ชุดใบงานวิทยาศาสตร์โลกและอวกาศ ใบงานที่ 1–10 และใบงานชวนคิดจากภาพยนตร์"><img src="assets/prev/2569-1_worksheets-earthspace/t.jpg" alt="" loading="lazy" width="420" height="594"><span class="dpg">26 หน้า</span></button><div class="dbody"><h4 class="dt" title="ชุดใบงานวิทยาศาสตร์โลกและอวกาศ ใบงานที่ 1–10 และใบงานชวนคิดจากภาพยนตร์">ชุดใบงานวิทยาศาสตร์โลกและอวกาศ ใบงานที่ 1–10 และใบงานชวนคิดจากภาพยนตร์</h4><span class="dm">PDF · 26 หน้า · 2.4 MB</span><div class="dact"><button type="button" class="lnk" data-pv="docs/2569-1/worksheets-earthspace.pdf">ดูตัวอย่าง</button><a href="docs/2569-1/worksheets-earthspace.pdf" target="_blank" rel="noopener">เปิดไฟล์</a></div></div></article><article class="dcard"><button type="button" class="dthumb" data-pv="docs/2569-1/activities-is1.pdf" aria-label="ดูตัวอย่าง ใบกิจกรรมค้นหาหัวข้อโครงงานและไทม์ไลน์โครงงาน IS1"><img src="assets/prev/2569-1_activities-is1/t.jpg" alt="" loading="lazy" width="420" height="594"><span class="dpg">11 หน้า</span></button><div class="dbody"><h4 class="dt" title="ใบกิจกรรมค้นหาหัวข้อโครงงานและไทม์ไลน์โครงงาน IS1">ใบกิจกรรมค้นหาหัวข้อโครงงานและไทม์ไลน์โครงงาน IS1</h4><span class="dm">PDF · 11 หน้า</span><div class="dact"><button type="button" class="lnk" data-pv="docs/2569-1/activities-is1.pdf">ดูตัวอย่าง</button><a href="docs/2569-1/activities-is1.pdf" target="_blank" rel="noopener">เปิดไฟล์</a></div></div></article></div></div><div class="dgroup2"><h3>PLC นิเทศ และงานครูที่ปรึกษา<span class="n tnum">4</span></h3><div class="cards"><article class="dcard"><button type="button" class="dthumb" data-pv="docs/2569-1/plc-report.pdf" aria-label="ดูตัวอย่าง รายงานกิจกรรมชุมชนแห่งการเรียนรู้ทางวิชาชีพ (PLC) ภาคเรียนที่ 1/2569 กลุ่มฟิสิกส์และดาราศาสตร์"><img src="assets/prev/2569-1_plc-report/t.jpg" alt="" loading="lazy" width="420" height="594"><span class="dpg">69 หน้า</span></button><div class="dbody"><h4 class="dt" title="รายงานกิจกรรมชุมชนแห่งการเรียนรู้ทางวิชาชีพ (PLC) ภาคเรียนที่ 1/2569 กลุ่มฟิสิกส์และดาราศาสตร์">รายงานกิจกรรมชุมชนแห่งการเรียนรู้ทางวิชาชีพ (PLC) ภาคเรียนที่ 1/2569 กลุ่มฟิสิกส์และดาราศาสตร์</h4><span class="dm">PDF · 69 หน้า · 8.8 MB</span><div class="dact"><button type="button" class="lnk" data-pv="docs/2569-1/plc-report.pdf">ดูตัวอย่าง</button><a href="docs/2569-1/plc-report.pdf" target="_blank" rel="noopener">เปิดไฟล์</a></div></div></article><article class="dcard"><button type="button" class="dthumb" data-pv="docs/2569-1/supervision-photos.pdf" aria-label="ดูตัวอย่าง ภาพประกอบการนิเทศการจัดการเรียนการสอน (5 สิงหาคม 2569)"><img src="assets/prev/2569-1_supervision-photos/t.jpg" alt="" loading="lazy" width="420" height="595"><span class="dpg">1 หน้า</span></button><div class="dbody"><h4 class="dt" title="ภาพประกอบการนิเทศการจัดการเรียนการสอน (5 สิงหาคม 2569)">ภาพประกอบการนิเทศการจัดการเรียนการสอน (5 สิงหาคม 2569)</h4><span class="dm">PDF · 1 หน้า · 2.1 MB</span><div class="dact"><button type="button" class="lnk" data-pv="docs/2569-1/supervision-photos.pdf">ดูตัวอย่าง</button><a href="docs/2569-1/supervision-photos.pdf" target="_blank" rel="noopener">เปิดไฟล์</a></div></div></article><article class="dcard"><button type="button" class="dthumb" data-pv="docs/2569-1/plc-photos.pdf" aria-label="ดูตัวอย่าง ภาพประกอบกิจกรรม PLC ภาคเรียนที่ 1/2569"><img src="assets/prev/2569-1_plc-photos/t.jpg" alt="" loading="lazy" width="420" height="595"><span class="dpg">3 หน้า</span></button><div class="dbody"><h4 class="dt" title="ภาพประกอบกิจกรรม PLC ภาคเรียนที่ 1/2569">ภาพประกอบกิจกรรม PLC ภาคเรียนที่ 1/2569</h4><span class="dm">PDF · 3 หน้า</span><div class="dact"><button type="button" class="lnk" data-pv="docs/2569-1/plc-photos.pdf">ดูตัวอย่าง</button><a href="docs/2569-1/plc-photos.pdf" target="_blank" rel="noopener">เปิดไฟล์</a></div></div></article><article class="dcard"><button type="button" class="dthumb" data-pv="docs/2569-1/homeroom-journal.pdf" aria-label="ดูตัวอย่าง วารสารห้องเรียน ม.5/4 ภาคเรียนที่ 1/2569"><img src="assets/prev/2569-1_homeroom-journal/t.jpg" alt="" loading="lazy" width="420" height="595"><span class="dpg">28 หน้า</span></button><div class="dbody"><h4 class="dt" title="วารสารห้องเรียน ม.5/4 ภาคเรียนที่ 1/2569">วารสารห้องเรียน ม.5/4 ภาคเรียนที่ 1/2569</h4><span class="dm">PDF · 28 หน้า · 9.5 MB</span><div class="dact"><button type="button" class="lnk" data-pv="docs/2569-1/homeroom-journal.pdf">ดูตัวอย่าง</button><a href="docs/2569-1/homeroom-journal.pdf" target="_blank" rel="noopener">เปิดไฟล์</a></div></div></article></div></div></div>
+        <div class="docket-foot"><span>ภาคเรียนอื่นดูได้ที่</span><a href="#archive">คลังเอกสารหลักฐานแยกตามภาคเรียน</a><span class="upd">ปรับปรุงล่าสุด 20 ตุลาคม 2569</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROFILE ===== -->
+  <section class="block" id="profile">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="scale" aria-hidden="true"></div>
+        <div class="eyebrow">Profile</div>
+        <h2>ประวัติและเส้นทางวิชาชีพ</h2>
+        <p>ครูฟิสิกส์ที่จบการศึกษาด้านการวัด ประเมิน และวิจัยการศึกษา ทำงานทั้งในห้องเรียนและในระบบงานวัดผลของโรงเรียน ใช้ข้อมูลและงานวิจัยเป็นฐานในการพัฒนาผู้เรียน</p>
+      </div>
+      <div class="about-grid">
+        <div class="panel">
+          <h3>การศึกษา</h3>
+          <ul class="edu">
+            <li><span class="yr">2567</span><div><b>การศึกษามหาบัณฑิต (กศ.ม.) สาขาวิชาการวัด ประเมิน และวิจัยการศึกษา</b><span>คณะศึกษาศาสตร์ มหาวิทยาลัยศรีนครินทรวิโรฒ · สภามหาวิทยาลัยอนุมัติปริญญา 3 กันยายน 2567</span></div></li>
+            <li><span class="yr">กศ.บ.</span><div><b>การศึกษาบัณฑิต (หลักสูตร 5 ปี) วิทยาศาสตร์–ฟิสิกส์</b><span>คณะวิทยาศาสตร์ มหาวิทยาลัยศรีนครินทรวิโรฒ</span></div></li>
+            <li><span class="yr">ม.ปลาย</span><div><b>โรงเรียนเบญจมราชูทิศ จังหวัดจันทบุรี</b><span>แผนการเรียนวิทยาศาสตร์</span></div></li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>ภาระงานในปัจจุบัน</h3>
+          <ul class="roles">
+            <li>สอนรายวิชาฟิสิกส์เพิ่มเติม 3–4 วิทยาศาสตร์โลกและอวกาศ และการศึกษาค้นคว้าด้วยตนเอง (IS)</li>
+            <li>รองประธานกรรมการงานวัดผลประเมินผล และเลขานุการงานวัดผลประเมินผลและการเทียบโอนผลการเรียนรู้</li>
+            <li>เลขานุการกลุ่มบริหารวิชาการ</li>
+            <li>กรรมการและเลขานุการกิจกรรมยกระดับผลสัมฤทธิ์ทางการเรียน</li>
+            <li>ผู้รับผิดชอบกิจกรรมพัฒนานักเรียนกลุ่มเสี่ยงต่อการไม่จบหลักสูตร</li>
+            <li>ครูที่ปรึกษาชั้นมัธยมศึกษาปีที่ 5/4</li>
+            <li>ครูที่ปรึกษาโครงงานและสิ่งประดิษฐ์ของนักเรียน และผู้ฝึกสอนฟุตซอลคณะสีกระดังงา</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="panel ruler-box">
+        <h3>เส้นทางรับราชการ 2557–2569</h3>
+        <div class="ruler-scroll">
+          <div class="ruler" id="ruler" role="img" aria-label="ไม้บรรทัดปี พ.ศ. 2557 ถึง 2569 แสดงปีที่มีเหตุการณ์สำคัญ"></div>
+        </div>
+        <ul class="timeline">
+          <li><span class="y">2557</span><p>บรรจุและแต่งตั้งเป็นครู โรงเรียนประณีตวิทยาคม จังหวัดตราด (27 พฤษภาคม 2557)</p></li>
+          <li><span class="y">2561</span><p>ได้รับทุนโครงการวิจัยและพัฒนานวัตกรรมแลกเป้า สพฐ. และนำเสนอผลงานวิจัยระดับชาติที่มหาวิทยาลัยศิลปากร</p></li>
+          <li><span class="y">2563</span><p>ตีพิมพ์ผลงานในวารสารวิชาการของมหาวิทยาลัยศิลปากร เป็นวิทยากรภายนอก และเริ่มศึกษาระดับปริญญาโท มศว</p></li>
+          <li><span class="y">2564</span><p>ย้ายมาปฏิบัติหน้าที่ครู โรงเรียนพรตพิทยพยัต กรุงเทพมหานคร (12 มีนาคม 2564)</p></li>
+          <li><span class="y">2566</span><p>นำเสนอบทความวิจัยภาคบรรยาย การประชุมวิชาการระดับชาติ สมาคมวิจัยสังคมศาสตร์แห่งประเทศไทย</p></li>
+          <li><span class="y">2567</span><p>สำเร็จการศึกษา กศ.ม. การวัด ประเมิน และวิจัยการศึกษา มหาวิทยาลัยศรีนครินทรวิโรฒ</p></li>
+          <li><span class="y">2568</span><p>นำทีมนักเรียนคว้าเหรียญเงิน I-New Gen Award 2025 และได้รับวิทยฐานะครูชำนาญการพิเศษ</p></li>
+          <li><span class="y">2569</span><p>นวัตกรรม iEXP Model ได้รับรางวัล Best Practice ระดับดีเยี่ยม และได้รับโล่ครูที่มีผลงานดีเด่น ด้านการดูแลช่วยเหลือนักเรียน</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WORKS ===== -->
+  <section class="block" id="works">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="scale" aria-hidden="true"></div>
+        <div class="eyebrow">Selected Works</div>
+        <h2>ผลงานเด่น</h2>
+        <p>นวัตกรรมการจัดการเรียนรู้ ระบบงานวัดผลดิจิทัล และสิ่งประดิษฐ์ที่ทำร่วมกับนักเรียน พร้อมผลลัพธ์ที่วัดได้</p>
+      </div>
+
+      <article class="panel feature">
+        <div class="body">
+          <div class="tagrow"><span class="tag v">นวัตกรรมการจัดการเรียนรู้</span><span class="tag">ฟิสิกส์เพิ่มเติม 4 · ม.5/4</span><span class="tag">ภาคเรียนที่ 1/2569</span></div>
+          <h3>iEXP Model</h3>
+          <p class="alt">iterative EXPerience-based Physics Learning · ชุดประสบการณ์เรียนรู้แบบลูปซ้อนลูป (3 วงรอบ 5 การทดลอง) เพื่อเปลี่ยนผ่านแนวคิดนามธรรมสู่การปฏิบัติจริง เรื่อง ความต้านทานไฟฟ้าในวัสดุ</p>
+          <p class="lead">นักเรียนแทนค่าในสมการ R = ρL/A ได้ แต่อธิบายไม่ได้ว่าทำไมความต้านทานจึงขึ้นอยู่กับชนิด ความยาว และพื้นที่หน้าตัดของวัสดุ ช่องว่างระหว่างความเข้าใจเชิงแนวคิดกับเชิงกระบวนการนี้คือโจทย์ของนวัตกรรม ซึ่งสังเคราะห์จากทฤษฎีการเรียนรู้จากประสบการณ์ของ Kolb หลักสูตรแบบเกลียวของ Bruner การประเมินเพื่อการเรียนรู้ การสืบเสาะ และจิตตปัญญาศึกษา</p>
+          <div class="pillars">
+            <div><b>4i Pillars</b><span>เสาหลัก 4 ด้านของนวัตกรรม</span></div>
+            <div><b>Triple-Cycle</b><span>วัฏจักรการเรียนรู้ 3 วงรอบ</span></div>
+            <div><b>E → X → P</b><span>กระบวนการในแต่ละวงรอบ</span></div>
+          </div>
+          <div class="chart">
+            <h4>คะแนนเฉลี่ยก่อนเรียนและหลังเรียน (ร้อยละ, นักเรียน 40 คน)</h4>
+            <div class="bars">
+              <div class="barrow"><span>ก่อนเรียน</span><div class="track"><span class="fill" style="width:33%"></span></div><span class="v tnum">33.00</span></div>
+              <div class="barrow post"><span>หลังเรียน</span><div class="track"><span class="fill" style="width:84.53%"></span></div><span class="v tnum">84.53</span></div>
+              <div class="axis" aria-hidden="true"><span></span><div><span>0</span><span>25</span><span>50</span><span>75</span><span>100</span></div><span></span></div>
+            </div>
+          </div>
+          <div class="readings">
+            <div><b class="tnum">0.78</b><span>ดัชนีพัฒนาการสัมพัทธ์ (Hake) ระดับสูง</span></div>
+            <div><b class="tnum">8/8</b><span>กลุ่มผ่านเกณฑ์การประเมินแบบองค์รวม K-S-A</span></div>
+            <div><b class="tnum">4.76</b><span>ความพึงพอใจของผู้มีส่วนเกี่ยวข้อง 4 กลุ่ม (S.D. 0.39) ระดับมากที่สุด</span></div>
+          </div>
+          <ul class="honors">
+            <li><span class="lvl prov">จังหวัด</span><span>Best Practice นวัตกรรมด้านการจัดการเรียนรู้ ระดับดีเยี่ยม สำนักงานศึกษาธิการจังหวัดกรุงเทพมหานคร ปีงบประมาณ 2569</span></li>
+            <li><span class="lvl area">สหวิทยาเขต</span><span>ระดับดีเยี่ยม ลำดับที่ 1 ด้านนวัตกรรมการจัดการเรียนรู้ Active Learning สหวิทยาเขตวชิรบูรพา</span></li>
+            <li><span class="lvl">เผยแพร่</span><span>คลังสื่อ OBEC Content Center ของ สพฐ. และผ่านการกลั่นกรองในวง PLC 8 ครั้ง</span></li>
+          </ul>
+          <div class="links">
+            <a href="https://drive.google.com/file/d/1HYNhoixUTa8DSVOT7fbaTIXPUVnjAF_L/view" target="_blank" rel="noopener">งานวิจัยหน้าเดียว (PDF)</a>
+            <a href="https://drive.google.com/file/d/105TXRCzx4bMgFdMSXHFmI91jcbMIdt2f/view" target="_blank" rel="noopener">เค้าโครงการวิจัยในชั้นเรียน (PDF)</a>
+          </div>
+        </div>
+        <div class="media">
+          <button type="button" data-zoom="assets/img/w/iexp-mastermap.jpg" data-cap="Integrated Master Map ของ iEXP Model (Talk–Do–Check)"><img src="assets/img/w/iexp-mastermap.jpg" alt="แผนภาพ Integrated Master Map ของ iEXP Model" loading="lazy" width="1400" height="1979"></button>
+          <small>Integrated Master Map: PLC × IPOO × การประเมิน 3 ชั้น (Talk–Do–Check)</small>
+        </div>
+      </article>
+
+      <div class="works">
+        <article class="panel work">
+          <button type="button" class="cover" data-zoom="assets/img/w/prot-care-model.jpg" data-cap="PROT C.A.R.E. Model รูปแบบการลดภาระงานครูด้วยระบบนิเวศดิจิทัล โรงเรียนพรตพิทยพยัต"><img src="assets/img/w/prot-care-model.jpg" alt="แผนภาพ PROT C.A.R.E. Model" loading="lazy"></button>
+          <div class="in">
+            <div class="tagrow"><span class="tag v">งานวัดผลดิจิทัล</span><span class="tag">ระดับโรงเรียน</span></div>
+            <h3>PROT C.A.R.E. Model และ PROT EXAM</h3>
+            <p>ระบบนิเวศดิจิทัลของงานวัดผลที่ร่วมขับเคลื่อนในฐานะรองประธานงานวัดผล กรอกข้อมูลครั้งเดียวใช้ได้ทุกฝ่ายงาน สอบไร้กระดาษผ่านแอป PROT EXAM และให้นักเรียนกับผู้ปกครองดูผลการเรียนได้เองผ่าน PROT Student Care</p>
+            <div class="stats">
+              <div><b class="tnum">−83.33%</b><span>เวลาทำงานเอกสารของครู</span></div>
+              <div><b class="tnum">15 → 2 วัน</b><span>ระยะเวลาประกาศผลคะแนน</span></div>
+              <div><b class="tnum">300,000</b><span>แผ่นกระดาษที่ลดได้ต่อปี</span></div>
+              <div><b class="tnum">4.82</b><span>ความพึงพอใจของครู ระดับมากที่สุด</span></div>
+            </div>
+            <p class="meta">ข้อมูลจากสไลด์นำเสนอการศึกษาดูงานงานวัดผล ปีการศึกษา 2569 · ครู 157 คน นักเรียน 3,096 คน 492 รายวิชาต่อปี</p>
+          </div>
+        </article>
+
+        <article class="panel work">
+          <button type="button" class="cover" data-zoom="assets/img/w/zero-dropout.jpg" data-cap="PROT Zero Dropout Model ระบบดูแลนักเรียนกลุ่มเสี่ยงต่อการหลุดออกจากระบบการศึกษา"><img src="assets/img/w/zero-dropout.jpg" alt="แผนภาพ PROT Zero Dropout Model" loading="lazy"></button>
+          <div class="in">
+            <div class="tagrow"><span class="tag v">ดูแลช่วยเหลือนักเรียน</span><span class="tag">กิจกรรม 3.01</span></div>
+            <h3>PROT Zero Dropout Model</h3>
+            <p>ระบบติดตามนักเรียนกลุ่มเสี่ยงต่อการไม่จบหลักสูตร คัดกรองด้วยสัญญาณเตือน 3 ระดับ เปิดโอกาสแก้ 0 ร มส มผ ปีละ 5 รอบ และติดตามรายบุคคลจนได้รับวุฒิการศึกษา โดยยึดหลัก “ไม่ทิ้งใครไว้ข้างหลัง”</p>
+            <div class="stats">
+              <div><b class="tnum">98.00%</b><span>นักเรียน ม.3 จบหลักสูตร (ปีการศึกษา 2567)</span></div>
+              <div><b class="tnum">97.92%</b><span>นักเรียน ม.6 จบหลักสูตร (ปีการศึกษา 2567)</span></div>
+              <div><b class="tnum">70.84%</b><span>อัตราแก้ผลการเรียนสำเร็จ 2,526 จาก 3,566 รายการ</span></div>
+              <div><b class="tnum">5 รอบ</b><span>รอบแก้ผลการเรียนต่อปีตามปฏิทินวัดผล</span></div>
+            </div>
+            <p class="meta">สอดคล้องกับนโยบาย Thailand Zero Dropout</p>
+          </div>
+        </article>
+
+        <article class="panel work">
+          <button type="button" class="cover" data-zoom="assets/img/w/smartvibe-board.jpg" data-cap="บอร์ดนำเสนอ SmartVibe ระบบเฝ้าระวังและระบุตำแหน่งความเสียหายของโครงสร้างอาคารจากการสั่นสะเทือน"><img src="assets/img/w/smartvibe-cover.jpg" alt="ภาพปก SmartVibe ตรวจสุขภาพตึกจากการสั่นสะเทือน" loading="lazy"></button>
+          <div class="in">
+            <div class="tagrow"><span class="tag v">สิ่งประดิษฐ์ของนักเรียน</span><span class="tag">ฟิสิกส์ + IoT</span><span class="tag">2569</span></div>
+            <h3>SmartVibe ระบบตรวจสุขภาพโครงสร้างอาคารรายชั้น</h3>
+            <p>นักเรียน ม.6 วัดความถี่ธรรมชาติของอาคารจำลองด้วยเซนเซอร์ MPU-6050 บนบอร์ด ESP32-S3 ส่งข้อมูลขึ้น Firebase แล้ววิเคราะห์ด้วย FFT บนแดชบอร์ด เพื่อชี้ชั้นที่เสียหายเมื่อโครงสร้างหลวม นำฟิสิกส์เรื่องการสั่นและคลื่นกลมาใช้กับปัญหาแผ่นดินไหวในเมือง</p>
+            <p class="meta">ครูที่ปรึกษาหลัก · เข้ารอบชิงชนะเลิศ การประกวดสิ่งประดิษฐ์ทางวิทยาศาสตร์ งานวันวิทยาศาสตร์ 2569 คณะวิทยาศาสตร์ สจล. · ส่งประกวด KMUTT Science &amp; Technology Idea Contest 2569 และ I-New Gen Award 2027</p>
+          </div>
+        </article>
+
+        <article class="panel work">
+          <button type="button" class="cover" data-zoom="assets/img/w/smartpipe-poster.jpg" data-cap="E-poster SmartPipe รางวัลเหรียญเงิน I-New Gen Award 2025 กลุ่มการเกษตร"><img src="assets/img/w/smartpipe-poster.jpg" alt="โปสเตอร์ผลงาน SmartPipe" loading="lazy"></button>
+          <div class="in">
+            <div class="tagrow"><span class="tag g">เหรียญเงิน</span><span class="tag">ระดับประเทศ</span><span class="tag">2568</span></div>
+            <h3>SmartPipe ระบบตรวจจับการรั่วและพยากรณ์การใช้น้ำด้วย Machine Learning</h3>
+            <p>นักเรียน ม.5/5 จำนวน 6 คน ใช้เซนเซอร์วัดอัตราการไหลหลายจุดตามแนวท่อ หาตำแหน่งท่อรั่วจากผลต่างของอัตราการไหล และพยากรณ์ปริมาณการใช้น้ำ แจ้งเตือนผ่านแอปพลิเคชัน</p>
+            <p class="meta">ครูผู้คุมทีม · รางวัลเหรียญเงิน กลุ่มการเกษตร การประกวด Thailand New Gen Inventors Award 2025 (I-New Gen Award 2025) สำนักงานการวิจัยแห่งชาติ (วช.) งานวันนักประดิษฐ์ 2–6 กุมภาพันธ์ 2568 ณ ไบเทค</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TEACHING ===== -->
+  <section class="block" id="teaching">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="scale" aria-hidden="true"></div>
+        <div class="eyebrow">Teaching</div>
+        <h2>การจัดการเรียนรู้</h2>
+        <p>รายวิชาที่รับผิดชอบ แนวทางการสอน และผลสัมฤทธิ์ของผู้เรียนจากรายงานการประเมินตนเอง (SAR)</p>
+      </div>
+      <div class="teach-grid">
+        <div class="panel">
+          <h3>ภาระงานสอน ภาคเรียนที่ 2/2569</h3>
+          <div class="tbl-wrap">
+            <table>
+              <thead><tr><th>รหัส</th><th>รายวิชา</th><th>ห้องเรียน</th><th>คาบ/สัปดาห์</th></tr></thead>
+              <tbody>
+                <tr><td class="code">ว32204</td><td>ฟิสิกส์เพิ่มเติม 4 (เสียง ไฟฟ้าสถิต ไฟฟ้ากระแส)</td><td>ม.5/2 ม.5/4</td><td>3 ต่อห้อง</td></tr>
+                <tr><td class="code">ว30114</td><td>วิทยาศาสตร์โลกและอวกาศ</td><td>ม.4/8 ม.4/9 ม.4/10</td><td>3 ต่อห้อง</td></tr>
+                <tr><td class="code">I30202</td><td>การสื่อสารและการนำเสนอ (IS2)</td><td>ม.5/4</td><td>2</td></tr>
+                <tr><td class="code">—</td><td>ครูที่ปรึกษา</td><td>ม.5/4</td><td>—</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="muted" style="font-size:.84rem;margin-top:12px;line-height:1.65">รายวิชาที่สอนในภาคเรียนก่อนหน้า: ว32203 ฟิสิกส์เพิ่มเติม 3 · I30201 การศึกษาค้นคว้าและสร้างองค์ความรู้ (IS1) · ว30114 ระดับ ม.6 · ลูกเสือและกิจกรรมชุมนุม</p>
+        </div>
+        <div class="panel">
+          <h3>ผู้เรียนที่มีผลสัมฤทธิ์ระดับ 2.5 ขึ้นไป</h3>
+          <div class="ach" id="ach"></div>
+          <p class="muted" style="font-size:.8rem;margin-top:12px">ที่มา: รายงานการประเมินตนเอง (SAR) ปีการศึกษา 2567 และ 2568</p>
+        </div>
+      </div>
+      <div class="methods">
+        <div><h4>ประสบการณ์ก่อนสมการ</h4><p>ใช้การทดลองและแบบจำลองให้นักเรียนเห็นปรากฏการณ์ก่อน แล้วจึงสรุปเป็นความสัมพันธ์ทางคณิตศาสตร์ ตามแนว Kolb และการสืบเสาะ 5E</p></div>
+        <div><h4>สถานการณ์จำลองและสื่อเว็บ</h4><p>ใช้ PhET Interactive Simulations และพัฒนาแบบจำลอง HTML เอง เช่น ห้องปฏิบัติการแสงและกระจก ระบบสุริยะ และดาวฤกษ์ เพื่อแก้โจทย์ปัญหาเรื่องคลื่นและแสง</p></div>
+        <div><h4>ประเมินเพื่อพัฒนา</h4><p>ใช้ใบงานแบบไล่ระดับ แบบทดสอบคู่ขนานก่อนและหลังเรียน ตารางวิเคราะห์ข้อสอบ (Test Blueprint) และการสอบออนไลน์ผ่าน PROT EXAM</p></div>
+      </div>
+      <div class="sys">
+        <div class="sys-head"><h3>ระบบการเรียนรู้ออนไลน์ประจำรายวิชา ภาคเรียนที่ 2/2569</h3><p>ครูออกแบบเว็บไซต์ประจำรายวิชาบน GitHub Pages ทำงานร่วมกับ Google Sheets และ Apps Script ให้นักเรียนเข้าถึงแผนรายสัปดาห์ ใบงาน และผลการเรียนของตนเองได้ทุกที่</p></div>
+        <div class="sys-grid"><article class="sys-card"><button type="button" class="sys-shot" data-pv="https://watpolprot-cloud.github.io/p4-journey/" aria-label="ดูภาพหน้าเว็บไซต์ P4 Journey"><img src="assets/prev/site_p4-journey/t.jpg" alt="" loading="lazy" width="520" height="325"></button><div class="sys-b"><span class="dsub">ว32204 · ม.5/2 ม.5/4</span><h4>P4 Journey</h4><p>เว็บรายวิชาที่รวมแผนรายสัปดาห์ ใบงานไล่ระดับ Level และ Quiz ที่สอบใหม่ได้ นักเรียนติดตามคะแนน ผลการวินิจฉัย และพัฒนาการของตนเองได้ตลอดภาคเรียน</p><div class="dact"><a href="https://watpolprot-cloud.github.io/p4-journey/" target="_blank" rel="noopener">เปิดเว็บไซต์</a></div></div></article><article class="sys-card"><button type="button" class="sys-shot" data-pv="https://watpolprot-cloud.github.io/es-journey/" aria-label="ดูภาพหน้าเว็บไซต์ ES Journey"><img src="assets/prev/site_es-journey/t.jpg" alt="" loading="lazy" width="520" height="325"></button><div class="sys-b"><span class="dsub">ว30114 · ม.4/8–4/10</span><h4>ES Journey</h4><p>ภารกิจ 20 สัปดาห์สำรวจโลกและอวกาศ แต่ละห้องเป็นหนึ่งทีม มีใบงานภารกิจประจำคาบคู่และสถานการณ์จำลองบนเว็บประกอบการเรียน</p><div class="dact"><a href="https://watpolprot-cloud.github.io/es-journey/" target="_blank" rel="noopener">เปิดเว็บไซต์</a></div></div></article><article class="sys-card"><button type="button" class="sys-shot" data-pv="https://watpolprot-cloud.github.io/is2-the-pitch/" aria-label="ดูภาพหน้าเว็บไซต์ IS2 THE PITCH"><img src="assets/prev/site_is2-the-pitch/t.jpg" alt="" loading="lazy" width="520" height="325"></button><div class="sys-b"><span class="dsub">I30202 · ม.5/4</span><h4>IS2 THE PITCH</h4><p>ห้องเรียนแบบ Masterclass ต่อยอดโครงงานสิ่งประดิษฐ์จาก IS1 นักเรียนมีบทบาทในทีม 5 ตำแหน่ง และนำเสนอผลงานในงานเปิดบ้านวิชาการ</p><div class="dact"><a href="https://watpolprot-cloud.github.io/is2-the-pitch/" target="_blank" rel="noopener">เปิดเว็บไซต์</a></div></div></article></div>
+      </div>
+      <div class="photo-pair">
+        <button type="button" data-zoom="assets/img/w/classroom-1.jpg" data-cap="บรรยากาศชั้นเรียนฟิสิกส์ระหว่างรับการนิเทศ"><img src="assets/img/w/classroom-1.jpg" alt="ชั้นเรียนฟิสิกส์ นักเรียนทำกิจกรรมกลุ่ม" loading="lazy"></button>
+        <button type="button" data-zoom="assets/img/w/classroom-2.jpg" data-cap="ครูเดินดูการทำกิจกรรมกลุ่มของนักเรียน"><img src="assets/img/w/classroom-2.jpg" alt="ครูให้คำแนะนำนักเรียนระหว่างทำกิจกรรมกลุ่ม" loading="lazy"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESEARCH ===== -->
+  <section class="block" id="research">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="scale" aria-hidden="true"></div>
+        <div class="eyebrow">Research &amp; Innovation</div>
+        <h2>วิจัยและนวัตกรรม</h2>
+        <p>งานวิจัยในชั้นเรียน ปริญญานิพนธ์ และการเผยแพร่ผลงานในเวทีวิชาการ</p>
+      </div>
+      <ul class="research">
+        <li><span class="y">2569</span><div><h3>การพัฒนาการจัดการเรียนรู้เชิงรุกด้วย iEXP Model เพื่อเปลี่ยนผ่านแนวคิดนามธรรมสู่การปฏิบัติจริง เรื่อง ความต้านทานไฟฟ้าในวัสดุ ของนักเรียนชั้นมัธยมศึกษาปีที่ 5/4</h3><p>วิจัยในชั้นเรียน ภาคเรียนที่ 1/2569 · กลุ่มเป้าหมาย 40 คน · ดัชนีพัฒนาการสัมพัทธ์ 0.78</p></div><span class="kind">วิจัยในชั้นเรียน<a href="https://drive.google.com/file/d/1HYNhoixUTa8DSVOT7fbaTIXPUVnjAF_L/view" target="_blank" rel="noopener">เปิดไฟล์</a></span></li>
+        <li><span class="y">2568</span><div><h3>การพัฒนาการคิดอย่างมีวิจารณญาณ โดยใช้การเรียนรู้แบบร่วมมือกันผ่านประสบการณ์ รายวิชาฟิสิกส์เพิ่มเติม 4 เรื่อง กฎของโอห์ม ของนักเรียนชั้นมัธยมศึกษาปีที่ 5</h3><p>นวัตกรรม Active Learning ส่งเข้าร่วม REO2 MOE AWARDS ครั้งที่ 2 สำนักงานศึกษาธิการภาค 2</p></div><span class="kind">นวัตกรรม</span></li>
+        <li><span class="y">2565–2568</span><div><h3>ความสามารถในการแก้โจทย์ปัญหา เรื่อง คลื่นกล ของนักเรียนระดับชั้นมัธยมศึกษาปีที่ 5 โดยใช้คอมพิวเตอร์จำลองสถานการณ์เสริมการสอน</h3><p>วิจัยในชั้นเรียนต่อเนื่องหลายภาคเรียน ใช้ PhET Interactive Simulations ร่วมกับการสืบเสาะ 5E</p></div><span class="kind">วิจัยในชั้นเรียน<a href="https://drive.google.com/file/d/1_w2bYIxIu7Rrk2HBTY1TztHQS7vMrNEr/view" target="_blank" rel="noopener">เปิดไฟล์</a></span></li>
+        <li><span class="y">2567</span><div><h3>การพัฒนาหน่วยการเรียนรู้ท้องถิ่นบนฐานความต้องการและการมีส่วนร่วมของชุมชน กรณีศึกษาตำบลประณีต จังหวัดตราด: การวิจัยแบบมีส่วนร่วมโดยชุมชนเป็นฐานแบบผสานวิธี</h3><p>ปริญญานิพนธ์ กศ.ม. มหาวิทยาลัยศรีนครินทรวิโรฒ · ผลการประเมินระดับดี · หน่วยการเรียนรู้ “การปลูกและดูแลต้นกล้าทุเรียนเบื้องต้น” ผู้เรียนมีความรู้ ทักษะกระบวนการทางวิทยาศาสตร์ และความใฝ่เรียนรู้หลังเรียนสูงขึ้นอย่างมีนัยสำคัญทางสถิติที่ระดับ .05</p></div><span class="kind">ปริญญานิพนธ์</span></li>
+        <li><span class="y">2566</span><div><h3>การวิเคราะห์ศักยภาพและความพร้อมในการจัดการศึกษาโดยชุมชน: กรณีศึกษาตำบลประณีต จังหวัดตราด</h3><p>นำเสนอภาคบรรยายและตีพิมพ์ในรายงานสืบเนื่อง การประชุมวิชาการระดับชาติเพื่อนำเสนอผลงานวิจัยคัดสรร ครั้งที่ 10 สมาคมวิจัยสังคมศาสตร์แห่งประเทศไทย 25 พฤศจิกายน 2566</p></div><span class="kind">Proceedings</span></li>
+        <li class="era">ช่วงรับราชการที่โรงเรียนประณีตวิทยาคม จังหวัดตราด</li>
+        <li><span class="y">2561–2563</span><div><h3>การพัฒนารูปแบบการจัดการเรียนการสอนด้วยโครงงานเป็นฐานร่วมกับแนวคิดจิตศึกษา ของครูโรงเรียนประณีตวิทยาคม</h3><p>งานวิจัยสถานศึกษาร่วมกับผู้อำนวยการโรงเรียน ได้รับทุนโครงการวิจัยและพัฒนานวัตกรรมแลกเป้า สพฐ. ปีงบประมาณ 2561 นำเสนอภาคบรรยายที่มหาวิทยาลัยศิลปากร และตีพิมพ์ในวารสารวิชาการของมหาวิทยาลัยศิลปากร ปี 2563</p></div><span class="kind">วิจัยสถานศึกษา<a href="https://drive.google.com/file/d/1jBF7M6femtKFYz_YMSfNvapKTz9pC2Dq/view" target="_blank" rel="noopener">รายงานการนำไปใช้</a></span></li>
+        <li><span class="y">2561</span><div><h3>การพัฒนาการใฝ่รู้ใฝ่เรียนและความมีวินัยในตนเองโดยใช้กระบวนการชุมชนการเรียนรู้ทางวิชาชีพ ของนักเรียนโรงเรียนประณีตวิทยาคม ประจำปีการศึกษา 2560</h3><p>นำเสนอแบบโปสเตอร์ การประชุมนำเสนอผลงานวิจัยระดับชาติและนานาชาติ มหาวิทยาลัยศิลปากร</p></div><span class="kind">นำเสนอผลงาน</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== AWARDS ===== -->
+  <section class="block" id="awards">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="scale" aria-hidden="true"></div>
+        <div class="eyebrow">Awards &amp; Recognition</div>
+        <h2>รางวัลและการยกย่อง</h2>
+        <p>เรียงจากปีล่าสุด ป้ายสีบอกระดับของรางวัล</p>
+      </div>
+      <div class="awards-grid">
+        <ul class="award-list">
+          <li><span class="y">2569</span><div><h3>โล่เกียรติคุณ ครูที่มีผลงานดีเด่น ด้านการดูแลช่วยเหลือนักเรียน</h3><p>สำนักงานคณะกรรมการการศึกษาขั้นพื้นฐาน ร่วมกับ สมาคมผู้ปกครองและครูแห่งประเทศไทย</p><span class="lvl nat">ระดับประเทศ</span></div></li>
+          <li><span class="y">2569</span><div><h3>Best Practice การพัฒนานวัตกรรมทางการศึกษา นวัตกรรมด้านการจัดการเรียนรู้ ระดับดีเยี่ยม</h3><p>สำนักงานศึกษาธิการจังหวัดกรุงเทพมหานคร ประจำปีงบประมาณ 2569 · ผลงาน iEXP Model</p><span class="lvl prov">ระดับจังหวัด</span></div></li>
+          <li><span class="y">2569</span><div><h3>ระดับดีเยี่ยม ลำดับที่ 1 ด้านนวัตกรรมการจัดการเรียนรู้ Active Learning</h3><p>สหวิทยาเขตวชิรบูรพา · ผลงาน iEXP Model</p><span class="lvl area">ระดับสหวิทยาเขต</span></div></li>
+          <li><span class="y">2568</span><div><h3>รางวัลเหรียญเงิน กลุ่มการเกษตร I-New Gen Award 2025</h3><p>สำนักงานการวิจัยแห่งชาติ (วช.) · ครูผู้คุมทีมผลงาน SmartPipe</p><span class="lvl nat">ระดับประเทศ</span></div></li>
+          <li><span class="y">2568</span><div><h3>เหรียญทอง รองชนะเลิศอันดับ 1 การประกวดโครงงานวิทยาศาสตร์ ประเภททดลอง ม.4–ม.6</h3><p>งานศิลปหัตถกรรมนักเรียน ครั้งที่ 73 สพม.กรุงเทพมหานคร เขต 2 · ครูผู้ควบคุม</p><span class="lvl area">ระดับเขตพื้นที่</span></div></li>
+          <li><span class="y">2568</span><div><h3>โล่ “ครูดีในดวงใจเพื่อนครู” อันดับที่ 1 และเหรียญ “ครูดีในดวงใจนักเรียน” ระดับชั้น ม.5 อันดับที่ 2</h3><p>กิจกรรมเชิดชูเกียรติ “เพชรแห่งพรต” ปีการศึกษา 2568 โรงเรียนพรตพิทยพยัต</p><span class="lvl">ระดับโรงเรียน</span></div></li>
+          <li><span class="y">2567</span><div><h3>โล่ “ครูดีในดวงใจเพื่อนครู” อันดับที่ 1 และ “ครูดีในดวงใจนักเรียน” ระดับชั้น ม.5</h3><p>กิจกรรมเชิดชูเกียรติ “เพชรแห่งพรต” ปีการศึกษา 2567</p><span class="lvl">ระดับโรงเรียน</span></div></li>
+          <li><span class="y">2566</span><div><h3>รางวัลครูดีในดวงใจเพื่อนครู และรางวัลหัวหน้าระดับยอดเยี่ยม</h3><p>กิจกรรมเชิดชูเกียรติ “เพชรแห่งพรต” ปีการศึกษา 2566</p><span class="lvl">ระดับโรงเรียน</span></div></li>
+          <li><span class="y">2563</span><div><h3>ชนะเลิศ ผลงานการจัดการเรียนรู้โดยใช้โครงงานเป็นฐาน (PBL)</h3><p>การประกวดผลงานการพัฒนาผู้เรียนให้มีทักษะแห่งศตวรรษที่ 21 มหกรรมวิชาการ Success Story SESA 17 Symposium 2020</p><span class="lvl area">ระดับเขตพื้นที่</span></div></li>
+          <li><span class="y">2561</span><div><h3>รางวัลคุณภาพระดับดีเยี่ยม และคะแนนชนะเลิศ ผลงานการขับเคลื่อนกระบวนการ PLC</h3><p>Success Story Symposium SESA 17 · S-S-S-S 2018</p><span class="lvl area">ระดับเขตพื้นที่</span></div></li>
+          <li><span class="y">สพม.17</span><div><h3>รองชนะเลิศอันดับ 1 งานวิจัยเชิงบริหาร ระดับดีเยี่ยม (87.00 คะแนน)</h3><p>การบริหารจัดการรูปแบบการจัดการเรียนการสอนด้วยโครงงานเป็นฐานร่วมกับแนวคิดจิตศึกษา</p><span class="lvl area">ระดับเขตพื้นที่</span></div></li>
+          <li><span class="y">ตราด</span><div><h3>เหรียญเงิน โครงงานบูรณาการ STEM ศึกษา (79 คะแนน)</h3><p>งานศิลปหัตถกรรมนักเรียน ระดับจังหวัด · ครูที่ปรึกษาโครงงาน</p><span class="lvl">ระดับจังหวัด</span></div></li>
+        </ul>
+        <div class="award-photos">
+          <figure><button type="button" data-zoom="assets/img/w/award-2569-stage.jpg" data-cap="รับโล่ครูที่มีผลงานดีเด่น ด้านการดูแลช่วยเหลือนักเรียน ปี 2569 ณ ศูนย์ประชุม NICE"><img src="assets/img/w/award-2569-stage.jpg" alt="ครูนพพลรับโล่บนเวที" loading="lazy"></button><figcaption>รับโล่ครูที่มีผลงานดีเด่น ด้านการดูแลช่วยเหลือนักเรียน 2569</figcaption></figure>
+          <figure><button type="button" data-zoom="assets/img/w/award-2569-plaque.jpg" data-cap="โล่เกียรติคุณ ครูที่มีผลงานดีเด่น ด้านการดูแลช่วยเหลือนักเรียน ประจำปี 2569"><img src="assets/img/w/award-2569-plaque.jpg" alt="ครูนพพลถือโล่เกียรติคุณและช่อดอกทานตะวัน" loading="lazy"></button><figcaption>โล่เกียรติคุณจาก สพฐ. ร่วมกับสมาคมผู้ปกครองและครูแห่งประเทศไทย</figcaption></figure>
+          <figure><button type="button" data-zoom="assets/img/g/2568-2b_025.jpg" data-cap="พิธีมอบโล่รางวัลเชิดชูเกียรติ เพชรแห่งพรต"><img src="assets/img/g/2568-2b_025.jpg" alt="รับโล่รางวัลเพชรแห่งพรตจากผู้บริหารบนเวที" loading="lazy"></button><figcaption>พิธีมอบโล่รางวัลเชิดชูเกียรติ “เพชรแห่งพรต”</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DEVELOPMENT ===== -->
+  <section class="block" id="development">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="scale" aria-hidden="true"></div>
+        <div class="eyebrow">Professional Practice</div>
+        <h2>บทบาทวิชาชีพและการพัฒนาตนเอง</h2>
+        <p>การเป็นวิทยากร งานคณะกรรมการระดับเขตพื้นที่ และการอบรมพัฒนาตนเองอย่างต่อเนื่อง</p>
+      </div>
+      <div class="dev-grid">
+        <div class="panel">
+          <h3>วิทยากรและผู้นำเสนอ</h3>
+          <ul class="dlist">
+            <li><span class="d">28 ต.ค. 2568 · 11 มี.ค. 2569</span>วิทยากรอบรมเชิงปฏิบัติการการจัดการเรียนการสอนการศึกษาค้นคว้าด้วยตนเอง (IS) บูรณาการ 5 กลุ่มสาระและแนวคิดสะเต็มศึกษา โรงเรียนฤทธิยะวรรณาลัย 2</li>
+            <li><span class="d">2569</span>นำเสนอระบบงานวัดผล PROT CARE แก่คณะศึกษาดูงาน และพิธีกรกิจกรรมสัปดาห์วิทยาศาสตร์</li>
+            <li><span class="d">22 ก.ค. 2563</span>วิทยากร “แนวทางการจัดกิจกรรมการเรียนรู้เพื่อสำนึก รักษ์ และภาคภูมิใจในชุมชน” วิทยาลัยนาฏศิลปจันทบุรี</li>
+            <li><span class="d">17 ก.ค. 2563</span>วิทยากรพัฒนาระบบประกันคุณภาพภายในและการจัดการเรียนรู้ด้วยจิตศึกษา โรงเรียนคชฌกูฏวิทยา</li>
+            <li><span class="d">2563</span>วิทยากรหลักต้อนรับคณะศึกษาดูงาน 3 คณะ และวิทยากรพัฒนาสติตามแนวคิดจิตศึกษาให้นักเรียนในจังหวัดจันทบุรี</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>คณะทำงานและกรรมการ</h3>
+          <ul class="dlist">
+            <li><span class="d">สพม.17</span>คณะทำงานพัฒนาข้อสอบวัดสมรรถนะการรู้เรื่องวิทยาศาสตร์ตามแนวทาง PISA ในฐานะตัวแทนครูวิทยาศาสตร์จังหวัดจันทบุรีและตราด</li>
+            <li><span class="d">สหวิทยาเขตเขาสมิง–บ่อไร่</span>คณะอนุกรรมการติดตาม ตรวจสอบ ประเมินผล และนิเทศการศึกษา รับผิดชอบด้านวิชาการ 7 โรงเรียน</li>
+            <li><span class="d">2558–2562</span>กรรมการประเมินผลงานสิ่งประดิษฐ์ทางวิทยาศาสตร์ งานศิลปหัตถกรรมนักเรียน</li>
+            <li><span class="d">โรงเรียนพรตพิทยพยัต</span>ผู้จัดการแข่งขัน STEM Cantilever Challenge “ยื่นสู่ความว่างเปล่า” สัปดาห์วิทยาศาสตร์ 2569 การประกวดโครงงานวิทยาศาสตร์ภายในโรงเรียน และกิจกรรม TCAS COACH</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>การอบรมพัฒนาตนเอง</h3>
+          <ul class="dlist">
+            <li><span class="d">16 ก.ย. 2569</span>การวิจัยและพัฒนา (R&amp;D) คุณภาพการเรียนการสอน เส้นทางสู่ผลงานทางวิชาการระดับครูเชี่ยวชาญ</li>
+            <li><span class="d">4 ก.พ. 2569</span>RESEARCH TO SUCCESS: เส้นทางสู่ครูเชี่ยวชาญด้วยการตีพิมพ์ผลงานวิชาการระดับมาตรฐาน</li>
+            <li><span class="d">23–24 มิ.ย. 2568</span>ธรรมนาวา “วัง” To ME การนิเทศความรู้และแนวปฏิบัติจิตศึกษา (Mind Education)</li>
+            <li><span class="d">ปีการศึกษา 2567</span>AI เพื่อพัฒนาสื่อและการจัดการเรียนรู้ · Education Innovation Best Practices · ฝึกหัวใจให้เห็นหัวใจ (หลักสูตรละ 8 ชั่วโมง)</li>
+            <li><span class="d">ปีการศึกษา 2566</span>Design-Based STEM Education · การวัดและประเมินผลการเรียนรู้ตัวชี้วัดระหว่างทางและปลายทาง · ครูไทยยุคใหม่ เข้าใจการเงิน</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ARCHIVE ===== -->
+  <section class="block" id="archive">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="scale" aria-hidden="true"></div>
+        <div class="eyebrow">Evidence Archive</div>
+        <h2>คลังเอกสารหลักฐานแยกตามภาคเรียน</h2>
+        <p>เลือกภาคเรียนเพื่อดูเอกสารของภาคเรียนนั้น หรือพิมพ์ชื่อเอกสารเพื่อค้นหาจากทุกภาคเรียน</p>
+      </div>
+      <div class="arch-tools">
+        <div class="sem-tabs" id="semTabs" role="tablist" aria-label="เลือกภาคเรียน"></div>
+        <input id="archQ" type="search" placeholder="ค้นหาชื่อเอกสารจากทุกภาคเรียน" aria-label="ค้นหาชื่อเอกสาร">
+        <span class="arch-count" id="archCount"></span>
+      </div>
+      <div id="archBody"></div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY ===== -->
+  <section class="block" id="gallery">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="scale" aria-hidden="true"></div>
+        <div class="eyebrow">Gallery</div>
+        <h2>ภาพกิจกรรม</h2>
+        <p>ภาพคัดสรรจากอัลบัมรายภาคเรียน กดที่ภาพเพื่อดูขนาดใหญ่</p>
+      </div>
+      <div class="tabs" id="galTabs" role="tablist" aria-label="เลือกภาคเรียน"></div>
+      <div class="gal-head"><h3 id="galTitle"></h3><a id="galLink" href="#" target="_blank" rel="noopener">ดูอัลบัมเต็มบน Facebook</a></div>
+      <div class="gallery" id="galGrid"></div>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Contact</div>
+      <h2>ครูนพพล ภาณุสุวัฒน์</h2>
+      <p style="margin-top:10px">กลุ่มสาระการเรียนรู้วิทยาศาสตร์และเทคโนโลยี โรงเรียนพรตพิทยพยัต<br>เลขที่ 4 ถนนหลวงพรต แขวงลาดกระบัง เขตลาดกระบัง กรุงเทพมหานคร 10520</p>
+    </div>
+    <div>
+      <div class="eyebrow">ช่องทางติดต่อ</div>
+      <ul>
+        <li>อีเมล <span id="mail">noppol.panusuwat@gmail.com</span><button type="button" class="copybtn" data-copy="noppol.panusuwat@gmail.com">คัดลอก</button></li>
+        <li>โทรศัพท์โรงเรียน 0-2326-9997</li>
+        <li><a href="https://www.facebook.com/noppon.letter" target="_blank" rel="noopener">Facebook นพพล ภาณุสุวัฒน์</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="eyebrow">แหล่งข้อมูล</div>
+      <ul>
+        <li><a href="https://drive.google.com/drive/folders/1VXKXSW_1gRPt4XmLZM_hTc_EHMdNdram" target="_blank" rel="noopener">แฟ้ม E-Portfolio บน Google Drive</a></li>
+        <li><a href="https://www.prot.ac.th" target="_blank" rel="noopener">เว็บไซต์โรงเรียนพรตพิทยพยัต</a></li>
+      </ul>
+    </div>
+    <div class="copy">ปรับปรุงข้อมูลล่าสุด 20 ตุลาคม 2569</div>
+  </div>
+</footer>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="ภาพขยาย">
+  <button type="button" class="lb-close" id="lbClose">ปิด</button>
+  <img id="lbImg" alt="">
+  <div class="lb-bar">
+    <button type="button" id="lbPrev">ก่อนหน้า</button>
+    <div class="lb-cap" id="lbCap"></div>
+    <button type="button" id="lbNext">ถัดไป</button>
+  </div>
+</div>
+
+<div class="pv" id="pv" hidden role="dialog" aria-modal="true" aria-labelledby="pvTitle">
+  <div class="pv-box">
+    <div class="pv-head">
+      <div class="pv-ht"><span class="pv-meta" id="pvMeta"></span><h3 id="pvTitle"></h3></div>
+      <button type="button" id="pvClose">ปิด</button>
+    </div>
+    <div class="pv-body" id="pvBody">
+      <div class="pv-stage" id="pvStage"><img id="pvImg" alt=""></div>
+      <div class="pv-strip" id="pvStrip" aria-label="เลือกหน้าตัวอย่าง"></div>
+    </div>
+    <div class="pv-foot">
+      <span class="pv-note" id="pvNote"></span>
+      <div class="pv-nav"><button type="button" id="pvPrev">หน้าก่อน</button><span class="pv-pos" id="pvPos"></span><button type="button" id="pvNext">หน้าถัดไป</button></div>
+      <a class="btn primary" id="pvOpen" href="#" target="_blank" rel="noopener">เปิดไฟล์ฉบับเต็ม</a>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  /* ---------- career ruler ---------- */
+  var ruler=document.getElementById('ruler');
+  var y0=2557,y1=2569,ev={2557:1,2561:1,2563:1,2564:1,2566:1,2567:1,2568:2,2569:2};
+  var html='<div class="bar"></div>';
+  function pos(y){return (y-y0)/(y1-y0)*96+2;}
+  html+='<span class="span-label" style="left:'+pos(2557)+'%;width:'+(pos(2564)-pos(2557))+'%">ประณีตวิทยาคม · ตราด</span>';
+  html+='<span class="span-label" style="left:'+pos(2564)+'%;width:'+(pos(2569)-pos(2564))+'%">พรตพิทยพยัต · กรุงเทพมหานคร</span>';
+  for(var y=y0;y<=y1;y++){
+    var c='yr'+(ev[y]?' ev':'')+(ev[y]===2?' gold':'');
+    html+='<span class="'+c+'" style="left:'+pos(y)+'%"><i></i><span>'+y+'</span></span>';
+  }
+  ruler.innerHTML=html;
+
+  /* ---------- achievement chart (SAR) ---------- */
+  var ach=[
+    {g:'SAR ปีการศึกษา 2567'},
+    {l:'ฟิสิกส์เพิ่มเติม 3',s:'ภาคเรียนที่ 1 · 83 คน',v:99},
+    {l:'วิทยาศาสตร์โลกและอวกาศ',s:'ภาคเรียนที่ 1 · 113 คน',v:100},
+    {l:'ฟิสิกส์เพิ่มเติม 4',s:'ภาคเรียนที่ 2 · 83 คน',v:99},
+    {l:'วิทยาศาสตร์โลกและอวกาศ',s:'ภาคเรียนที่ 2 · 117 คน',v:96},
+    {g:'SAR ปีการศึกษา 2568'},
+    {l:'วิทยาศาสตร์โลกและอวกาศ',s:'ภาคเรียนที่ 1 · 105 คน',v:98.10},
+    {l:'ฟิสิกส์เพิ่มเติม 3',s:'ภาคเรียนที่ 1 · 65 คน',v:100},
+    {l:'IS1 (I30201)',s:'ภาคเรียนที่ 1 · 40 คน',v:100},
+    {l:'วิทยาศาสตร์โลกและอวกาศ',s:'ภาคเรียนที่ 2 · 116 คน',v:96.55},
+    {l:'ฟิสิกส์เพิ่มเติม 4',s:'ภาคเรียนที่ 2 · 65 คน',v:100}
+  ];
+  document.getElementById('ach').innerHTML=ach.map(function(a){
+    if(a.g) return '<div class="grp">'+a.g+'</div>';
+    var t=(a.v%1?a.v.toFixed(2):a.v)+'%';
+    return '<div class="row"><span class="lab">'+a.l+'<small>'+a.s+'</small></span><span class="t" role="img" aria-label="'+t+'"><i style="width:'+a.v+'%"></i></span><b class="tnum">'+t+'</b></div>';
+  }).join('');
+
+  /* ---------- archive (by semester) ---------- */
+  var docs=[["2/2569", "หลักสูตรและแผนการจัดการเรียนรู้", "โครงสร้างรายวิชาฟิสิกส์เพิ่มเติม 4 (ว32204) ชั้นมัธยมศึกษาปีที่ 5", "docs/2569-2/structure-physics4.pdf", "PDF · 24 หน้า", "ว32204 · ม.5/2 ม.5/4"], ["2/2569", "หลักสูตรและแผนการจัดการเรียนรู้", "โครงสร้างรายวิชาวิทยาศาสตร์โลกและอวกาศ (ว30114) ชั้นมัธยมศึกษาปีที่ 4", "docs/2569-2/structure-earthspace.pdf", "PDF · 21 หน้า", "ว30114 · ม.4/8–4/10"], ["2/2569", "หลักสูตรและแผนการจัดการเรียนรู้", "โครงสร้างรายวิชาการสื่อสารและการนำเสนอ (I30202) IS2 THE PITCH", "docs/2569-2/structure-is2.pdf", "PDF · 16 หน้า", "I30202 · ม.5/4"], ["2/2569", "หลักสูตรและแผนการจัดการเรียนรู้", "แผนการจัดการเรียนรู้ ฟิสิกส์เพิ่มเติม 4 ภาคเรียนที่ 2/2569 (36 แผน ฉบับรวมเล่ม)", "docs/2569-2/lesson-plan-physics4.pdf", "PDF · 364 หน้า · 7.4 MB", "ว32204 · ม.5/2 ม.5/4"], ["2/2569", "หลักสูตรและแผนการจัดการเรียนรู้", "คู่มือการจัดการเรียนรู้รายสัปดาห์ IS2 THE PITCH สัปดาห์ที่ 1–19", "docs/2569-2/is2-weekly-teaching-guides.pdf", "PDF · 102 หน้า · 3.6 MB", "I30202 · ม.5/4"], ["2/2569", "การวิเคราะห์ผู้เรียนรายบุคคล", "รายงานผลการวิเคราะห์ผู้เรียน ว32204 ฟิสิกส์เพิ่มเติม 4 ม.5", "docs/2569-2/analysis-physics4.pdf", "PDF · 5 หน้า", "ว32204 · ม.5/2 ม.5/4"], ["2/2569", "การวิเคราะห์ผู้เรียนรายบุคคล", "รายงานผลการวิเคราะห์ผู้เรียน ว30114 วิทยาศาสตร์โลกและอวกาศ ม.4", "docs/2569-2/analysis-earthspace-m4.pdf", "PDF · 7 หน้า", "ว30114 · ม.4/8–4/10"], ["2/2569", "การวิเคราะห์ผู้เรียนรายบุคคล", "รายงานผลการวิเคราะห์ผู้เรียน I30202 การสื่อสารและการนำเสนอ (IS2) ม.5/4", "docs/2569-2/analysis-is2.pdf", "PDF · 4 หน้า", "I30202 · ม.5/4"], ["2/2569", "สื่อและใบงาน", "ชุดใบงาน P4 Journey ฟิสิกส์เพิ่มเติม 4 ใบงานที่ 1–36 (ไล่ระดับ Level)", "docs/2569-2/worksheets-physics4.pdf", "PDF · 216 หน้า · 13 MB", "ว32204 · ม.5/2 ม.5/4"], ["2/2569", "สื่อและใบงาน", "สไลด์ประกอบการสอน แผนที่ 1 ปฐมนิเทศระบบ P4 Journey", "docs/2569-2/slides-physics4-plan01.pdf", "PDF · 22 หน้า", "ว32204 · ม.5/2 ม.5/4"], ["2/2569", "สื่อและใบงาน", "ชุดใบงานภารกิจ ES Journey หน่วยโลก บรรยากาศ และอวกาศ พร้อมใบสรุปทบทวนก่อนสอบ", "docs/2569-2/worksheets-earthspace.pdf", "PDF · 40 หน้า · 3.9 MB", "ว30114 · ม.4/8–4/10"], ["2/2569", "สื่อและใบงาน", "ชุดใบงานและการ์ดกิจกรรม Masterclass IS2 THE PITCH สัปดาห์ที่ 1–19", "docs/2569-2/worksheets-is2-masterclass.pdf", "PDF · 109 หน้า · 8.4 MB", "I30202 · ม.5/4"], ["2/2569", "ระบบการเรียนรู้ออนไลน์ประจำรายวิชา", "P4 Journey เว็บไซต์รายวิชาฟิสิกส์เพิ่มเติม 4", "https://watpolprot-cloud.github.io/p4-journey/", "เว็บไซต์ · GitHub Pages", "ว32204 · ม.5/2 ม.5/4"], ["2/2569", "ระบบการเรียนรู้ออนไลน์ประจำรายวิชา", "ES Journey เว็บไซต์รายวิชาวิทยาศาสตร์โลกและอวกาศ", "https://watpolprot-cloud.github.io/es-journey/", "เว็บไซต์ · GitHub Pages", "ว30114 · ม.4/8–4/10"], ["2/2569", "ระบบการเรียนรู้ออนไลน์ประจำรายวิชา", "IS2 THE PITCH เว็บไซต์รายวิชาการสื่อสารและการนำเสนอ", "https://watpolprot-cloud.github.io/is2-the-pitch/", "เว็บไซต์ · GitHub Pages", "I30202 · ม.5/4"], ["1/2569", "หลักสูตรและแผนการจัดการเรียนรู้", "โครงสร้างรายวิชาฟิสิกส์เพิ่มเติม 3 (ว32203) ชั้นมัธยมศึกษาปีที่ 5", "docs/2569-1/structure-physics3.pdf", "PDF · 19 หน้า"], ["1/2569", "หลักสูตรและแผนการจัดการเรียนรู้", "โครงสร้างรายวิชาวิทยาศาสตร์โลกและอวกาศ (ว30114)", "docs/2569-1/structure-earthspace.pdf", "PDF · 20 หน้า"], ["1/2569", "หลักสูตรและแผนการจัดการเรียนรู้", "โครงสร้างรายวิชาการศึกษาค้นคว้าและสร้างองค์ความรู้ (I30201)", "docs/2569-1/structure-is1.pdf", "PDF · 7 หน้า"], ["1/2569", "หลักสูตรและแผนการจัดการเรียนรู้", "แผนการจัดการเรียนรู้ ฟิสิกส์เพิ่มเติม 3 ภาคเรียนที่ 1/2569 (ฉบับรวมเล่ม)", "docs/2569-1/lesson-plan-physics3.pdf", "PDF · 409 หน้า · 10 MB"], ["1/2569", "หลักสูตรและแผนการจัดการเรียนรู้", "เกณฑ์การให้คะแนนรายวิชาในระบบ PROT CARE", "docs/2569-1/grading-criteria.pdf", "PDF · 3 หน้า"], ["1/2569", "การวิเคราะห์ผู้เรียนรายบุคคล", "รายงานผลการวิเคราะห์ผู้เรียน รายวิชาฟิสิกส์เพิ่มเติม 3", "https://drive.google.com/file/d/1x9UpIhoT3Zy3p9plEqtZUYDRfDFC-Prp/view", "Google Drive"], ["1/2569", "การวิเคราะห์ผู้เรียนรายบุคคล", "รายงานผลการวิเคราะห์ผู้เรียน รายวิชาวิทยาศาสตร์โลกและอวกาศ ม.4", "https://drive.google.com/file/d/1YBQUFTkguDQbILkGAIEq-bV_2DvUP5Th/view", "Google Drive"], ["1/2569", "การวิเคราะห์ผู้เรียนรายบุคคล", "รายงานผลการวิเคราะห์ผู้เรียน รายวิชาวิทยาศาสตร์โลกและอวกาศ ม.6", "https://drive.google.com/file/d/1sPfwS8B092_QDxCKrbrKWAsonCDZGEQs/view", "Google Drive"], ["1/2569", "การวิเคราะห์ผู้เรียนรายบุคคล", "รายงานผลการวิเคราะห์ผู้เรียน รายวิชาการศึกษาค้นคว้าอิสระ 1", "https://drive.google.com/file/d/1kMEA1iv5OFqoX1Kmiedqij-vxqY8aG3s/view", "Google Drive"], ["1/2569", "รายงานผลการพัฒนาผู้เรียน", "รายงานผลการพัฒนาผู้เรียน ว32203 ฟิสิกส์เพิ่มเติม 3 ม.5", "https://drive.google.com/file/d/1qnPro78_NUCvm_bz6UoZCSOB9WicxNOv/view", "Google Drive"], ["1/2569", "รายงานผลการพัฒนาผู้เรียน", "รายงานผลการพัฒนาผู้เรียน ว30114 วิทยาศาสตร์โลกและอวกาศ ม.4", "https://drive.google.com/file/d/1zmHV99xD9H-oyHXP3sUtL8JIlkvU5rMI/view", "Google Drive"], ["1/2569", "รายงานผลการพัฒนาผู้เรียน", "รายงานผลการพัฒนาผู้เรียน ว30114 วิทยาศาสตร์โลกและอวกาศ ม.6", "https://drive.google.com/file/d/1djUKzkpvyMvQxhDvC0fcC1GZIsGd0SBo/view", "Google Drive"], ["1/2569", "รายงานผลการพัฒนาผู้เรียน", "รายงานผลการพัฒนาผู้เรียน I30201 การศึกษาค้นคว้าและสร้างองค์ความรู้ ม.5", "https://drive.google.com/file/d/1sMnVZF963bdzLyRH6ohTHQ-XyyXdwowO/view", "Google Drive"], ["1/2569", "วิจัยในชั้นเรียนและนวัตกรรม", "งานวิจัยหน้าเดียว การจัดการเรียนรู้เชิงรุกด้วย iEXP Model", "https://drive.google.com/file/d/1HYNhoixUTa8DSVOT7fbaTIXPUVnjAF_L/view", "Google Drive"], ["1/2569", "วิจัยในชั้นเรียนและนวัตกรรม", "เค้าโครงการวิจัยในชั้นเรียน iEXP Model", "https://drive.google.com/file/d/105TXRCzx4bMgFdMSXHFmI91jcbMIdt2f/view", "Google Drive"], ["1/2569", "วิจัยในชั้นเรียนและนวัตกรรม", "รายงานผลการปฏิบัติที่เป็นเลิศ (Best Practice) iEXP Model ชุดประสบการณ์เรียนรู้แบบลูปซ้อนลูป", "docs/2569-1/iexp-best-practice.pdf", "PDF · 61 หน้า · 8.2 MB"], ["1/2569", "วิจัยในชั้นเรียนและนวัตกรรม", "คู่มือการใช้นวัตกรรม iEXP Model", "docs/2569-1/iexp-manual.pdf", "PDF · 29 หน้า · 3.5 MB"], ["1/2569", "สื่อและใบงาน", "เอกสารประกอบการเรียนและใบงานฟิสิกส์ เรื่อง คลื่นกล", "docs/2569-1/worksheets-physics3.pdf", "PDF · 47 หน้า"], ["1/2569", "สื่อและใบงาน", "ชุดใบงานวิทยาศาสตร์โลกและอวกาศ ใบงานที่ 1–10 และใบงานชวนคิดจากภาพยนตร์", "docs/2569-1/worksheets-earthspace.pdf", "PDF · 26 หน้า · 2.4 MB"], ["1/2569", "สื่อและใบงาน", "ใบกิจกรรมค้นหาหัวข้อโครงงานและไทม์ไลน์โครงงาน IS1", "docs/2569-1/activities-is1.pdf", "PDF · 11 หน้า"], ["1/2569", "PLC นิเทศ และงานครูที่ปรึกษา", "รายงานกิจกรรมชุมชนแห่งการเรียนรู้ทางวิชาชีพ (PLC) ภาคเรียนที่ 1/2569 กลุ่มฟิสิกส์และดาราศาสตร์", "docs/2569-1/plc-report.pdf", "PDF · 69 หน้า · 8.8 MB"], ["1/2569", "PLC นิเทศ และงานครูที่ปรึกษา", "ภาพประกอบการนิเทศการจัดการเรียนการสอน (5 สิงหาคม 2569)", "docs/2569-1/supervision-photos.pdf", "PDF · 1 หน้า · 2.1 MB"], ["1/2569", "PLC นิเทศ และงานครูที่ปรึกษา", "ภาพประกอบกิจกรรม PLC ภาคเรียนที่ 1/2569", "docs/2569-1/plc-photos.pdf", "PDF · 3 หน้า"], ["1/2569", "PLC นิเทศ และงานครูที่ปรึกษา", "วารสารห้องเรียน ม.5/4 ภาคเรียนที่ 1/2569", "docs/2569-1/homeroom-journal.pdf", "PDF · 28 หน้า · 9.5 MB"], ["2/2568", "รายงานการประเมินตนเอง (SAR)", "รายงานการประเมินตนเอง ปีการศึกษา 2568", "https://drive.google.com/file/d/1K9lr-ICo1RwFUtG6cM3Wu5qLPhABlfCg/view", "Google Drive"], ["2/2568", "การวิเคราะห์ผู้เรียนรายบุคคล", "โฟลเดอร์วิเคราะห์ผู้เรียน ภาคเรียนที่ 2/2568", "https://drive.google.com/drive/folders/1JSMHKUDp-5sYFevy3_-eFoOPZwD7yZkP", "โฟลเดอร์ Google Drive"], ["1/2568", "หลักสูตรและแผนการจัดการเรียนรู้", "แผนการจัดการเรียนรู้ ฟิสิกส์เพิ่มเติม 3", "https://drive.google.com/file/d/1RViqMD6cKvyonLKyu7CEMCm-Wmu-2jmn/view", "Google Drive"], ["1/2568", "หลักสูตรและแผนการจัดการเรียนรู้", "โฟลเดอร์โครงสร้างรายวิชา ภาคเรียนที่ 1/2568", "https://drive.google.com/drive/folders/1j1xIIUdQK5Dio-E0ugcJ24FIbYTKujNH", "โฟลเดอร์ Google Drive"], ["1/2568", "วิจัยในชั้นเรียนและนวัตกรรม", "เค้าโครงงานวิจัยในชั้นเรียน 3 บท", "https://drive.google.com/file/d/1LONasx7UqZA1JmOtUnhIACrV9Xt7HFzB/view", "Google Drive"], ["1/2568", "การวิเคราะห์ผู้เรียนรายบุคคล", "โฟลเดอร์วิเคราะห์ผู้เรียน ภาคเรียนที่ 1/2568", "https://drive.google.com/drive/folders/1ZmkWeWk0eqmbZMUL-UjQU62BrUvsFVl2", "โฟลเดอร์ Google Drive"], ["2/2567", "หลักสูตรและแผนการจัดการเรียนรู้", "โครงสร้าง หน่วย และแผนการจัดการเรียนรู้ ฟิสิกส์เพิ่มเติม 4", "https://drive.google.com/file/d/1sMng0Lkn9NNGfGBOFnEYtERIU5Eyn4vY/view", "Google Drive"], ["2/2567", "หลักสูตรและแผนการจัดการเรียนรู้", "โฟลเดอร์โครงสร้างรายวิชา ภาคเรียนที่ 2/2567", "https://drive.google.com/drive/folders/1f-zIeat2aaa0Y5XoOlFKmKYou6WprF-J", "โฟลเดอร์ Google Drive"], ["2/2567", "วิจัยในชั้นเรียนและนวัตกรรม", "งานวิจัยในชั้นเรียน ภาคเรียนที่ 2/2567", "https://drive.google.com/file/d/1_w2bYIxIu7Rrk2HBTY1TztHQS7vMrNEr/view", "Google Drive"], ["2/2567", "การวิเคราะห์ผู้เรียนรายบุคคล", "โฟลเดอร์วิเคราะห์ผู้เรียน ภาคเรียนที่ 2/2567", "https://drive.google.com/drive/folders/1d4ocL8GPnqQG-y8gms5SvUBkH3ExHP0B", "โฟลเดอร์ Google Drive"], ["2/2567", "รายงานการประเมินตนเอง (SAR)", "รายงานการประเมินตนเอง ปีการศึกษา 2567", "https://drive.google.com/file/d/1c-dzmBv7TG5ZYARDJpjR1mB-cIF9IdgF/view", "Google Drive"], ["1/2567", "วิจัยในชั้นเรียนและนวัตกรรม", "งานวิจัยหน้าเดียว ความสามารถในการแก้โจทย์ปัญหา เรื่อง คลื่นกล", "https://drive.google.com/file/d/141V8Np6DWFdBKlh9VAfvSr8CaJEx0VMf/view", "Google Drive"], ["1/2567", "วิจัยในชั้นเรียนและนวัตกรรม", "งานวิจัยหน้าเดียว (ฉบับปรับปรุง)", "https://drive.google.com/file/d/1DreInbry1HZo_tTTMY6D5HCaX-2-OF3v/view", "Google Drive"], ["1/2567", "การวิเคราะห์ผู้เรียนรายบุคคล", "โฟลเดอร์วิเคราะห์ผู้เรียน ภาคเรียนที่ 1/2567", "https://drive.google.com/drive/folders/1bx03POvepWwb6v6eaEdfWgdEI5MVYf0J", "โฟลเดอร์ Google Drive"], ["2/2566", "หลักสูตรและแผนการจัดการเรียนรู้", "แผนการจัดการเรียนรู้ที่ดีที่สุด พร้อมบันทึกหลังแผน", "https://drive.google.com/file/d/14nY-N6lv4c4vo8OwTEdU0oQEa6MxFUS5/view", "Google Drive"], ["2/2566", "วิจัยในชั้นเรียนและนวัตกรรม", "วิจัยในชั้นเรียน ภาคเรียนที่ 2/2566", "https://drive.google.com/file/d/1GOeRRVoOklHlvbI2rlhab6zYCFqfrhNc/view", "Google Drive"], ["2/2566", "PLC นิเทศ และงานครูที่ปรึกษา", "รายงาน PLC ภาคเรียนที่ 2/2566", "https://drive.google.com/file/d/1E5UA4vL2wlrg90nA8w8Yo6XprkXMXDfF/view", "Google Drive"], ["2/2566", "การวิเคราะห์ผู้เรียนรายบุคคล", "โฟลเดอร์วิเคราะห์ผู้เรียน ภาคเรียนที่ 2/2566", "https://drive.google.com/drive/folders/16SbJfA-tH2DIwsGG3HAunLOepN4HavVV", "โฟลเดอร์ Google Drive"], ["2/2566", "อบรมและเกียรติบัตร", "เกียรติบัตร การประชุมวิชาการระดับชาติ ครั้งที่ 10 สมาคมวิจัยสังคมศาสตร์แห่งประเทศไทย", "https://drive.google.com/file/d/1iF06ERR8w_y9DmX_9ep7Mw4_KoPn0Orl/view", "Google Drive"], ["2/2566", "รายงานการประเมินตนเอง (SAR)", "รายงานการประเมินตนเอง ปีการศึกษา 2566", "https://drive.google.com/file/d/1nfq2msInGAM_TncTv48EvrEJukZq94-z/view", "Google Drive"], ["1/2566", "หลักสูตรและแผนการจัดการเรียนรู้", "โฟลเดอร์แผนการจัดการเรียนรู้ ภาคเรียนที่ 1/2566", "https://drive.google.com/drive/folders/1ioaLa-xUE2mpGFxBEKWInfBC4OpHpm8C", "โฟลเดอร์ Google Drive"], ["1/2566", "หลักสูตรและแผนการจัดการเรียนรู้", "โฟลเดอร์โครงสร้างรายวิชา ภาคเรียนที่ 1/2566", "https://drive.google.com/drive/folders/1LPgj9AEvnjX3sgPgmqlQkTkUXsJgaYDW", "โฟลเดอร์ Google Drive"], ["1/2566", "การวิเคราะห์ผู้เรียนรายบุคคล", "โฟลเดอร์วิเคราะห์ผู้เรียน ภาคเรียนที่ 1/2566", "https://drive.google.com/drive/folders/1TB5ltPTE4wHi6QTRvSVsQ20XA8OVYdoe", "โฟลเดอร์ Google Drive"], ["1/2566", "อบรมและเกียรติบัตร", "วุฒิบัตร ครูไทยยุคใหม่ เข้าใจการเงิน", "https://drive.google.com/file/d/1TVgHrdJytE3JiPWhb3LJAb8yo3hKHtHm/view", "Google Drive"], ["2/2565", "วิจัยในชั้นเรียนและนวัตกรรม", "วิจัยในชั้นเรียน ภาคเรียนที่ 2/2565", "https://drive.google.com/file/d/11iHCDLluYOml-r-vvX_Gzk9KU9x1tMTi/view", "Google Drive"], ["2/2565", "วิจัยในชั้นเรียนและนวัตกรรม", "นวัตกรรมการเรียนรู้ ภาคเรียนที่ 2/2565", "https://drive.google.com/file/d/1nwd5txoZWL_tge3wtj82b3fAnDlI5FWC/view", "Google Drive"], ["2/2565", "การวิเคราะห์ผู้เรียนรายบุคคล", "โฟลเดอร์วิเคราะห์ผู้เรียน ภาคเรียนที่ 2/2565", "https://drive.google.com/drive/folders/1ZecpXwvCmY5BmPvBUKG5mAqtsMSmfAtr", "โฟลเดอร์ Google Drive"], ["2/2565", "รายงานการประเมินตนเอง (SAR)", "รายงานการประเมินตนเอง ปีการศึกษา 2565", "https://drive.google.com/file/d/1BoGlMid2-4zds4skWw3v1pDGue2Aaq77/view", "Google Drive"], ["1/2565", "หลักสูตรและแผนการจัดการเรียนรู้", "โครงสร้างรายวิชาฟิสิกส์เพิ่มเติม 3", "https://drive.google.com/file/d/1Q0BqHCW2SytTyzuFhXCVGqzVRAju8eGp/view", "Google Drive"], ["1/2565", "หลักสูตรและแผนการจัดการเรียนรู้", "โครงสร้างรายวิชาวิทยาศาสตร์โลกและอวกาศ", "https://drive.google.com/file/d/1ckMjhZ715XT6BdV8lP3GyUfhaWlj7sqY/view", "Google Drive"], ["1/2565", "หลักสูตรและแผนการจัดการเรียนรู้", "แผนหน่วยการเรียนรู้ที่ 1", "https://drive.google.com/file/d/1Z4nswc7y_ly-jRxHfjlowcviCgOH-pRr/view", "Google Drive"], ["1/2565", "หลักสูตรและแผนการจัดการเรียนรู้", "แผนหน่วยการเรียนรู้ที่ 2", "https://drive.google.com/file/d/1DtBBAO1dA5YHDacdow3TEfL7vNZes-gg/view", "Google Drive"], ["1/2565", "หลักสูตรและแผนการจัดการเรียนรู้", "แผนหน่วยการเรียนรู้ที่ 3", "https://drive.google.com/file/d/1osYmLdafhMCsXDcP5qqdMJTuV3Ij8oyK/view", "Google Drive"], ["1/2565", "หลักสูตรและแผนการจัดการเรียนรู้", "แผนหน่วยการเรียนรู้ที่ 4", "https://drive.google.com/file/d/1ps-M0AlwGqmlY4V08ioD4hND_Ykc4YuF/view", "Google Drive"], ["1/2565", "วิจัยในชั้นเรียนและนวัตกรรม", "งานวิจัยในชั้นเรียน ปีการศึกษา 2565", "https://drive.google.com/file/d/1GrFLTNljQfrxOZ9V-CqJXC64AKG3pbhy/view", "Google Drive"], ["1/2565", "วิจัยในชั้นเรียนและนวัตกรรม", "นวัตกรรมการจัดการเรียนรู้ ฟิสิกส์เพิ่มเติม 3 (ว32203)", "https://drive.google.com/file/d/1eFEw4p2oTiVJqVsnKg41wqCElEewVIGt/view", "Google Drive"], ["1/2565", "การวิเคราะห์ผู้เรียนรายบุคคล", "โฟลเดอร์วิเคราะห์ผู้เรียน ภาคเรียนที่ 1/2565", "https://drive.google.com/drive/folders/1TPq2pqkhEr-0LWxQSN5B1kQ46VgW0QWm", "โฟลเดอร์ Google Drive"], ["1/2565", "รายงานการประเมินตนเอง (SAR)", "รายงานการประเมินตนเอง ภาคเรียนที่ 1/2565", "https://drive.google.com/file/d/189u8P951AVYaLn_mfoLpCOEgL3N6UW9t/view", "Google Drive"], ["1/2565", "อบรมและเกียรติบัตร", "เกียรติบัตร การจัดการเรียนรู้เชิงรุก", "https://drive.google.com/file/d/1va5Z_kPkmcjJeCcxQgaLE-UkDuY1XVQP/view", "Google Drive"], ["1/2565", "อบรมและเกียรติบัตร", "เกียรติบัตร Design-Based STEM Education", "https://drive.google.com/file/d/1JhoZaz2hODgCNf4PbVWuPTT1yUt8VCvW/view", "Google Drive"], ["1/2565", "อบรมและเกียรติบัตร", "เกียรติบัตร การประเมินเพื่อการเรียนรู้ (AfL)", "https://drive.google.com/file/d/18E75_9jWTpu-XulZDqk7rbz2Gvo6DFso/view", "Google Drive"], ["1/2565", "อบรมและเกียรติบัตร", "เกียรติบัตร ครูดีในดวงใจ", "https://drive.google.com/file/d/1RUsB0GCUOedItsyf3D5LcSAhw-LtugtB/view", "Google Drive"], ["1/2565", "อบรมและเกียรติบัตร", "เกียรติบัตร E-Portfolio", "https://drive.google.com/file/d/1QutJZDyEBc4xopWVuUxC4FlGFnlYGYPe/view", "Google Drive"], ["1/2565", "อบรมและเกียรติบัตร", "รายงานการอบรมการจัดการเรียนรู้เชิงรุก", "https://drive.google.com/file/d/12T57AOSs3a3-uoM6LGZSgHxK9xA08ET-/view", "Google Drive"], ["1/2565", "อบรมและเกียรติบัตร", "รายงานการอบรมการวัดและประเมินผล", "https://drive.google.com/file/d/1K-kfmVZsVgHErED-5wc1DF5sCO68OPkS/view", "Google Drive"], ["1/2565", "อบรมและเกียรติบัตร", "รายงานการอบรม E-Portfolio", "https://drive.google.com/file/d/14Ze9CVuAuF0lWZT1-xk-mj0FeRzB676H/view", "Google Drive"], ["1/2565", "อบรมและเกียรติบัตร", "รายงานการอบรม STEM เฉพาะกลุ่ม", "https://drive.google.com/file/d/1pYnrs-tDc1o2K-Ifs6T1Iki7myNhgI8q/view", "Google Drive"], ["ก่อน 2565", "วิจัยในชั้นเรียนและนวัตกรรม", "รายงานผลการนำงานวิจัยไปใช้ประโยชน์ โรงเรียนประณีตวิทยาคม", "https://drive.google.com/file/d/1jBF7M6femtKFYz_YMSfNvapKTz9pC2Dq/view", "Google Drive"]], SEMS=["2/2569", "1/2569", "2/2568", "1/2568", "2/2567", "1/2567", "2/2566", "1/2566", "2/2565", "1/2565", "ก่อน 2565"], GROUPS=["หลักสูตรและแผนการจัดการเรียนรู้", "การวิเคราะห์ผู้เรียนรายบุคคล", "รายงานผลการพัฒนาผู้เรียน", "วิจัยในชั้นเรียนและนวัตกรรม", "สื่อและใบงาน", "ระบบการเรียนรู้ออนไลน์ประจำรายวิชา", "PLC นิเทศ และงานครูที่ปรึกษา", "รายงานการประเมินตนเอง (SAR)", "อบรมและเกียรติบัตร"];
+  var PV={"docs/2569-2/structure-physics4.pdf":{"k":"2569-2_structure-physics4","n":24,"p":[1,2,3,8,15],"r":0.706},"docs/2569-2/structure-earthspace.pdf":{"k":"2569-2_structure-earthspace","n":21,"p":[1,2,3,7,13],"r":0.706},"docs/2569-2/structure-is2.pdf":{"k":"2569-2_structure-is2","n":16,"p":[1,2,3,5,10],"r":0.706},"docs/2569-2/lesson-plan-physics4.pdf":{"k":"2569-2_lesson-plan-physics4","n":364,"p":[1,2,3,110,219],"r":0.706},"docs/2569-2/is2-weekly-teaching-guides.pdf":{"k":"2569-2_is2-weekly-teaching-guides","n":102,"p":[1,2,3,31,62],"r":0.706},"docs/2569-2/analysis-physics4.pdf":{"k":"2569-2_analysis-physics4","n":5,"p":[1,2,3,4,5],"r":0.706},"docs/2569-2/analysis-earthspace-m4.pdf":{"k":"2569-2_analysis-earthspace-m4","n":7,"p":[1,2,3,5],"r":0.706},"docs/2569-2/analysis-is2.pdf":{"k":"2569-2_analysis-is2","n":4,"p":[1,2,3,4],"r":0.706},"docs/2569-2/worksheets-physics4.pdf":{"k":"2569-2_worksheets-physics4","n":216,"p":[1,2,3,65,130],"r":0.707},"docs/2569-2/slides-physics4-plan01.pdf":{"k":"2569-2_slides-physics4-plan01","n":22,"p":[1,2,3,7,14],"r":1.772},"docs/2569-2/worksheets-earthspace.pdf":{"k":"2569-2_worksheets-earthspace","n":40,"p":[1,2,3,12,24],"r":0.706},"docs/2569-2/worksheets-is2-masterclass.pdf":{"k":"2569-2_worksheets-is2-masterclass","n":109,"p":[1,2,3,33,66],"r":0.706},"site:p4-journey":{"k":"site_p4-journey","n":null,"p":[1],"r":1.6},"site:es-journey":{"k":"site_es-journey","n":null,"p":[1],"r":1.6},"site:is2-the-pitch":{"k":"site_is2-the-pitch","n":null,"p":[1],"r":1.6},"docs/2569-1/structure-physics3.pdf":{"k":"2569-1_structure-physics3","n":19,"p":[1,2,3,6,12],"r":0.707},"docs/2569-1/structure-earthspace.pdf":{"k":"2569-1_structure-earthspace","n":20,"p":[1,2,3,6,12],"r":0.707},"docs/2569-1/structure-is1.pdf":{"k":"2569-1_structure-is1","n":7,"p":[1,2,3,5],"r":0.707},"docs/2569-1/lesson-plan-physics3.pdf":{"k":"2569-1_lesson-plan-physics3","n":409,"p":[1,2,3,123,246],"r":0.706},"docs/2569-1/grading-criteria.pdf":{"k":"2569-1_grading-criteria","n":3,"p":[1,2,3],"r":0.707},"drive:1x9UpIhoT3Zy3p9plEqtZUYDRfDFC-Prp":{"k":"g_1x9UpIhoT3Zy3p9plEqtZUYDRfDFC-Prp","n":null,"p":[1],"r":0.773},"drive:1YBQUFTkguDQbILkGAIEq-bV_2DvUP5Th":{"k":"g_1YBQUFTkguDQbILkGAIEq-bV_2DvUP5Th","n":null,"p":[1],"r":0.773},"drive:1sPfwS8B092_QDxCKrbrKWAsonCDZGEQs":{"k":"g_1sPfwS8B092_QDxCKrbrKWAsonCDZGEQs","n":null,"p":[1],"r":0.773},"drive:1kMEA1iv5OFqoX1Kmiedqij-vxqY8aG3s":{"k":"g_1kMEA1iv5OFqoX1Kmiedqij-vxqY8aG3s","n":null,"p":[1],"r":0.773},"drive:1qnPro78_NUCvm_bz6UoZCSOB9WicxNOv":{"k":"g_1qnPro78_NUCvm_bz6UoZCSOB9WicxNOv","n":null,"p":[1],"r":0.707},"drive:1zmHV99xD9H-oyHXP3sUtL8JIlkvU5rMI":{"k":"g_1zmHV99xD9H-oyHXP3sUtL8JIlkvU5rMI","n":null,"p":[1],"r":0.707},"drive:1djUKzkpvyMvQxhDvC0fcC1GZIsGd0SBo":{"k":"g_1djUKzkpvyMvQxhDvC0fcC1GZIsGd0SBo","n":null,"p":[1],"r":0.707},"drive:1sMnVZF963bdzLyRH6ohTHQ-XyyXdwowO":{"k":"g_1sMnVZF963bdzLyRH6ohTHQ-XyyXdwowO","n":null,"p":[1],"r":0.707},"drive:1HYNhoixUTa8DSVOT7fbaTIXPUVnjAF_L":{"k":"g_1HYNhoixUTa8DSVOT7fbaTIXPUVnjAF_L","n":null,"p":[1],"r":0.707},"drive:105TXRCzx4bMgFdMSXHFmI91jcbMIdt2f":{"k":"g_105TXRCzx4bMgFdMSXHFmI91jcbMIdt2f","n":null,"p":[1],"r":0.707},"docs/2569-1/iexp-best-practice.pdf":{"k":"2569-1_iexp-best-practice","n":61,"p":[1,2,3,19,37],"r":0.772},"docs/2569-1/iexp-manual.pdf":{"k":"2569-1_iexp-manual","n":29,"p":[1,2,3,9,18],"r":0.707},"docs/2569-1/worksheets-physics3.pdf":{"k":"2569-1_worksheets-physics3","n":47,"p":[1,2,3,15,29],"r":0.706},"docs/2569-1/worksheets-earthspace.pdf":{"k":"2569-1_worksheets-earthspace","n":26,"p":[1,2,3,8,16],"r":0.707},"docs/2569-1/activities-is1.pdf":{"k":"2569-1_activities-is1","n":11,"p":[1,2,3,4,7],"r":0.707},"docs/2569-1/plc-report.pdf":{"k":"2569-1_plc-report","n":69,"p":[1,2,3,21,42],"r":0.707},"docs/2569-1/supervision-photos.pdf":{"k":"2569-1_supervision-photos","n":1,"p":[1],"r":0.706},"docs/2569-1/plc-photos.pdf":{"k":"2569-1_plc-photos","n":3,"p":[1,2,3],"r":0.706},"docs/2569-1/homeroom-journal.pdf":{"k":"2569-1_homeroom-journal","n":28,"p":[1,2,3,9,17],"r":0.706},"drive:1K9lr-ICo1RwFUtG6cM3Wu5qLPhABlfCg":{"k":"g_1K9lr-ICo1RwFUtG6cM3Wu5qLPhABlfCg","n":null,"p":[1],"r":0.707},"drive:1RViqMD6cKvyonLKyu7CEMCm-Wmu-2jmn":{"k":"g_1RViqMD6cKvyonLKyu7CEMCm-Wmu-2jmn","n":null,"p":[1],"r":0.707},"drive:1LONasx7UqZA1JmOtUnhIACrV9Xt7HFzB":{"k":"g_1LONasx7UqZA1JmOtUnhIACrV9Xt7HFzB","n":null,"p":[1],"r":0.773},"drive:1sMng0Lkn9NNGfGBOFnEYtERIU5Eyn4vY":{"k":"g_1sMng0Lkn9NNGfGBOFnEYtERIU5Eyn4vY","n":null,"p":[1],"r":0.707},"drive:1_w2bYIxIu7Rrk2HBTY1TztHQS7vMrNEr":{"k":"g_1_w2bYIxIu7Rrk2HBTY1TztHQS7vMrNEr","n":null,"p":[1],"r":0.708},"drive:1c-dzmBv7TG5ZYARDJpjR1mB-cIF9IdgF":{"k":"g_1c-dzmBv7TG5ZYARDJpjR1mB-cIF9IdgF","n":null,"p":[1],"r":0.707},"drive:141V8Np6DWFdBKlh9VAfvSr8CaJEx0VMf":{"k":"g_141V8Np6DWFdBKlh9VAfvSr8CaJEx0VMf","n":null,"p":[1],"r":0.707},"drive:1DreInbry1HZo_tTTMY6D5HCaX-2-OF3v":{"k":"g_1DreInbry1HZo_tTTMY6D5HCaX-2-OF3v","n":null,"p":[1],"r":0.707},"drive:14nY-N6lv4c4vo8OwTEdU0oQEa6MxFUS5":{"k":"g_14nY-N6lv4c4vo8OwTEdU0oQEa6MxFUS5","n":null,"p":[1],"r":0.708},"drive:1GOeRRVoOklHlvbI2rlhab6zYCFqfrhNc":{"k":"g_1GOeRRVoOklHlvbI2rlhab6zYCFqfrhNc","n":null,"p":[1],"r":0.708},"drive:1E5UA4vL2wlrg90nA8w8Yo6XprkXMXDfF":{"k":"g_1E5UA4vL2wlrg90nA8w8Yo6XprkXMXDfF","n":null,"p":[1],"r":0.708},"drive:1iF06ERR8w_y9DmX_9ep7Mw4_KoPn0Orl":{"k":"g_1iF06ERR8w_y9DmX_9ep7Mw4_KoPn0Orl","n":null,"p":[1],"r":1.414},"drive:1nfq2msInGAM_TncTv48EvrEJukZq94-z":{"k":"g_1nfq2msInGAM_TncTv48EvrEJukZq94-z","n":null,"p":[1],"r":0.707},"drive:1TVgHrdJytE3JiPWhb3LJAb8yo3hKHtHm":{"k":"g_1TVgHrdJytE3JiPWhb3LJAb8yo3hKHtHm","n":null,"p":[1],"r":1.414},"drive:11iHCDLluYOml-r-vvX_Gzk9KU9x1tMTi":{"k":"g_11iHCDLluYOml-r-vvX_Gzk9KU9x1tMTi","n":null,"p":[1],"r":0.707},"drive:1nwd5txoZWL_tge3wtj82b3fAnDlI5FWC":{"k":"g_1nwd5txoZWL_tge3wtj82b3fAnDlI5FWC","n":null,"p":[1],"r":0.707},"drive:1BoGlMid2-4zds4skWw3v1pDGue2Aaq77":{"k":"g_1BoGlMid2-4zds4skWw3v1pDGue2Aaq77","n":null,"p":[1],"r":0.707},"drive:1Q0BqHCW2SytTyzuFhXCVGqzVRAju8eGp":{"k":"g_1Q0BqHCW2SytTyzuFhXCVGqzVRAju8eGp","n":null,"p":[1],"r":0.708},"drive:1ckMjhZ715XT6BdV8lP3GyUfhaWlj7sqY":{"k":"g_1ckMjhZ715XT6BdV8lP3GyUfhaWlj7sqY","n":null,"p":[1],"r":0.708},"drive:1Z4nswc7y_ly-jRxHfjlowcviCgOH-pRr":{"k":"g_1Z4nswc7y_ly-jRxHfjlowcviCgOH-pRr","n":null,"p":[1],"r":0.707},"drive:1DtBBAO1dA5YHDacdow3TEfL7vNZes-gg":{"k":"g_1DtBBAO1dA5YHDacdow3TEfL7vNZes-gg","n":null,"p":[1],"r":0.707},"drive:1osYmLdafhMCsXDcP5qqdMJTuV3Ij8oyK":{"k":"g_1osYmLdafhMCsXDcP5qqdMJTuV3Ij8oyK","n":null,"p":[1],"r":0.707},"drive:1ps-M0AlwGqmlY4V08ioD4hND_Ykc4YuF":{"k":"g_1ps-M0AlwGqmlY4V08ioD4hND_Ykc4YuF","n":null,"p":[1],"r":0.707},"drive:1GrFLTNljQfrxOZ9V-CqJXC64AKG3pbhy":{"k":"g_1GrFLTNljQfrxOZ9V-CqJXC64AKG3pbhy","n":null,"p":[1],"r":0.707},"drive:1eFEw4p2oTiVJqVsnKg41wqCElEewVIGt":{"k":"g_1eFEw4p2oTiVJqVsnKg41wqCElEewVIGt","n":null,"p":[1],"r":0.707},"drive:189u8P951AVYaLn_mfoLpCOEgL3N6UW9t":{"k":"g_189u8P951AVYaLn_mfoLpCOEgL3N6UW9t","n":null,"p":[1],"r":0.707},"drive:1va5Z_kPkmcjJeCcxQgaLE-UkDuY1XVQP":{"k":"g_1va5Z_kPkmcjJeCcxQgaLE-UkDuY1XVQP","n":null,"p":[1],"r":1.419},"drive:1JhoZaz2hODgCNf4PbVWuPTT1yUt8VCvW":{"k":"g_1JhoZaz2hODgCNf4PbVWuPTT1yUt8VCvW","n":null,"p":[1],"r":1.419},"drive:18E75_9jWTpu-XulZDqk7rbz2Gvo6DFso":{"k":"g_18E75_9jWTpu-XulZDqk7rbz2Gvo6DFso","n":null,"p":[1],"r":1.414},"drive:1RUsB0GCUOedItsyf3D5LcSAhw-LtugtB":{"k":"g_1RUsB0GCUOedItsyf3D5LcSAhw-LtugtB","n":null,"p":[1],"r":1.429},"drive:1QutJZDyEBc4xopWVuUxC4FlGFnlYGYPe":{"k":"g_1QutJZDyEBc4xopWVuUxC4FlGFnlYGYPe","n":null,"p":[1],"r":1.414},"drive:12T57AOSs3a3-uoM6LGZSgHxK9xA08ET-":{"k":"g_12T57AOSs3a3-uoM6LGZSgHxK9xA08ET-","n":null,"p":[1],"r":0.707},"drive:1K-kfmVZsVgHErED-5wc1DF5sCO68OPkS":{"k":"g_1K-kfmVZsVgHErED-5wc1DF5sCO68OPkS","n":null,"p":[1],"r":0.707},"drive:14Ze9CVuAuF0lWZT1-xk-mj0FeRzB676H":{"k":"g_14Ze9CVuAuF0lWZT1-xk-mj0FeRzB676H","n":null,"p":[1],"r":0.707},"drive:1pYnrs-tDc1o2K-Ifs6T1Iki7myNhgI8q":{"k":"g_1pYnrs-tDc1o2K-Ifs6T1Iki7myNhgI8q","n":null,"p":[1],"r":0.707},"drive:1jBF7M6femtKFYz_YMSfNvapKTz9pC2Dq":{"k":"g_1jBF7M6femtKFYz_YMSfNvapKTz9pC2Dq","n":null,"p":[1],"r":0.773}};
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  var st={s:'2/2569',q:''};
+  var semTabs=document.getElementById('semTabs'),qIn=document.getElementById('archQ'),body=document.getElementById('archBody');
+  semTabs.innerHTML=SEMS.map(function(s){var n=docs.filter(function(d){return d[0]===s;}).length;
+    return '<button type="button" class="tab" role="tab" aria-selected="'+(s===st.s)+'" data-s="'+s+'">'+s+'<small>'+n+'</small></button>';}).join('');
+  function pkey(u){if(/^docs\//.test(u))return u;var m=u.match(/\/file\/d\/([\w-]+)/);if(m)return 'drive:'+m[1];m=u.match(/github\.io\/([\w-]+)/);return m?'site:'+m[1]:null;}
+  function pinfo(u){var k=pkey(u);return k&&PV[k]?PV[k]:null;}
+  function row(d,showSem){
+    var folder=d[3].indexOf('/folders/')>-1,p=pinfo(d[3]),site=/github\.io/.test(d[3]);
+    var th=p?'<button type="button" class="athumb'+(site?' site':p.r>1?' wide':'')+'" data-pv="'+esc(d[3])+'" aria-label="ดูตัวอย่าง '+esc(d[2])+'"><img src="assets/prev/'+p.k+'/t.jpg" alt="" loading="lazy"></button>':'<span class="afold" aria-hidden="true">'+(folder?'โฟลเดอร์':'ไฟล์')+'</span>';
+    return '<li>'+th+'<span class="at">'+(showSem?'<span class="sem">'+esc(d[0])+'</span>':'')+esc(d[2])+'</span><span class="src">'+esc(d[4])+'</span><span class="aact">'+(p?'<button type="button" class="lnk" data-pv="'+esc(d[3])+'">ดูตัวอย่าง</button>':'')+'<a href="'+esc(d[3])+'" target="_blank" rel="noopener">'+(folder?'เปิดโฟลเดอร์':site?'เปิดเว็บไซต์':'เปิดไฟล์')+'</a></span></li>';
+  }
+  function render(){
+    var q=st.q.trim().toLowerCase(),list,out='';
+    if(q){
+      list=docs.filter(function(d){return d[2].toLowerCase().indexOf(q)>-1||d[1].toLowerCase().indexOf(q)>-1;});
+      out='<h3 class="arch-sem">ผลการค้นหา “'+esc(st.q.trim())+'”</h3>'+(list.length?'<ul class="arch">'+list.map(function(d){return row(d,true);}).join('')+'</ul>':'<ul class="arch"><li><span class="empty">ไม่พบเอกสารที่ตรงกับคำค้น ลองพิมพ์คำที่สั้นลง เช่น ชื่อรายวิชา</span></li></ul>');
+    }else{
+      list=docs.filter(function(d){return d[0]===st.s;});
+      out='<h3 class="arch-sem">'+(st.s.indexOf('/')>-1?'ภาคเรียนที่ '+st.s:'ผลงาน'+st.s)+'</h3>';
+      GROUPS.forEach(function(g){var it=list.filter(function(d){return d[1]===g;});if(!it.length)return;
+        out+='<div class="agroup"><h4>'+esc(g)+'</h4><ul class="arch">'+it.map(function(d){return row(d,false);}).join('')+'</ul></div>';});
+    }
+    body.innerHTML=out;
+    document.getElementById('archCount').textContent=list.length+' รายการ';
+  }
+  semTabs.addEventListener('click',function(e){var b=e.target.closest('.tab');if(!b)return;st.s=b.dataset.s;qIn.value='';st.q='';
+    [].forEach.call(semTabs.children,function(c){c.setAttribute('aria-selected',c===b);});render();});
+  qIn.addEventListener('input',function(){st.q=qIn.value;render();});
+  render();
+
+  /* ---------- semester dossier tabs ---------- */
+  var dTabs=[].slice.call(document.querySelectorAll('.docket-tabs .tab'));
+  dTabs.forEach(function(b){b.addEventListener('click',function(){dTabs.forEach(function(x){var on=x===b;x.setAttribute('aria-selected',on);document.getElementById(x.getAttribute('aria-controls')).hidden=!on;});});});
+
+  /* ---------- document preview ---------- */
+  var byUrl={};docs.forEach(function(d){byUrl[d[3]]=d;});
+  var pv=document.getElementById('pv'),pvImg=document.getElementById('pvImg'),pvStrip=document.getElementById('pvStrip'),pvStage=document.getElementById('pvStage'),pvBody=document.getElementById('pvBody'),pvPrev=document.getElementById('pvPrev'),pvNext=document.getElementById('pvNext'),pvPos=document.getElementById('pvPos'),pvOpen=document.getElementById('pvOpen');
+  var pvPages=[],pvI=0,pvInfo=null,pvLast=null;
+  function pvShow(i){pvI=i;var pg=pvPages[i];pvImg.src=pg.src;pvImg.alt='ตัวอย่างหน้า '+pg.n;
+    pvPos.textContent=pvInfo.n?('หน้า '+pg.n+' / '+pvInfo.n):'';pvPrev.disabled=i===0;pvNext.disabled=i===pvPages.length-1;
+    [].forEach.call(pvStrip.children,function(c,j){c.setAttribute('aria-current',j===i);});pvStage.scrollTop=0;
+    var cur=pvStrip.children[i];if(cur&&cur.scrollIntoView)cur.scrollIntoView({block:'nearest',inline:'nearest'});}
+  function pvOpenDoc(u){
+    var d=byUrl[u],p=pinfo(u);if(!d||!p){window.open(u,'_blank','noopener');return;}
+    var k=pkey(u),drive=k.indexOf('drive:')===0,site=k.indexOf('site:')===0;
+    pvInfo=p;pvLast=document.activeElement;
+    document.getElementById('pvTitle').textContent=d[2];
+    document.getElementById('pvMeta').textContent=(d[0].indexOf('/')>-1?'ภาคเรียนที่ '+d[0]:d[0])+' · '+d[1];
+    pvPages=p.p.map(function(n){return {n:n,src:'assets/prev/'+p.k+'/p'+n+'.jpg'};});
+    pvStrip.innerHTML=pvPages.map(function(pg,j){return '<button type="button" data-j="'+j+'"><img src="'+pg.src+'" alt="" loading="lazy"><span>หน้า '+pg.n+'</span></button>';}).join('');
+    pvBody.classList.toggle('one',pvPages.length<2);pvStage.classList.toggle('wide',p.r>1);
+    document.querySelector('.pv-nav').hidden=pvPages.length<2;
+    document.getElementById('pvNote').textContent=drive?'ภาพตัวอย่างหน้าแรกของเอกสารจาก Google Drive กดปุ่มด้านขวาเพื่ออ่านฉบับเต็ม':site?'ภาพหน้าแรกของเว็บไซต์รายวิชา กดปุ่มด้านขวาเพื่อเปิดเว็บไซต์จริง':(pvPages.length<p.n?'ตัวอย่าง '+pvPages.length+' หน้า จากทั้งหมด '+p.n+' หน้า':'เอกสารทั้งหมด '+p.n+' หน้า');
+    pvOpen.href=u;pvOpen.textContent=drive?'เปิดใน Google Drive':site?'เปิดเว็บไซต์':'เปิดไฟล์ฉบับเต็ม';
+    pv.hidden=false;document.body.style.overflow='hidden';pvShow(0);document.getElementById('pvClose').focus();
+  }
+  function pvClose(){pv.hidden=true;pvImg.removeAttribute('src');pvStrip.innerHTML='';document.body.style.overflow='';if(pvLast&&pvLast.focus)pvLast.focus();}
+  document.addEventListener('click',function(e){var b=e.target.closest('[data-pv]');if(!b)return;e.preventDefault();pvOpenDoc(b.getAttribute('data-pv'));});
+  pvStrip.addEventListener('click',function(e){var b=e.target.closest('button[data-j]');if(b)pvShow(+b.dataset.j);});
+  pvPrev.addEventListener('click',function(){if(pvI>0)pvShow(pvI-1);});
+  pvNext.addEventListener('click',function(){if(pvI<pvPages.length-1)pvShow(pvI+1);});
+  document.getElementById('pvClose').addEventListener('click',pvClose);
+  pv.addEventListener('click',function(e){if(e.target===pv)pvClose();});
+  document.addEventListener('keydown',function(e){if(pv.hidden)return;if(e.key==='Escape')pvClose();else if(e.key==='ArrowLeft'&&pvI>0)pvShow(pvI-1);else if(e.key==='ArrowRight'&&pvI<pvPages.length-1)pvShow(pvI+1);});
+
+  /* ---------- gallery ---------- */
+  var G=[{"k":"2569-2","l":"ภาคเรียนที่ 2/2569","u":"https://www.facebook.com/media/set/?set=a.10235312016002038&type=3","i":[{"f":"2569-2b_001.jpg","c":"รับโล่ครูที่มีผลงานดีเด่น ด้านการดูแลช่วยเหลือนักเรียน ปี 2569","w":533,"h":560},{"f":"2569-2b_003.jpg","c":"ร่วมพิธีการของโรงเรียนในเครื่องแบบปกติขาว","w":560,"h":374},{"f":"2569-2b_005.jpg","c":"มอบรางวัลกิจกรรม MATH WORLD CUP 2026","w":560,"h":373},{"f":"2569-2b_009.jpg","c":"จัดกิจกรรมการเรียนรู้ในชั้นเรียน","w":560,"h":373},{"f":"2569-2b_010.jpg","c":"ร่วมแสดงความยินดีกับเพื่อนครู","w":549,"h":560},{"f":"2569-2b_012.jpg","c":"ร่วมพิธีการกับคณะครู","w":560,"h":349},{"f":"2569-2b_015.jpg","c":"นำกิจกรรมลูกเสือ","w":560,"h":373},{"f":"2569-2b_016.jpg","c":"นิทรรศการแนะแนว Choose your Future","w":560,"h":373},{"f":"2569-2b_018.jpg","c":"ร่วมพิธีการของโรงเรียน","w":560,"h":374},{"f":"2569-2b_020.jpg","c":"คณะครูในพิธีไหว้ครู","w":560,"h":374},{"f":"2569-2b_023.jpg","c":"พิธีกรกิจกรรมสัปดาห์วิทยาศาสตร์ 2569","w":560,"h":373},{"f":"2569-2b_024.jpg","c":"บรรยายในการอบรมเชิงปฏิบัติการ","w":560,"h":373},{"f":"2569-2b_025.jpg","c":"บรรยายในการอบรมเชิงปฏิบัติการ","w":560,"h":373},{"f":"2569-2b_028.jpg","c":"ร่วมกิจกรรมเชิงปฏิบัติการของครู","w":560,"h":373},{"f":"2569-2b_029.jpg","c":"บรรยายแก่คณะครู","w":560,"h":373}]},{"k":"2568-2","l":"ภาคเรียนที่ 2/2568","u":"https://www.facebook.com/media/set/?set=a.10233118055234390&type=3","i":[{"f":"2568-2b_000.jpg","c":"ถ่ายภาพร่วมกับนักเรียน","w":560,"h":373},{"f":"2568-2b_002.jpg","c":"รับโล่รางวัลเชิดชูเกียรติ เพชรแห่งพรต","w":560,"h":373},{"f":"2568-2b_003.jpg","c":"ร่วมแสดงความยินดีกับนักเรียนที่ได้รับเกียรติบัตร","w":560,"h":373},{"f":"2568-2b_007.jpg","c":"วิทยากรอบรมการจัดการเรียนการสอน IS","w":560,"h":420},{"f":"2568-2b_008.jpg","c":"วิทยากรอบรมการจัดการเรียนการสอน IS","w":560,"h":420},{"f":"2568-2b_018.jpg","c":"รับเกียรติบัตรร่วมกับเพื่อนครู","w":560,"h":373},{"f":"2568-2b_025.jpg","c":"พิธีมอบโล่รางวัล เพชรแห่งพรต","w":560,"h":373},{"f":"2568-2b_027.jpg","c":"จัดกิจกรรมการเรียนรู้ในชั้นเรียน","w":560,"h":373},{"f":"2568-2b_028.jpg","c":"จัดกิจกรรมการเรียนรู้ในชั้นเรียน","w":560,"h":373},{"f":"2568-2b_032.jpg","c":"ทัศนศึกษาร่วมกับนักเรียน","w":560,"h":420},{"f":"2568-2b_037.jpg","c":"ร่วมกิจกรรมของโรงเรียน","w":560,"h":373},{"f":"2568-2b_047.jpg","c":"กิจกรรมสังสรรค์ปีใหม่ของโรงเรียน","w":560,"h":373},{"f":"2568-2b_050.jpg","c":"บรรยายให้ความรู้แก่นักเรียน","w":560,"h":420},{"f":"2568-2b_057.jpg","c":"ร่วมพิธีทางศาสนา","w":560,"h":373}]},{"k":"2568","l":"ปีการศึกษา 2568","u":"https://www.facebook.com/media/set/?set=a.10231714117216817&type=3","i":[{"f":"2568_000.jpg","c":"ถ่ายภาพร่วมกับนักเรียนในห้องปฏิบัติการ","w":560,"h":420},{"f":"2568_012.jpg","c":"วิทยากรกระบวนการ การอบรมเชิงปฏิบัติการ","w":560,"h":373},{"f":"2568_014.jpg","c":"วิทยากรกระบวนการ การอบรมเชิงปฏิบัติการ","w":560,"h":373},{"f":"2568_018.jpg","c":"วิทยากรกระบวนการ การอบรมเชิงปฏิบัติการ","w":560,"h":373},{"f":"2568_019.jpg","c":"วิทยากรกระบวนการ การอบรมเชิงปฏิบัติการ","w":560,"h":373},{"f":"2568_020.jpg","c":"จัดกิจกรรมการเรียนรู้ในชั้นเรียน","w":560,"h":373},{"f":"2568_021.jpg","c":"จัดกิจกรรมการเรียนรู้ในชั้นเรียน","w":560,"h":373},{"f":"2568_023.jpg","c":"จัดกิจกรรมการเรียนรู้ในชั้นเรียน","w":560,"h":373},{"f":"2568_027.jpg","c":"กิจกรรมลูกเสือ ฝึกผูกเงื่อนและสร้างโครงสร้าง","w":560,"h":373},{"f":"2568_029.jpg","c":"กิจกรรมลูกเสือ ฝึกผูกเงื่อนและสร้างโครงสร้าง","w":560,"h":373},{"f":"2568_030.jpg","c":"กิจกรรมลูกเสือ ฝึกผูกเงื่อนและสร้างโครงสร้าง","w":560,"h":373},{"f":"2568_037.jpg","c":"บรรยายในหอประชุม","w":560,"h":373},{"f":"2568_038.jpg","c":"บรรยายในหอประชุม","w":560,"h":373},{"f":"2568_040.jpg","c":"กิจกรรมกีฬาสีของโรงเรียน","w":560,"h":373},{"f":"2568_048.jpg","c":"อบรมธรรมนาวา \"วัง\" To ME (Mind Education)","w":560,"h":373}]},{"k":"2567-2","l":"ภาคเรียนที่ 2/2567","u":"https://www.facebook.com/media/set/?set=a.10228711094583128&type=3","i":[{"f":"2567-2_000.jpg","c":"จัดกิจกรรมการเรียนรู้ในห้องปฏิบัติการคอมพิวเตอร์","w":420,"h":560},{"f":"2567-2_003.jpg","c":"กิจกรรมการเรียนรู้นอกห้องเรียน","w":560,"h":374},{"f":"2567-2_009.jpg","c":"นักเรียนนำเสนอผลงานในนิทรรศการ","w":560,"h":420},{"f":"2567-2_010.jpg","c":"กิจกรรมกีฬาสีของโรงเรียน","w":560,"h":373},{"f":"2567-2c_006.jpg","c":"ทัศนศึกษาร่วมกับนักเรียน","w":560,"h":373},{"f":"2567-2c_008.jpg","c":"พิธีกรบนเวทีกิจกรรมของโรงเรียน","w":560,"h":373},{"f":"2567-2c_022.jpg","c":"รับรางวัลบนเวทีกิจกรรมของโรงเรียน","w":560,"h":373},{"f":"2567-2c_027.jpg","c":"กิจกรรมการเรียนรู้นอกห้องเรียน","w":560,"h":374},{"f":"2567-2c_033.jpg","c":"กิจกรรมทัศนศึกษา","w":560,"h":374}]},{"k":"2566-2","l":"ภาคเรียนที่ 2/2566","u":"https://www.facebook.com/media/set/?set=a.10225417344161426&type=3","i":[{"f":"2566-2_018.jpg","c":"จัดกิจกรรมการเรียนรู้ในชั้นเรียน","w":560,"h":373},{"f":"2566-2_021.jpg","c":"ร่วมพิธีการกับคณะครูและนักเรียน","w":560,"h":373},{"f":"2566-2_026.jpg","c":"กิจกรรมเชิดชูเกียรติ เกียรติยศแห่งพรต","w":560,"h":373},{"f":"2566-2_030.jpg","c":"บรรยายในพิธีการของโรงเรียน","w":560,"h":373},{"f":"2566-2_031.jpg","c":"ร่วมแสดงความยินดีกับนักเรียน","w":560,"h":373},{"f":"2566-2_032.jpg","c":"ร่วมแสดงความยินดีกับนักเรียน","w":560,"h":373},{"f":"2566-2_057.jpg","c":"รับมอบของที่ระลึก","w":560,"h":373}]},{"k":"2565-1","l":"ภาคเรียนที่ 1/2565","u":"https://www.facebook.com/media/set/?set=a.10221962484752100&type=3","i":[{"f":"2565-1_042.jpg","c":"ร่วมกิจกรรมการประเมิน","w":560,"h":373},{"f":"2565-1_064.jpg","c":"กิจกรรมสัปดาห์วิทยาศาสตร์","w":560,"h":373},{"f":"2565-1_070.jpg","c":"กิจกรรมสัปดาห์วิทยาศาสตร์","w":560,"h":373},{"f":"2565-1_080.jpg","c":"คณะครูกลุ่มสาระการเรียนรู้","w":560,"h":373},{"f":"2565-1_109.jpg","c":"นำเสนอผลงาน","w":560,"h":420},{"f":"2565-1_118.jpg","c":"กิจกรรมในห้องปฏิบัติการคอมพิวเตอร์","w":560,"h":420}]},{"k":"2564","l":"ปีการศึกษา 2564","u":"https://www.facebook.com/media/set/?set=a.10221768239296085&type=3","i":[{"f":"2564_009.jpg","c":"จัดการเรียนการสอนออนไลน์","w":560,"h":315},{"f":"2564_011.jpg","c":"ชั้นเรียนออนไลน์ช่วงสถานการณ์โควิด-19","w":560,"h":315},{"f":"2564_036.jpg","c":"ร่วมพิธีการของโรงเรียน","w":560,"h":355},{"f":"2564_053.jpg","c":"รับมอบเกียรติบัตร","w":560,"h":373},{"f":"2564_055.jpg","c":"อบรมเชิงปฏิบัติการร่วมกับคณะครู","w":560,"h":373},{"f":"2564_056.jpg","c":"ร่วมกิจกรรมอบรม","w":560,"h":373},{"f":"2564_063.jpg","c":"ศึกษาดูงานร่วมกับคณะครู","w":560,"h":420}]}];
+  var tabs=document.getElementById('galTabs'),grid=document.getElementById('galGrid'),cur=0;
+  tabs.innerHTML=G.map(function(a,i){return '<button type="button" class="tab" role="tab" aria-selected="'+(i===0)+'" data-i="'+i+'">'+a.l+'</button>';}).join('');
+  function showAlbum(i){
+    cur=i;var a=G[i];
+    [].forEach.call(tabs.children,function(b,j){b.setAttribute('aria-selected',j===i);});
+    document.getElementById('galTitle').textContent=a.l+' · '+a.i.length+' ภาพคัดสรร';
+    document.getElementById('galLink').href=a.u;
+    grid.innerHTML=a.i.map(function(p,j){
+      return '<button type="button" data-g="'+j+'"><img src="assets/img/t/'+p.f+'" alt="'+esc(p.c||a.l)+'" loading="lazy" width="'+p.w+'" height="'+p.h+'">'+(p.c?'<span class="cap">'+esc(p.c)+'</span>':'')+'</button>';
+    }).join('');
+  }
+  tabs.addEventListener('click',function(e){var b=e.target.closest('.tab');if(b)showAlbum(+b.dataset.i);});
+  showAlbum(0);
+
+  /* ---------- lightbox ---------- */
+  var lb=document.getElementById('lb'),lbImg=document.getElementById('lbImg'),lbCap=document.getElementById('lbCap'),seq=[],k=0,lastFocus=null;
+  function open(list,i){seq=list;k=i;lastFocus=document.activeElement;lb.hidden=false;document.body.style.overflow='hidden';draw();document.getElementById('lbClose').focus();}
+  function draw(){var it=seq[k];lbImg.src=it.src;lbImg.alt=it.cap||'';lbCap.innerHTML=(it.sub?'<small>'+esc(it.sub)+(seq.length>1?' · '+(k+1)+'/'+seq.length:'')+'</small>':'')+esc(it.cap||'');
+    document.getElementById('lbPrev').hidden=document.getElementById('lbNext').hidden=seq.length<2;}
+  function close(){lb.hidden=true;lbImg.removeAttribute('src');document.body.style.overflow='';if(lastFocus)lastFocus.focus();}
+  function step(d){k=(k+d+seq.length)%seq.length;draw();}
+  grid.addEventListener('click',function(e){var b=e.target.closest('button[data-g]');if(!b)return;var a=G[cur];
+    open(a.i.map(function(p){return {src:'assets/img/g/'+p.f,cap:p.c,sub:a.l};}),+b.dataset.g);});
+  document.addEventListener('click',function(e){var b=e.target.closest('[data-zoom]');if(!b)return;open([{src:b.dataset.zoom,cap:b.dataset.cap||''}],0);});
+  document.getElementById('lbClose').addEventListener('click',close);
+  document.getElementById('lbPrev').addEventListener('click',function(){step(-1);});
+  document.getElementById('lbNext').addEventListener('click',function(){step(1);});
+  lb.addEventListener('click',function(e){if(e.target===lb)close();});
+  document.addEventListener('keydown',function(e){if(lb.hidden)return;if(e.key==='Escape')close();else if(e.key==='ArrowLeft'&&seq.length>1)step(-1);else if(e.key==='ArrowRight'&&seq.length>1)step(1);});
+
+  /* ---------- copy email ---------- */
+  document.addEventListener('click',function(e){var b=e.target.closest('[data-copy]');if(!b)return;var v=b.dataset.copy;
+    function done(){b.textContent='คัดลอกแล้ว';setTimeout(function(){b.textContent='คัดลอก';},1600);}
+    try{navigator.clipboard.writeText(v).then(done,function(){sel();});}catch(err){sel();}
+    function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('mail'));var s=getSelection();s.removeAllRanges();s.addRange(r);}
+  });
+
+  /* ---------- active nav ---------- */
+  var links=[].slice.call(document.querySelectorAll('.nav a'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(l){l.classList.toggle('on',l.getAttribute('href')==='#'+en.target.id);});}});},{rootMargin:'-45% 0px -50% 0px'});
+    links.forEach(function(l){var s=document.querySelector(l.getAttribute('href'));if(s)io.observe(s);});
+  }
+})();
+</script>
+
+</body>
+</html>
