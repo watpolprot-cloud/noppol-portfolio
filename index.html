@@ -571,6 +571,91 @@ footer ul{list-style:none;margin:8px 0 0;padding:0}
 footer .copy{grid-column:1/-1;border-top:1px solid color-mix(in srgb,var(--foot-fg) 20%,transparent);padding-top:18px;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.06em;color:color-mix(in srgb,var(--foot-fg) 55%,transparent)}
 .copybtn{font:inherit;font-size:.8rem;margin-left:8px;padding:2px 10px;border-radius:3px;border:1px solid color-mix(in srgb,var(--foot-fg) 40%,transparent);background:transparent;color:var(--foot-fg);cursor:pointer}
 @media (max-width:860px){footer .wrap{grid-template-columns:1fr}}
+
+/* ===== Timetable 2/2569 ===== */
+:root{--s-phy-bg:#EDE8F8;--s-phy-fg:#4A2C8F;--s-es-bg:#E2F1F0;--s-es-fg:#1D6B66;--s-is-bg:#F6EEDB;--s-is-fg:#8A6216;--s-act-bg:#FBE8EF;--s-act-fg:#9A2D5A}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--s-phy-bg:#2A2242;--s-phy-fg:#C9B9FA;--s-es-bg:#14302E;--s-es-fg:#7FD1C9;--s-is-bg:#2E2614;--s-is-fg:#E2B85C;--s-act-bg:#33192A;--s-act-fg:#F09BC0}}
+:root[data-theme="dark"]{--s-phy-bg:#2A2242;--s-phy-fg:#C9B9FA;--s-es-bg:#14302E;--s-es-fg:#7FD1C9;--s-is-bg:#2E2614;--s-is-fg:#E2B85C;--s-act-bg:#33192A;--s-act-fg:#F09BC0}
+.tt{margin-top:40px;scroll-margin-top:80px}
+.tt-top{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:end;margin-bottom:20px}
+.tt-top h3{font-size:var(--step-2);margin:4px 0 6px}
+.tt-top p{margin:0;font-size:.92rem}
+.tt-stats{display:grid;grid-template-columns:repeat(4,auto);gap:0;margin:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius)}
+.tt-stats div{padding:12px 18px;border-left:1px solid var(--line)}
+.tt-stats div:first-child{border-left:0}
+.tt-stats dt{font-size:.74rem;color:var(--muted);white-space:nowrap}
+.tt-stats dd{margin:0;font-family:var(--font-display);font-size:1.9rem;font-weight:800;color:var(--violet);line-height:1.15}
+.tt-grid-wrap{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:10px;box-shadow:var(--shadow)}
+.tt-grid{border-collapse:separate;border-spacing:5px;width:100%;min-width:980px;table-layout:fixed;font-size:.86rem}
+.tt-grid th,.tt-grid td{border:0;padding:0;text-align:center;vertical-align:middle;font-weight:500}
+.tt-grid thead th{background:var(--violet);color:var(--on-violet);border-radius:5px;padding:8px 4px;text-transform:none;letter-spacing:0;font-family:var(--font-body);font-size:.84rem}
+.tt-grid thead th span{display:block;font-weight:700}
+.tt-grid thead th small{display:block;font-family:var(--font-mono);font-size:.68rem;opacity:.85}
+.tt-grid .tt-corner{width:96px;background:var(--violet-ink)}
+.tt-grid tbody th{text-align:left;padding:8px 10px;background:var(--paper);border-radius:5px;border-left:3px solid var(--violet);font-family:var(--font-body)}
+.tt-grid tbody th span{display:block;font-weight:700;font-size:.95rem;color:var(--ink)}
+.tt-grid tbody th small{color:var(--muted);font-size:.72rem;font-weight:400}
+.tt-c{height:78px;border-radius:5px}
+.tt-c.empty{border:1px dashed var(--line)!important}
+.tt-c b{display:block;font-family:var(--font-display);font-size:1.12rem;font-weight:800;line-height:1.25}
+.tt-code{font-family:var(--font-mono);font-size:.72rem;font-weight:500}
+.tt-room{display:inline-block;margin-top:3px;padding:0 8px;border-radius:999px;background:var(--surface);font-size:.7rem;font-weight:600}
+.tt-room.alt{background:var(--gold);color:var(--surface)}
+.s-phy{background:var(--s-phy-bg);color:var(--s-phy-fg)}
+.s-es{background:var(--s-es-bg);color:var(--s-es-fg)}
+.s-is{background:var(--s-is-bg);color:var(--s-is-fg)}
+.s-act{background:var(--s-act-bg);color:var(--s-act-fg)}
+.tt-c[class*="s-"] b{color:var(--ink)}
+.duty{background:repeating-linear-gradient(135deg,var(--paper) 0 6px,var(--line) 6px 7px);color:var(--muted)}
+.tt-duty{font-size:.78rem;font-weight:600;padding:0 4px;display:block;line-height:1.35}
+.tt-list{display:none}
+.tt-note{font-size:.84rem;margin:12px 0 0}
+.tt-subs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:20px}
+.tt-sub{display:grid;grid-template-columns:minmax(0,1fr) auto;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-left:4px solid currentColor;border-radius:var(--radius);overflow:hidden}
+.tt-sub.s-phy{border-left-color:var(--s-phy-fg)}.tt-sub.s-es{border-left-color:var(--s-es-fg)}.tt-sub.s-is{border-left-color:var(--s-is-fg)}.tt-sub.s-act{border-left-color:var(--s-act-fg)}
+.tt-sub>div:first-child{padding:14px 14px 14px 16px;min-width:0}
+.tt-sub .tt-code{color:var(--violet)}
+.tt-sub h4{font-family:var(--font-body);font-size:.98rem;font-weight:700;margin:2px 0}
+.tt-sub p{margin:0;font-size:.84rem;color:var(--muted)}
+.tt-sub a{display:inline-block;margin-top:6px;font-size:.8rem;font-weight:600}
+.tt-n{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:10px 14px;text-align:center;min-width:84px}
+.tt-sub.s-phy .tt-n{background:var(--s-phy-bg);color:var(--s-phy-fg)}.tt-sub.s-es .tt-n{background:var(--s-es-bg);color:var(--s-es-fg)}.tt-sub.s-is .tt-n{background:var(--s-is-bg);color:var(--s-is-fg)}.tt-sub.s-act .tt-n{background:var(--s-act-bg);color:var(--s-act-fg)}
+.tt-n b{font-family:var(--font-display);font-size:2rem;font-weight:800;line-height:1.1}
+.tt-n small{font-size:.68rem;line-height:1.4}
+.tt-info{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:14px}
+.tt-info .panel{padding:18px 20px}
+.tt-info h4{font-family:var(--font-body);font-size:.98rem;font-weight:700;margin-bottom:10px}
+.tt-bars{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.tt-bars li{display:grid;grid-template-columns:72px minmax(0,1fr) 24px;align-items:center;gap:10px;font-size:.86rem}
+.tt-bars i{display:block;height:10px;border-radius:999px;background:var(--violet-soft);position:relative;overflow:hidden}
+.tt-bars i::after{content:"";position:absolute;inset:0 auto 0 0;width:var(--w);background:var(--violet);border-radius:999px;transform-origin:left;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.js .tt-bars i::after{transform:scaleX(0)}
+.js .tt-info.in .tt-bars i::after{transform:scaleX(1)}
+.tt-bars b{text-align:right;color:var(--violet)}
+.tt-roles{margin:0;display:grid;gap:8px}
+.tt-roles div{display:grid;grid-template-columns:96px minmax(0,1fr);gap:8px;font-size:.86rem;border-bottom:1px solid var(--line);padding-bottom:7px}
+.tt-roles div:last-child{border-bottom:0;padding-bottom:0}
+.tt-roles dt{font-weight:600}
+.tt-roles dd{margin:0;color:var(--muted)}
+@media (max-width:980px){.tt-subs{grid-template-columns:repeat(2,minmax(0,1fr))}.tt-info{grid-template-columns:1fr}}
+@media (max-width:760px){
+  .tt-top{grid-template-columns:1fr}
+  .tt-stats{grid-template-columns:repeat(2,1fr)}
+  .tt-stats div:nth-child(3){border-left:0}
+  .tt-stats div:nth-child(n+3){border-top:1px solid var(--line)}
+  .tt-grid-wrap{display:none}
+  .tt-list{display:grid;gap:12px}
+  .tt-day{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--violet);border-radius:var(--radius);padding:12px 14px}
+  .tt-day h4{font-family:var(--font-body);font-size:1rem;display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
+  .tt-day h4 small{font-weight:400;color:var(--muted);font-size:.78rem}
+  .tt-day ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+  .tt-day li{display:grid;grid-template-columns:92px minmax(0,1fr);gap:10px;align-items:center;padding:7px 10px;border-radius:5px;font-size:.88rem}
+  .tt-day li .tt-w{color:var(--ink);font-weight:600}
+  .tt-day li.duty .tt-w{color:var(--muted)}
+  .tt-p{font-weight:700;line-height:1.3}
+  .tt-p small{display:block;font-family:var(--font-mono);font-size:.68rem;font-weight:400;opacity:.85}
+  .tt-subs{grid-template-columns:1fr}
+}
 </style>
 
 <div class="progress" aria-hidden="true"><span id="progBar"></span></div>
@@ -585,6 +670,7 @@ footer .copy{grid-column:1/-1;border-top:1px solid color-mix(in srgb,var(--foot-
       <a href="#works">ผลงานเด่น</a>
       <a href="#khs3">ผลงาน คศ.3</a>
       <a href="#teaching">การจัดการเรียนรู้</a>
+      <a href="#timetable">ตารางสอน</a>
       <a href="#research">วิจัยและนวัตกรรม</a>
       <a href="#awards">รางวัล</a>
       <a href="#development">บทบาทวิชาชีพ</a><a href="#certs">เกียรติบัตร</a>
@@ -871,6 +957,45 @@ footer .copy{grid-column:1/-1;border-top:1px solid color-mix(in srgb,var(--foot-
           <h3>ผู้เรียนที่มีผลสัมฤทธิ์ระดับ 2.5 ขึ้นไป</h3>
           <div class="ach" id="ach"></div>
           <p class="muted" style="font-size:.8rem;margin-top:12px">ที่มา: รายงานการประเมินตนเอง (SAR) ปีการศึกษา 2567 และ 2568</p>
+        </div>
+      </div>
+
+      <!-- ===== TIMETABLE & TEACHING INFO 2/2569 ===== -->
+      <div class="tt" id="timetable">
+        <div class="tt-top">
+          <div>
+            <div class="eyebrow">Timetable · 2/2569</div>
+            <h3>ตารางสอนและสารสนเทศการสอน ภาคเรียนที่ 2/2569</h3>
+            <p class="muted">เปิดภาคเรียน 26 ตุลาคม 2569 · เรียนตามตารางถึง 19 กุมภาพันธ์ 2570 · สอบปลายภาค 23–26 กุมภาพันธ์ 2570</p>
+          </div>
+          <dl class="tt-stats">
+            <div><dt>คาบสอน/สัปดาห์</dt><dd class="tnum">18</dd></div>
+            <div><dt>ห้องเรียน</dt><dd class="tnum">5</dd></div>
+            <div><dt>รายวิชา</dt><dd class="tnum">4</dd></div>
+            <div><dt>สัปดาห์เรียน</dt><dd class="tnum">17</dd></div>
+          </dl>
+        </div>
+        <div class="tt-grid-wrap" role="region" aria-label="ตารางสอนรายคาบ" tabindex="0">
+          <table class="tt-grid">
+            <thead><tr><th scope="col" class="tt-corner">วัน / คาบ</th><th scope="col"><span>คาบ 1</span><small>08.30–09.20</small></th><th scope="col"><span>คาบ 2</span><small>09.20–10.10</small></th><th scope="col"><span>คาบ 3</span><small>10.10–11.00</small></th><th scope="col"><span>คาบ 4</span><small>11.00–11.50</small></th><th scope="col"><span>คาบ 5</span><small>11.50–12.40</small></th><th scope="col"><span>คาบ 6</span><small>12.40–13.30</small></th><th scope="col"><span>คาบ 7</span><small>13.30–14.20</small></th><th scope="col"><span>คาบ 8</span><small>14.20–15.10</small></th><th scope="col"><span>คาบ 9</span><small>15.10–16.00</small></th><th scope="col"><span>คาบ 10</span><small>16.00–16.50</small></th></tr></thead>
+            <tbody><tr><th scope="row"><span>จันทร์</span><small>สอน 4 คาบ</small></th><td class="tt-c s-phy"><span class="tt-code">ว32204</span><b>ม.5/4</b><span class="tt-room">ห้อง 335</span></td><td class="tt-c s-phy"><span class="tt-code">ว32204</span><b>ม.5/4</b><span class="tt-room">ห้อง 335</span></td><td class="tt-c empty"></td><td class="tt-c empty"></td><td class="tt-c empty"></td><td class="tt-c empty"></td><td class="tt-c empty"></td><td class="tt-c s-is"><span class="tt-code">I30202</span><b>ม.5/4</b><span class="tt-room">ห้อง 335</span></td><td class="tt-c s-is"><span class="tt-code">I30202</span><b>ม.5/4</b><span class="tt-room">ห้อง 335</span></td><td class="tt-c empty"></td></tr><tr><th scope="row"><span>อังคาร</span><small>สอน 4 คาบ</small></th><td class="tt-c empty"></td><td class="tt-c empty"></td><td class="tt-c s-es"><span class="tt-code">ว30114</span><b>ม.4/9</b><span class="tt-room">ห้อง 335</span></td><td class="tt-c s-phy"><span class="tt-code">ว32204</span><b>ม.5/4</b><span class="tt-room">ห้อง 335</span></td><td class="tt-c empty"></td><td class="tt-c empty"></td><td class="tt-c empty"></td><td class="tt-c s-es"><span class="tt-code">ว30114</span><b>ม.4/10</b><span class="tt-room alt">ห้อง 321</span></td><td class="tt-c s-es"><span class="tt-code">ว30114</span><b>ม.4/10</b><span class="tt-room alt">ห้อง 321</span></td><td class="tt-c duty"><span class="tt-duty">PLC</span></td></tr><tr><th scope="row"><span>พุธ</span><small>สอน 4 คาบ</small></th><td class="tt-c empty"></td><td class="tt-c s-phy"><span class="tt-code">ว32204</span><b>ม.5/2</b><span class="tt-room">ห้อง 335</span></td><td class="tt-c s-es"><span class="tt-code">ว30114</span><b>ม.4/8</b><span class="tt-room">ห้อง 335</span></td><td class="tt-c s-es"><span class="tt-code">ว30114</span><b>ม.4/8</b><span class="tt-room">ห้อง 335</span></td><td class="tt-c empty"></td><td class="tt-c empty"></td><td class="tt-c s-act"><span class="tt-code">ก30914</span><b>ม.5/4</b><span class="tt-room">ห้อง 335</span></td><td class="tt-c duty"><span class="tt-duty">คณะสี</span></td><td class="tt-c empty"></td><td class="tt-c empty"></td></tr><tr><th scope="row"><span>พฤหัสบดี</span><small>สอน 2 คาบ</small></th><td class="tt-c s-phy"><span class="tt-code">ว32204</span><b>ม.5/2</b><span class="tt-room">ห้อง 335</span></td><td class="tt-c s-phy"><span class="tt-code">ว32204</span><b>ม.5/2</b><span class="tt-room">ห้อง 335</span></td><td class="tt-c empty"></td><td class="tt-c empty"></td><td class="tt-c empty"></td><td class="tt-c duty"><span class="tt-duty">ประชุมระดับ</span></td><td class="tt-c empty"></td><td class="tt-c duty"><span class="tt-duty">ประชุมวิชาการ</span></td><td class="tt-c duty"><span class="tt-duty">ประชุมวิชาการ</span></td><td class="tt-c empty"></td></tr><tr><th scope="row"><span>ศุกร์</span><small>สอน 4 คาบ</small></th><td class="tt-c empty"></td><td class="tt-c empty"></td><td class="tt-c s-es"><span class="tt-code">ว30114</span><b>ม.4/9</b><span class="tt-room">ห้อง 335</span></td><td class="tt-c s-es"><span class="tt-code">ว30114</span><b>ม.4/9</b><span class="tt-room">ห้อง 335</span></td><td class="tt-c empty"></td><td class="tt-c empty"></td><td class="tt-c s-es"><span class="tt-code">ว30114</span><b>ม.4/8</b><span class="tt-room">ห้อง 335</span></td><td class="tt-c s-es"><span class="tt-code">ว30114</span><b>ม.4/10</b><span class="tt-room">ห้อง 335</span></td><td class="tt-c empty"></td><td class="tt-c empty"></td></tr></tbody>
+          </table>
+        </div>
+        <div class="tt-list"><div class="tt-day"><h4>จันทร์<small>สอน 4 คาบ</small></h4><ul><li class="s-phy"><span class="tt-p">คาบ 1<small>08.30–09.20</small></span><span class="tt-w"><span class="tt-code">ว32204</span> ม.5/4 · ห้อง 335</span></li><li class="s-phy"><span class="tt-p">คาบ 2<small>09.20–10.10</small></span><span class="tt-w"><span class="tt-code">ว32204</span> ม.5/4 · ห้อง 335</span></li><li class="s-is"><span class="tt-p">คาบ 8<small>14.20–15.10</small></span><span class="tt-w"><span class="tt-code">I30202</span> ม.5/4 · ห้อง 335</span></li><li class="s-is"><span class="tt-p">คาบ 9<small>15.10–16.00</small></span><span class="tt-w"><span class="tt-code">I30202</span> ม.5/4 · ห้อง 335</span></li></ul></div><div class="tt-day"><h4>อังคาร<small>สอน 4 คาบ</small></h4><ul><li class="s-es"><span class="tt-p">คาบ 3<small>10.10–11.00</small></span><span class="tt-w"><span class="tt-code">ว30114</span> ม.4/9 · ห้อง 335</span></li><li class="s-phy"><span class="tt-p">คาบ 4<small>11.00–11.50</small></span><span class="tt-w"><span class="tt-code">ว32204</span> ม.5/4 · ห้อง 335</span></li><li class="s-es"><span class="tt-p">คาบ 8<small>14.20–15.10</small></span><span class="tt-w"><span class="tt-code">ว30114</span> ม.4/10 · ห้อง 321</span></li><li class="s-es"><span class="tt-p">คาบ 9<small>15.10–16.00</small></span><span class="tt-w"><span class="tt-code">ว30114</span> ม.4/10 · ห้อง 321</span></li><li class="duty"><span class="tt-p">คาบ 10<small>16.00–16.50</small></span><span class="tt-w">PLC</span></li></ul></div><div class="tt-day"><h4>พุธ<small>สอน 4 คาบ</small></h4><ul><li class="s-phy"><span class="tt-p">คาบ 2<small>09.20–10.10</small></span><span class="tt-w"><span class="tt-code">ว32204</span> ม.5/2 · ห้อง 335</span></li><li class="s-es"><span class="tt-p">คาบ 3<small>10.10–11.00</small></span><span class="tt-w"><span class="tt-code">ว30114</span> ม.4/8 · ห้อง 335</span></li><li class="s-es"><span class="tt-p">คาบ 4<small>11.00–11.50</small></span><span class="tt-w"><span class="tt-code">ว30114</span> ม.4/8 · ห้อง 335</span></li><li class="s-act"><span class="tt-p">คาบ 7<small>13.30–14.20</small></span><span class="tt-w"><span class="tt-code">ก30914</span> ม.5/4 · ห้อง 335</span></li><li class="duty"><span class="tt-p">คาบ 8<small>14.20–15.10</small></span><span class="tt-w">คณะสี</span></li></ul></div><div class="tt-day"><h4>พฤหัสบดี<small>สอน 2 คาบ</small></h4><ul><li class="s-phy"><span class="tt-p">คาบ 1<small>08.30–09.20</small></span><span class="tt-w"><span class="tt-code">ว32204</span> ม.5/2 · ห้อง 335</span></li><li class="s-phy"><span class="tt-p">คาบ 2<small>09.20–10.10</small></span><span class="tt-w"><span class="tt-code">ว32204</span> ม.5/2 · ห้อง 335</span></li><li class="duty"><span class="tt-p">คาบ 6<small>12.40–13.30</small></span><span class="tt-w">ประชุมระดับ</span></li><li class="duty"><span class="tt-p">คาบ 8<small>14.20–15.10</small></span><span class="tt-w">ประชุมวิชาการ</span></li><li class="duty"><span class="tt-p">คาบ 9<small>15.10–16.00</small></span><span class="tt-w">ประชุมวิชาการ</span></li></ul></div><div class="tt-day"><h4>ศุกร์<small>สอน 4 คาบ</small></h4><ul><li class="s-es"><span class="tt-p">คาบ 3<small>10.10–11.00</small></span><span class="tt-w"><span class="tt-code">ว30114</span> ม.4/9 · ห้อง 335</span></li><li class="s-es"><span class="tt-p">คาบ 4<small>11.00–11.50</small></span><span class="tt-w"><span class="tt-code">ว30114</span> ม.4/9 · ห้อง 335</span></li><li class="s-es"><span class="tt-p">คาบ 7<small>13.30–14.20</small></span><span class="tt-w"><span class="tt-code">ว30114</span> ม.4/8 · ห้อง 335</span></li><li class="s-es"><span class="tt-p">คาบ 8<small>14.20–15.10</small></span><span class="tt-w"><span class="tt-code">ว30114</span> ม.4/10 · ห้อง 335</span></li></ul></div></div>
+        <p class="tt-note muted">สอนที่ห้อง 335 เป็นหลัก · ม.4/10 วันอังคารคาบ 8–9 ใช้ห้อง 321 · โฮมรูม 07.30–08.30 น. · ช่องลายเส้นคืองานอื่นตามตารางสอน</p>
+        <div class="tt-subs"><article class="tt-sub s-phy"><div><span class="tt-code">ว32204</span><h4>ฟิสิกส์เพิ่มเติม 4</h4><p>ม.5/2 · ม.5/4</p><a href="https://watpolprot-cloud.github.io/p4-journey/" target="_blank" rel="noopener">เว็บรายวิชา P4 Journey</a></div><div class="tt-n"><b class="tnum">6</b><small>คาบ/สัปดาห์<br>ห้องละ 3 คาบ</small></div></article><article class="tt-sub s-es"><div><span class="tt-code">ว30114</span><h4>วิทยาศาสตร์โลกและอวกาศ</h4><p>ม.4/8 · ม.4/9 · ม.4/10</p><a href="https://watpolprot-cloud.github.io/es-journey/" target="_blank" rel="noopener">เว็บรายวิชา ES Journey</a></div><div class="tt-n"><b class="tnum">9</b><small>คาบ/สัปดาห์<br>ห้องละ 3 คาบ</small></div></article><article class="tt-sub s-is"><div><span class="tt-code">I30202</span><h4>การสื่อสารและการนำเสนอ (IS2)</h4><p>ม.5/4</p><a href="https://watpolprot-cloud.github.io/is2-the-pitch/" target="_blank" rel="noopener">เว็บรายวิชา IS2 THE PITCH</a></div><div class="tt-n"><b class="tnum">2</b><small>คาบ/สัปดาห์</small></div></article><article class="tt-sub s-act"><div><span class="tt-code">ก30914</span><h4>กิจกรรมพัฒนาผู้เรียน</h4><p>ม.5/4</p></div><div class="tt-n"><b class="tnum">1</b><small>คาบ/สัปดาห์</small></div></article></div>
+        <div class="tt-info">
+          <div class="panel"><h4>จำนวนคาบสอนรายวัน</h4><ul class="tt-bars"><li><span>จันทร์</span><i style="--w:100%"></i><b class="tnum">4</b></li><li><span>อังคาร</span><i style="--w:100%"></i><b class="tnum">4</b></li><li><span>พุธ</span><i style="--w:100%"></i><b class="tnum">4</b></li><li><span>พฤหัสบดี</span><i style="--w:50%"></i><b class="tnum">2</b></li><li><span>ศุกร์</span><i style="--w:100%"></i><b class="tnum">4</b></li></ul></div>
+          <div class="panel"><h4>จำนวนคาบสอนรายห้องเรียน</h4><ul class="tt-bars"><li><span>ม.4/8</span><i style="--w:50%"></i><b class="tnum">3</b></li><li><span>ม.4/9</span><i style="--w:50%"></i><b class="tnum">3</b></li><li><span>ม.4/10</span><i style="--w:50%"></i><b class="tnum">3</b></li><li><span>ม.5/2</span><i style="--w:50%"></i><b class="tnum">3</b></li><li><span>ม.5/4</span><i style="--w:100%"></i><b class="tnum">6</b></li></ul></div>
+          <div class="panel"><h4>บทบาทอื่นตามตารางสอน</h4>
+            <dl class="tt-roles">
+              <div><dt>ครูที่ปรึกษา</dt><dd>ม.5/4 · โฮมรูมทุกวัน 07.30–08.30</dd></div>
+              <div><dt>PLC</dt><dd>ชุมชนการเรียนรู้ทางวิชาชีพ วันอังคาร คาบ 10</dd></div>
+              <div><dt>คณะสี</dt><dd>วันพุธ คาบ 8</dd></div>
+              <div><dt>ประชุมระดับ</dt><dd>วันพฤหัสบดี คาบ 6</dd></div>
+              <div><dt>ประชุมวิชาการ</dt><dd>วันพฤหัสบดี คาบ 8–9</dd></div>
+            </dl>
+          </div>
         </div>
       </div>
       <div class="methods">
@@ -1291,7 +1416,7 @@ footer .copy{grid-column:1/-1;border-top:1px solid color-mix(in srgb,var(--foot-
 
   /* ---------- motion: reveal on scroll, count-up, progress ---------- */
   var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var RV='.sec-head,.cert,.panel,.dcard,.sys-card,.vcard,.methods>div,.photo-pair>button,.k3-main,.k3-ind li,.dgroup2>h3,.agroup,.gallery>button,.dlist li,.award-photos>*';
+  var RV='.sec-head,.tt-grid-wrap,.tt-sub,.tt-day,.cert,.panel,.dcard,.sys-card,.vcard,.methods>div,.photo-pair>button,.k3-main,.k3-ind li,.dgroup2>h3,.agroup,.gallery>button,.dlist li,.award-photos>*';
   var items=[].slice.call(document.querySelectorAll(RV)).filter(function(el){return !el.closest('.hero')&&!el.closest('.pv')&&!el.closest('.lb');});
   function countUp(el){var txt=el.textContent.trim(),m=txt.match(/^([−-]?)([\d,]*\d(?:\.\d+)?)(\D*)$/);if(!m||reduce)return;
     var target=parseFloat(m[2].replace(/,/g,'')),dec=(m[2].split('.')[1]||'').length,comma=m[2].indexOf(',')>-1,t0=null,dur=1300;
@@ -1306,8 +1431,8 @@ footer .copy{grid-column:1/-1;border-top:1px solid color-mix(in srgb,var(--foot-
       [].forEach.call(el.querySelectorAll('.stats b,.readings b,.dh-count dd,.bars .v'),countUp);});},{rootMargin:'0px 0px -8% 0px',threshold:.08});
     items.forEach(function(el){ro.observe(el);});
     var bo=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');bo.unobserve(en.target);}});},{threshold:.3});
-    [].forEach.call(document.querySelectorAll('.bars,.ach'),function(el){[].forEach.call(el.querySelectorAll('.row'),function(r,i){r.style.setProperty('--ri',i);});bo.observe(el);});
-  }else{[].forEach.call(document.querySelectorAll('.bars,.ach,.sec-head'),function(el){el.classList.add('in');});}
+    [].forEach.call(document.querySelectorAll('.bars,.ach,.tt-info'),function(el){[].forEach.call(el.querySelectorAll('.row'),function(r,i){r.style.setProperty('--ri',i);});bo.observe(el);});
+  }else{[].forEach.call(document.querySelectorAll('.bars,.ach,.sec-head,.tt-info'),function(el){el.classList.add('in');});}
   var prog=document.getElementById('progBar'),ticking=false;
   function onScroll(){if(ticking)return;ticking=true;requestAnimationFrame(function(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;prog.style.transform='scaleX('+(max>0?h.scrollTop/max:0)+')';ticking=false;});}
   window.addEventListener('scroll',onScroll,{passive:true});onScroll();
