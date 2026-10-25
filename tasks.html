@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>งานและกำหนดส่ง · นพพล ภาณุสุวัฒน์</title>
+<meta name="description" content="รายการงานและกำหนดส่งของครูนพพล ภาณุสุวัฒน์ ดึงจาก Google Sheet แสดงเฉพาะงานที่ครูเลือกเผยแพร่">
+<script>document.documentElement.classList.add("js")</script>
+<link rel="preconnect" href="https://script.google.com">
+<link rel="preconnect" href="https://script.googleusercontent.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Noto+Serif+Thai:wght@500;600;700;800&display=swap">
+<style>
+/* หน้าติดตามงาน ใช้ชุดสีและตัวอักษรเดียวกับ index.html (ม่วงเป็นหลัก ทองใช้เน้นเรื่องเร่งด่วน/วันนี้) */
+:root{
+  --paper:#F6F5FA; --surface:#FFFFFF; --ink:#1C1930; --muted:#5E5873; --line:#E1DDEB; --line-strong:#C9C2DB;
+  --violet:#4A2C8F; --violet-ink:#3A2272; --violet-soft:#EDE8F8; --gold:#A87A1E; --gold-soft:#F6EEDB;
+  --red:#B3261E; --red-soft:#FBE7E7;
+  --grid:rgba(74,44,143,.065); --shadow:0 1px 2px rgba(28,25,48,.06),0 8px 24px rgba(28,25,48,.06);
+  --on-violet:#FFFFFF; --foot-bg:#1C1930; --foot-fg:#F6F5FA;
+  --font-display:"Noto Serif Thai","Sarabun",Georgia,serif;
+  --font-body:"IBM Plex Sans Thai","Sarabun","Leelawadee UI","Thonburi",system-ui,sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+  --step--1:clamp(.8rem,.78rem + .1vw,.86rem); --step-0:clamp(.98rem,.95rem + .15vw,1.06rem);
+  --step-1:clamp(1.15rem,1.08rem + .35vw,1.35rem); --step-2:clamp(1.4rem,1.25rem + .8vw,1.9rem);
+  --step-3:clamp(1.8rem,1.5rem + 1.6vw,2.7rem); --step-4:clamp(2.3rem,1.8rem + 2.8vw,4rem);
+  --radius:6px; --maxw:1080px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#121019; --surface:#1A1725; --ink:#ECE9F5; --muted:#A8A1BC; --line:#2C2839; --line-strong:#3D3750;
+    --violet:#B7A2F6; --violet-ink:#D4C8FB; --violet-soft:#241E38; --gold:#E2B85C; --gold-soft:#2A2315;
+    --red:#F2A39C; --red-soft:#3A1D1C;
+    --grid:rgba(183,162,246,.055); --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 28px rgba(0,0,0,.35);
+    --on-violet:#160F2A; --foot-bg:#0B0A11; --foot-fg:#ECE9F5; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#121019; --surface:#1A1725; --ink:#ECE9F5; --muted:#A8A1BC; --line:#2C2839; --line-strong:#3D3750;
+  --violet:#B7A2F6; --violet-ink:#D4C8FB; --violet-soft:#241E38; --gold:#E2B85C; --gold-soft:#2A2315;
+  --red:#F2A39C; --red-soft:#3A1D1C;
+  --grid:rgba(183,162,246,.055); --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 28px rgba(0,0,0,.35);
+  --on-violet:#160F2A; --foot-bg:#0B0A11; --foot-fg:#ECE9F5; color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+body{
+  margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);font-size:var(--step-0);line-height:1.75;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:28px 28px;background-attachment:fixed;-webkit-font-smoothing:antialiased;
+}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--surface)}
+a{color:var(--violet);text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{color:var(--violet-ink)}
+:focus-visible{outline:2px solid var(--violet);outline-offset:3px;border-radius:3px}
+h1,h2,h3{font-family:var(--font-display);line-height:1.3;margin:0;text-wrap:balance;font-weight:700;letter-spacing:0}
+p{margin:0}
+button{font:inherit;cursor:pointer}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font-family:var(--font-mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--violet);font-weight:500}
+
+/* ---------- top bar ---------- */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:saturate(1.2) blur(10px);-webkit-backdrop-filter:saturate(1.2) blur(10px);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;gap:20px;min-height:60px}
+.brand{display:flex;flex-direction:column;line-height:1.2;text-decoration:none;color:var(--ink);flex:none}
+.brand b{font-family:var(--font-display);font-size:1.02rem;font-weight:700}
+.brand span{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
+.nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;margin-left:auto;min-width:0}
+.nav::-webkit-scrollbar{display:none}
+.nav a{white-space:nowrap;text-decoration:none;color:var(--muted);font-size:.9rem;padding:6px 10px;border-radius:4px;font-weight:500}
+.nav a:hover,.nav a.on{color:var(--violet);background:var(--violet-soft)}
+@media (max-width:560px){.topbar .wrap{flex-direction:column;align-items:stretch;gap:2px;padding-block:8px 4px}.nav{margin-left:-6px}}
+
+/* ---------- scale rule (signature) ---------- */
+.scale{height:18px;border-top:1.5px solid var(--ink);
+  background-image:
+    repeating-linear-gradient(90deg,var(--ink) 0 1.5px,transparent 1.5px 100px),
+    repeating-linear-gradient(90deg,var(--ink) 0 1px,transparent 1px 50px),
+    repeating-linear-gradient(90deg,var(--line-strong) 0 1px,transparent 1px 10px);
+  background-size:100% 14px,100% 9px,100% 6px;background-repeat:no-repeat;opacity:.9}
+
+/* ---------- head ---------- */
+.page-head{padding-top:40px}
+.page-head .scale{margin-bottom:18px}
+.page-head h1{font-size:var(--step-4);font-weight:800;line-height:1.15;margin-top:10px}
+.page-head .today{margin-top:14px;font-size:var(--step-1);font-weight:600}
+.page-head .week{color:var(--violet);font-weight:600}
+.page-head .lede{margin-top:6px;color:var(--muted);max-width:46em;font-size:.96rem}
+
+.facts{margin:28px 0 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1.5px solid var(--ink);border-bottom:1px solid var(--line)}
+.facts div{padding:12px 16px 14px 0;min-width:0}
+.facts div+div{padding-left:16px;border-left:1px solid var(--line)}
+.facts dt{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.1em;color:var(--muted)}
+.facts dd{margin:2px 0 0;font-family:var(--font-mono);font-size:var(--step-3);font-weight:500;line-height:1.2;font-variant-numeric:tabular-nums}
+.facts dd.alert{color:var(--red)}
+@media (max-width:640px){.facts{grid-template-columns:repeat(2,minmax(0,1fr))}.facts div:nth-child(3){padding-left:0;border-left:0}.facts div:nth-child(n+3){border-top:1px solid var(--line)}}
+
+/* ---------- toolbar ---------- */
+.toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;margin-top:24px}
+.seg{display:inline-flex;border:1.5px solid var(--violet);border-radius:4px;overflow:hidden;flex:none}
+.seg button{font-size:.9rem;font-weight:600;padding:6px 14px;border:0;background:transparent;color:var(--violet)}
+.seg button+button{border-left:1.5px solid var(--violet)}
+.seg button[aria-pressed="true"]{background:var(--violet);color:var(--on-violet)}
+.seg button:not([aria-pressed="true"]):hover{background:var(--violet-soft)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:.82rem;padding:3px 11px;border-radius:3px;border:1px solid var(--line-strong);background:var(--surface);color:var(--muted)}
+.chip:hover{color:var(--violet);border-color:var(--violet)}
+.chip[aria-pressed="true"]{background:var(--violet-soft);border-color:transparent;color:var(--violet);font-weight:600}
+.sync{margin-left:auto;display:flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:.74rem;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;padding:5px 12px;border-radius:4px;font-weight:600;font-size:.86rem;border:1.5px solid var(--violet);background:transparent;color:var(--violet);font-family:var(--font-body)}
+.btn:hover{background:var(--violet-soft)}
+.btn:disabled{opacity:.5;cursor:default}
+@media (max-width:640px){.sync{margin-left:0;width:100%;justify-content:space-between}}
+
+/* ---------- notices ---------- */
+.notice{margin-top:18px;padding:12px 16px;border-radius:var(--radius);border:1px solid var(--line);background:var(--surface);font-size:.94rem;display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
+.notice.warn{background:var(--gold-soft);border-color:transparent}
+.notice.err{background:var(--red-soft);border-color:transparent;color:var(--ink)}
+.notice b{font-weight:600}
+.setup{margin-top:28px;padding:26px 28px;background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:var(--radius);box-shadow:var(--shadow)}
+.setup h2{font-size:var(--step-2)}
+.setup p{margin-top:8px;color:var(--muted);max-width:44em}
+
+/* ---------- groups + tasks ---------- */
+.group{margin-top:34px}
+.group-head{display:flex;align-items:baseline;gap:12px;border-top:1.5px solid var(--ink);padding-top:10px;margin-bottom:12px}
+.group-head h2{font-size:var(--step-2)}
+.group-head .n{font-family:var(--font-mono);font-size:.78rem;color:var(--muted)}
+.group.overdue .group-head{border-top-color:var(--red)}
+.group.overdue h2{color:var(--red)}
+.group.today .group-head{border-top-color:var(--gold)}
+.list{display:grid;gap:10px}
+.task{display:grid;grid-template-columns:104px minmax(0,1fr) auto;gap:18px;align-items:start;background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--line-strong);border-radius:var(--radius);padding:14px 18px}
+.task.overdue{border-left-color:var(--red)}
+.task.today{border-left-color:var(--gold)}
+.task.soon{border-left-color:var(--violet)}
+.task.done{opacity:.75}
+.task.done h3{text-decoration:line-through;text-decoration-thickness:1px;text-decoration-color:var(--muted)}
+.when{font-family:var(--font-mono);line-height:1.3;border-right:1px solid var(--line);padding-right:14px;min-width:0}
+.when .d{display:block;font-size:1.8rem;font-weight:500;line-height:1.1;color:var(--ink)}
+.when .m{display:block;font-size:.78rem;margin-top:2px}
+.when .w{display:block;font-size:.7rem;color:var(--muted)}
+.when .m+.w{margin-top:4px}
+.when.none .d{font-size:.86rem;font-weight:400;color:var(--muted);line-height:1.5}
+.what{min-width:0}
+.what h3{font-family:var(--font-body);font-size:1.05rem;font-weight:600;line-height:1.55;overflow-wrap:anywhere}
+.what .detail{margin-top:4px;color:var(--muted);font-size:.93rem;line-height:1.65;white-space:pre-line;overflow-wrap:anywhere}
+.meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin-top:8px}
+.tag{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.02em;padding:2px 9px;border:1px solid var(--line-strong);border-radius:3px;color:var(--muted);background:var(--surface)}
+.tag.v{border-color:transparent;background:var(--violet-soft);color:var(--violet)}
+.tag.g{border-color:transparent;background:var(--gold-soft);color:var(--gold);font-weight:500}
+.meta .time{font-family:var(--font-mono);font-size:.76rem;color:var(--ink)}
+.meta a{font-size:.86rem;font-weight:600}
+.left{font-family:var(--font-mono);font-size:.8rem;font-weight:500;white-space:nowrap;padding:3px 10px;border-radius:3px;background:var(--violet-soft);color:var(--violet)}
+.task.overdue .left{background:var(--red-soft);color:var(--red)}
+.task.today .left{background:var(--gold-soft);color:var(--gold)}
+.task.later .left{background:transparent;color:var(--muted);border:1px solid var(--line)}
+.task.done .left{background:transparent;color:var(--muted);border:1px solid var(--line)}
+@media (max-width:640px){
+  .task{grid-template-columns:82px minmax(0,1fr);gap:12px;padding:12px 14px}
+  .when{padding-right:8px}
+  .when .d{font-size:1.5rem}
+  .when .m{font-size:.72rem;white-space:nowrap}
+  .left{grid-column:2;justify-self:start;margin-top:-4px}
+}
+.empty{margin-top:28px;padding:28px 20px;text-align:center;color:var(--muted);border:1px dashed var(--line-strong);border-radius:var(--radius);background:var(--surface)}
+.skeleton{margin-top:34px;display:grid;gap:10px}
+.skeleton div{height:86px;border-radius:var(--radius);background:linear-gradient(90deg,var(--surface),var(--violet-soft),var(--surface));background-size:200% 100%;border:1px solid var(--line);animation:sk 1.4s ease-in-out infinite}
+@keyframes sk{0%{background-position:100% 0}100%{background-position:-100% 0}}
+
+/* ---------- footer ---------- */
+footer{margin-top:56px;background:var(--foot-bg);color:var(--foot-fg)}
+footer .wrap{padding-block:30px 28px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 28px;font-size:.88rem;color:color-mix(in srgb,var(--foot-fg) 78%,transparent)}
+footer a{color:var(--foot-fg)}
+footer b{font-family:var(--font-display);color:var(--foot-fg);font-size:1rem}
+
+@media print{
+  body{background:#fff}
+  .topbar,.toolbar,.notice,footer{display:none!important}
+  .task{break-inside:avoid;box-shadow:none}
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="./"><b>นพพล ภาณุสุวัฒน์</b><span>E-Portfolio · Task Tracker</span></a>
+    <nav class="nav" aria-label="ไปยังหน้าอื่น">
+      <a href="./">หน้าพอร์ตโฟลิโอ</a>
+      <a href="tasks.html" class="on" aria-current="page">งานและกำหนดส่ง</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="page-head">
+    <div class="scale" aria-hidden="true"></div>
+    <div class="eyebrow" id="eyebrow">Task Tracker</div>
+    <h1>งานและกำหนดส่ง</h1>
+    <p class="today"><span id="today"></span> <span class="week" id="week"></span></p>
+    <p class="lede">รายการงานจาก Google Sheet ของครูนพพล แสดงเฉพาะงานที่ครูเลือกเผยแพร่ เมื่อครูแก้ไขในชีต หน้านี้จะเห็นข้อมูลใหม่ภายในประมาณ 1 นาที</p>
+  </section>
+
+  <div id="board" hidden>
+    <dl class="facts" aria-label="สรุปจำนวนงาน">
+      <div><dt>เลยกำหนด</dt><dd id="sOver">0</dd></div>
+      <div><dt>ถึงกำหนดภายใน 7 วัน</dt><dd id="sSoon">0</dd></div>
+      <div><dt>ยังไม่เสร็จทั้งหมด</dt><dd id="sOpen">0</dd></div>
+      <div><dt>เสร็จแล้ว</dt><dd id="sDone">0</dd></div>
+    </dl>
+    <div class="toolbar">
+      <div class="seg" role="group" aria-label="เลือกสถานะงาน">
+        <button type="button" data-view="open" aria-pressed="true">ยังไม่เสร็จ</button>
+        <button type="button" data-view="done" aria-pressed="false">เสร็จแล้ว</button>
+        <button type="button" data-view="all" aria-pressed="false">ทั้งหมด</button>
+      </div>
+      <div class="chips" id="chips" role="group" aria-label="เลือกหมวดหมู่"></div>
+      <div class="sync"><span id="stamp" aria-live="polite"></span><button type="button" class="btn" id="reload">โหลดใหม่</button></div>
+    </div>
+  </div>
+
+  <div id="notice" role="status"></div>
+  <div id="groups"></div>
+  <noscript><p class="empty">กรุณาเปิดใช้ JavaScript เพื่อดูรายการงาน</p></noscript>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><b>นพพล ภาณุสุวัฒน์</b> · ครูชำนาญการพิเศษ โรงเรียนพรตพิทยพยัต</span>
+    <span>หน้านี้แสดงเฉพาะงานที่ครูเลือกเผยแพร่ · <a href="./">กลับหน้าพอร์ตโฟลิโอ</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+
+  /* ลิงก์ Web app จาก Google Apps Script (ลงท้ายด้วย /exec) ใส่หลังครู Deploy แล้ว */
+  var API_URL = '';
+
+  var TZ = 'Asia/Bangkok';
+  var STORE_KEY = 'np-tasks-v1';
+  var TIMEOUT_MS = 20000;
+  var REFRESH_MS = 5 * 60 * 1000;
+  var MONTHS = ['มกราคม','กุมภาพันธ์','มีนาคม','เมษายน','พฤษภาคม','มิถุนายน','กรกฎาคม','สิงหาคม','กันยายน','ตุลาคม','พฤศจิกายน','ธันวาคม'];
+  var MONTHS_ABBR = ['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'];
+  var DAYS = ['อาทิตย์','จันทร์','อังคาร','พุธ','พฤหัสบดี','ศุกร์','เสาร์'];
+  var DAYS_ABBR = ['อา.','จ.','อ.','พ.','พฤ.','ศ.','ส.'];
+  var KEY_RE = /^\d{4}-\d{2}-\d{2}$/;
+
+  var state = { data: null, savedAt: 0, fetchedAt: 0, loading: false, error: '', view: 'open', cat: '' };
+  function $(id){ return document.getElementById(id); }
+
+  /* ---------- วันที่ (คิดตามเวลาประเทศไทยเสมอ ไม่ว่าเครื่องผู้ชมตั้งเขตเวลาใด) ---------- */
+  var fmt = null;
+  function bangkokParts(date){
+    if(!fmt) fmt = new Intl.DateTimeFormat('en-US',{timeZone:TZ,year:'numeric',month:'numeric',day:'numeric',hour:'numeric',minute:'numeric',hourCycle:'h23'});
+    var o = {};
+    fmt.formatToParts(date).forEach(function(p){ o[p.type] = p.value; });
+    return { y:+o.year, m:+o.month, d:+o.day, h:(+o.hour) % 24, min:+o.minute };
+  }
+  function pad(n){ return (n < 10 ? '0' : '') + n; }
+  function todayKey(){ var p = bangkokParts(new Date()); return p.y + '-' + pad(p.m) + '-' + pad(p.d); }
+  function split(key){ var p = key.split('-'); return { y:+p[0], m:+p[1], d:+p[2] }; }
+  function utc(key){ var p = split(key); return Date.UTC(p.y, p.m - 1, p.d); }
+  function diffDays(from, to){ return Math.round((utc(to) - utc(from)) / 86400000); }
+  function dow(key){ return new Date(utc(key)).getUTCDay(); }
+  function thaiLong(key){ var p = split(key); return 'วัน' + DAYS[dow(key)] + 'ที่ ' + p.d + ' ' + MONTHS[p.m - 1] + ' พ.ศ. ' + (p.y + 543); }
+  function thaiShort(key){ var p = split(key); return DAYS_ABBR[dow(key)] + ' ' + p.d + ' ' + MONTHS_ABBR[p.m - 1] + ' ' + (p.y + 543); }
+  function stamp(iso){
+    var t = Date.parse(iso);
+    if(isNaN(t)) return '';
+    var p = bangkokParts(new Date(t));
+    return p.d + ' ' + MONTHS_ABBR[p.m - 1] + ' ' + (p.y + 543) + ' เวลา ' + pad(p.h) + '.' + pad(p.min) + ' น.';
+  }
+  function weekOf(key, term){
+    if(!term || !term.start) return 0;
+    var d = diffDays(term.start, key);
+    if(d < 0 || (term.end && diffDays(term.end, key) > 0)) return 0;
+    return Math.floor(d / 7) + 1;
+  }
+
+  /* ---------- ตรวจข้อมูลจาก Apps Script ก่อนใช้ ---------- */
+  function str(v, n){ return typeof v === 'string' ? v.slice(0, n) : (typeof v === 'number' && isFinite(v) ? String(v) : ''); }
+  function clean(j){
+    if(!j || j.ok !== true || !Array.isArray(j.tasks)) return null;
+    var tasks = [];
+    for(var i = 0; i < j.tasks.length && tasks.length < 500; i++){
+      var t = j.tasks[i] || {};
+      var title = str(t.title, 300).trim();
+      if(!title) continue;
+      var due = str(t.due, 10);
+      var link = str(t.link, 500);
+      tasks.push({
+        title: title,
+        due: KEY_RE.test(due) ? due : '',
+        dueText: str(t.dueText, 60),
+        time: str(t.time, 60),
+        status: str(t.status, 40) || 'ยังไม่เริ่ม',
+        urgent: t.urgent === true,
+        category: str(t.category, 60),
+        detail: str(t.detail, 1500),
+        link: /^https?:\/\/[^\s<>"']+$/i.test(link) ? link : ''
+      });
+    }
+    var term = j.term && typeof j.term === 'object' ? j.term : {};
+    var s = str(term.start, 10), e = str(term.end, 10);
+    return { ok: true, updatedAt: str(j.updatedAt, 40), term: { name: str(term.name, 40), start: KEY_RE.test(s) ? s : '', end: KEY_RE.test(e) ? e : '' }, tasks: tasks };
+  }
+
+  /* ---------- เก็บข้อมูลล่าสุดในเครื่องผู้ชม ใช้แสดงระหว่างรอ หรือเมื่อเชื่อมต่อไม่ได้ ---------- */
+  function storage(){ try { return window.localStorage; } catch(e) { return null; } }
+  function restore(){
+    var s = storage();
+    if(!s) return;
+    try {
+      var o = JSON.parse(s.getItem(STORE_KEY) || 'null');
+      var d = o && clean(o.data);
+      if(d){ state.data = d; state.savedAt = +o.savedAt || 0; }
+    } catch(e) {}
+  }
+  function persist(data){
+    var s = storage();
+    if(!s) return;
+    try { s.setItem(STORE_KEY, JSON.stringify({ savedAt: Date.now(), data: data })); } catch(e) {}
+  }
+
+  /* ---------- โหลดข้อมูล ---------- */
+  function load(){
+    if(!API_URL || state.loading) return;
+    state.loading = true;
+    render();
+    var ctrl = typeof AbortController === 'function' ? new AbortController() : null;
+    var timer = setTimeout(function(){ if(ctrl) ctrl.abort(); }, TIMEOUT_MS);
+    fetch(API_URL, { method: 'GET', cache: 'no-store', redirect: 'follow', credentials: 'omit', signal: ctrl ? ctrl.signal : undefined })
+      .then(function(r){ if(!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function(json){
+        var data = clean(json);
+        if(!data) throw new Error(json && typeof json.error === 'string' ? json.error : 'รูปแบบข้อมูลไม่ถูกต้อง');
+        state.data = data;
+        state.savedAt = Date.now();
+        state.error = '';
+        persist(data);
+      })
+      .catch(function(err){
+        state.error = err && err.name === 'AbortError' ? 'Google ตอบช้าเกินไป' : String(err && err.message || err);
+      })
+      .then(function(){
+        clearTimeout(timer);
+        state.loading = false;
+        state.fetchedAt = Date.now();
+        render();
+      });
+  }
+
+  /* ---------- แสดงผล ---------- */
+  function el(tag, cls, text){
+    var n = document.createElement(tag);
+    if(cls) n.className = cls;
+    if(text != null) n.textContent = text;
+    return n;
+  }
+  function isDone(t){ return /^เสร็จ/.test(t.status); }
+
+  function annotate(data, today){
+    return data.tasks.map(function(t, i){
+      var diff = t.due ? diffDays(today, t.due) : null;
+      var done = isDone(t);
+      var cls = done ? 'done' : diff === null ? 'nodate' : diff < 0 ? 'overdue' : diff === 0 ? 'today' : diff <= 7 ? 'soon' : 'later';
+      return { t: t, diff: diff, done: done, cls: cls, i: i };
+    });
+  }
+
+  function leftLabel(x){
+    if(x.done) return 'เสร็จแล้ว';
+    if(x.diff === null) return '';
+    if(x.diff < 0) return 'เลยมา ' + (-x.diff) + ' วัน';
+    if(x.diff === 0) return 'วันนี้';
+    if(x.diff === 1) return 'พรุ่งนี้';
+    return 'อีก ' + x.diff + ' วัน';
+  }
+
+  function taskEl(x, term){
+    var t = x.t;
+    var a = el('article', 'task ' + x.cls);
+    var when = el('div', 'when' + (t.due ? '' : ' none'));
+    if(t.due){
+      var p = split(t.due), w = weekOf(t.due, term);
+      when.setAttribute('aria-label', 'กำหนดส่ง ' + thaiLong(t.due));
+      when.appendChild(el('span', 'd', String(p.d)));
+      when.appendChild(el('span', 'm', MONTHS_ABBR[p.m - 1] + ' ' + (p.y + 543)));
+      when.appendChild(el('span', 'w', 'วัน' + DAYS[dow(t.due)]));
+      if(w) when.appendChild(el('span', 'w', 'สัปดาห์ ' + w));
+    } else {
+      when.appendChild(el('span', 'd', t.dueText || 'ไม่ระบุวัน'));
+    }
+    a.appendChild(when);
+
+    var what = el('div', 'what');
+    what.appendChild(el('h3', '', t.title));
+    if(t.detail) what.appendChild(el('p', 'detail', t.detail));
+    var meta = el('div', 'meta');
+    if(t.urgent && !x.done) meta.appendChild(el('span', 'tag g', 'เร่งด่วน'));
+    if(!x.done) meta.appendChild(el('span', 'tag v', t.status));
+    if(t.category) meta.appendChild(el('span', 'tag', t.category));
+    if(t.time) meta.appendChild(el('span', 'time', t.time));
+    if(t.link){
+      var l = el('a', '', 'ลิงก์ที่เกี่ยวข้อง');
+      l.href = t.link; l.target = '_blank'; l.rel = 'noopener noreferrer';
+      meta.appendChild(l);
+    }
+    if(meta.childNodes.length) what.appendChild(meta);
+    a.appendChild(what);
+
+    var left = leftLabel(x);
+    if(left) a.appendChild(el('div', 'left', left));
+    return a;
+  }
+
+  function groupEl(cls, title, items, term){
+    var g = el('section', 'group ' + cls);
+    var h = el('div', 'group-head');
+    h.appendChild(el('h2', '', title));
+    h.appendChild(el('span', 'n', items.length + ' รายการ'));
+    g.appendChild(h);
+    var list = el('div', 'list');
+    items.forEach(function(x){ list.appendChild(taskEl(x, term)); });
+    g.appendChild(list);
+    return g;
+  }
+
+  function notice(kind, text, retry){
+    var box = $('notice');
+    box.textContent = '';
+    box.className = '';
+    if(!text) return;
+    var n = el('div', 'notice ' + kind);
+    n.appendChild(el('span', '', text));
+    if(retry){
+      var b = el('button', 'btn', 'ลองใหม่');
+      b.type = 'button';
+      b.addEventListener('click', load);
+      n.appendChild(b);
+    }
+    box.appendChild(n);
+  }
+
+  function render(){
+    var today = todayKey();
+    var data = state.data;
+    var term = data ? data.term : null;
+    var groups = $('groups');
+    state.day = today;
+
+    $('today').textContent = thaiLong(today);
+    var week = '';
+    if(term && term.start){
+      var wk = weekOf(today, term);
+      if(wk) week = '· สัปดาห์ที่ ' + wk + (term.name ? ' ภาคเรียนที่ ' + term.name : '');
+      else if(diffDays(today, term.start) > 0) week = '· ก่อนเปิดภาคเรียน (สัปดาห์ที่ 1 เริ่ม ' + thaiShort(term.start) + ')';
+    }
+    $('week').textContent = week;
+    $('eyebrow').textContent = 'Task Tracker' + (term && term.name ? ' · ภาคเรียนที่ ' + term.name : '');
+
+    groups.textContent = '';
+
+    if(!API_URL){
+      $('board').hidden = true;
+      notice('', '');
+      var s = el('div', 'setup');
+      s.appendChild(el('h2', '', 'หน้านี้ยังไม่ได้เชื่อมต่อกับ Google Sheet'));
+      s.appendChild(el('p', '', 'เมื่อติดตั้ง Apps Script ในชีตและใส่ลิงก์ Web app ในไฟล์ tasks.html แล้ว รายการงานจะแสดงที่นี่โดยอัตโนมัติ'));
+      groups.appendChild(s);
+      return;
+    }
+
+    if(!data){
+      $('board').hidden = true;
+      if(state.loading || !state.fetchedAt){
+        notice('', '');
+        var sk = el('div', 'skeleton');
+        sk.setAttribute('aria-label', 'กำลังโหลดข้อมูล');
+        for(var k = 0; k < 3; k++) sk.appendChild(el('div'));
+        groups.appendChild(sk);
+      } else {
+        notice('err', 'โหลดข้อมูลจาก Google Sheet ไม่สำเร็จ (' + state.error + ') กรุณาลองใหม่อีกครั้ง', true);
+      }
+      return;
+    }
+
+    $('board').hidden = false;
+    $('stamp').textContent = state.loading ? 'กำลังอัปเดตข้อมูล…' : (data.updatedAt ? 'ข้อมูล ณ ' + stamp(data.updatedAt) : '');
+    $('reload').disabled = state.loading;
+    if(state.error && !state.loading){
+      notice('warn', 'เชื่อมต่อ Google Sheet ไม่สำเร็จ (' + state.error + ') กำลังแสดงข้อมูลที่บันทึกไว้' +
+        (state.savedAt ? ' เมื่อ ' + stamp(new Date(state.savedAt).toISOString()) : ''), true);
+    } else {
+      notice('', '');
+    }
+
+    var items = annotate(data, today);
+    var open = items.filter(function(x){ return !x.done; });
+    $('sOver').textContent = open.filter(function(x){ return x.cls === 'overdue'; }).length;
+    $('sOver').className = open.some(function(x){ return x.cls === 'overdue'; }) ? 'alert' : '';
+    $('sSoon').textContent = open.filter(function(x){ return x.diff !== null && x.diff >= 0 && x.diff <= 7; }).length;
+    $('sOpen').textContent = open.length;
+    $('sDone').textContent = items.length - open.length;
+
+    // หมวดหมู่ (แสดงตัวเลือกเมื่อมีตั้งแต่ 2 หมวด)
+    var cats = [];
+    items.forEach(function(x){ if(x.t.category && cats.indexOf(x.t.category) === -1) cats.push(x.t.category); });
+    if(cats.indexOf(state.cat) === -1) state.cat = '';
+    var chips = $('chips');
+    chips.textContent = '';
+    if(cats.length > 1){
+      [''].concat(cats).forEach(function(c){
+        var b = el('button', 'chip', c || 'ทุกหมวด');
+        b.type = 'button';
+        b.setAttribute('aria-pressed', String(c === state.cat));
+        b.addEventListener('click', function(){ state.cat = c; render(); });
+        chips.appendChild(b);
+      });
+    }
+    document.querySelectorAll('.seg button').forEach(function(b){
+      b.setAttribute('aria-pressed', String(b.getAttribute('data-view') === state.view));
+    });
+
+    var shown = items.filter(function(x){ return !state.cat || x.t.category === state.cat; });
+    var by = function(cls){ return shown.filter(function(x){ return x.cls === cls; }); };
+    var out = [];
+    if(state.view !== 'done'){
+      [['overdue', 'เลยกำหนด'], ['today', 'วันนี้'], ['soon', 'ภายใน 7 วัน'], ['later', 'ถัดไป'], ['nodate', 'ยังไม่กำหนดวัน']]
+        .forEach(function(g){ var list = by(g[0]); if(list.length) out.push(groupEl(g[0], g[1], list, term)); });
+    }
+    if(state.view !== 'open'){
+      var done = by('done').sort(function(a, b){
+        if(a.t.due === b.t.due) return a.i - b.i;
+        if(!a.t.due) return 1;
+        if(!b.t.due) return -1;
+        return a.t.due < b.t.due ? 1 : -1;
+      });
+      if(done.length) out.push(groupEl('done', 'เสร็จแล้ว', done, term));
+    }
+    if(out.length){
+      out.forEach(function(g){ groups.appendChild(g); });
+    } else {
+      groups.appendChild(el('p', 'empty',
+        state.view === 'done' ? 'ยังไม่มีงานที่ทำเสร็จ' :
+        state.view === 'open' ? 'ไม่มีงานค้างในขณะนี้' : 'ยังไม่มีงานที่เผยแพร่'));
+    }
+  }
+
+  /* ---------- เริ่มทำงาน ---------- */
+  document.querySelectorAll('.seg button').forEach(function(b){
+    b.addEventListener('click', function(){ state.view = b.getAttribute('data-view'); render(); });
+  });
+  $('reload').addEventListener('click', load);
+  function refreshIfStale(){
+    if(document.visibilityState !== 'visible') return;
+    if(Date.now() - state.fetchedAt > REFRESH_MS) load();
+    else if(state.day !== todayKey()) render(); // ข้ามเที่ยงคืนแล้ว นับวันใหม่
+  }
+  document.addEventListener('visibilitychange', refreshIfStale);
+  setInterval(refreshIfStale, 60 * 1000);
+
+  restore();
+  render();
+  load();
+})();
+</script>
+</body>
+</html>
