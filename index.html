@@ -75,6 +75,9 @@ p{margin:0}
 .nav::-webkit-scrollbar{display:none}
 .nav a{white-space:nowrap;text-decoration:none;color:var(--muted);font-size:.9rem;padding:6px 10px;border-radius:4px;font-weight:500}
 .nav a:hover,.nav a.on{color:var(--violet);background:var(--violet-soft)}
+.nav-tasks{flex:none;white-space:nowrap;text-decoration:none;color:var(--violet);font-size:.9rem;font-weight:600;padding:5px 12px;border-radius:4px;border:1.5px solid var(--violet);margin-left:8px}
+.nav-tasks:hover{background:var(--violet);color:var(--on-violet)}
+@media (max-width:760px){.nav-tasks{display:none}}
 @media (max-width:760px){.topbar .wrap{flex-direction:column;align-items:stretch;gap:2px;padding-block:8px 4px}.nav{margin-left:-6px}}
 
 /* ---------- scale rule (signature) ---------- */
@@ -679,6 +682,7 @@ footer .copy{grid-column:1/-1;border-top:1px solid color-mix(in srgb,var(--foot-
       <a href="#gallery">ภาพกิจกรรม</a>
       <a href="#contact">ติดต่อ</a>
     </nav>
+    <a class="nav-tasks" href="tasks.html">ติดตามงาน</a>
   </div>
 </header>
 
@@ -701,6 +705,7 @@ footer .copy{grid-column:1/-1;border-top:1px solid color-mix(in srgb,var(--foot-
           <div class="actions hi" style="--hd:.7s">
             <a class="btn primary" href="#semester">เอกสารประกอบการประเมิน 2/2569</a>
             <a class="btn ghost" href="#works">ดูผลงานเด่น</a>
+            <a class="btn ghost" href="tasks.html">ติดตามงานของครู</a>
           </div>
         </div>
         <figure class="portrait hi-p">
