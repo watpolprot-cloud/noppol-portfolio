@@ -129,16 +129,15 @@ button{font:inherit;cursor:pointer}
 .group-head{display:flex;align-items:baseline;gap:12px;border-top:1.5px solid var(--ink);padding-top:10px;margin-bottom:12px}
 .group-head h2{font-size:var(--step-2)}
 .group-head .n{font-family:var(--font-mono);font-size:.78rem;color:var(--muted)}
-.group.overdue .group-head{border-top-color:var(--red)}
-.group.overdue h2{color:var(--red)}
+.group.past .group-head{border-top-color:var(--line-strong)}
+.group.past h2{color:var(--muted)}
 .group.today .group-head{border-top-color:var(--gold)}
 .list{display:grid;gap:10px}
 .task{display:grid;grid-template-columns:104px minmax(0,1fr) auto;gap:18px;align-items:start;background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--line-strong);border-radius:var(--radius);padding:14px 18px}
-.task.overdue{border-left-color:var(--red)}
 .task.today{border-left-color:var(--gold)}
 .task.soon{border-left-color:var(--violet)}
-.task.done{opacity:.75}
-.task.done h3{text-decoration:line-through;text-decoration-thickness:1px;text-decoration-color:var(--muted)}
+.task.past{opacity:.8}
+.task.past .when .d{color:var(--muted)}
 .when{font-family:var(--font-mono);line-height:1.3;border-right:1px solid var(--line);padding-right:14px;min-width:0}
 .when .d{display:block;font-size:1.8rem;font-weight:500;line-height:1.1;color:var(--ink)}
 .when .m{display:block;font-size:.78rem;margin-top:2px}
@@ -155,10 +154,8 @@ button{font:inherit;cursor:pointer}
 .meta .time{font-family:var(--font-mono);font-size:.76rem;color:var(--ink)}
 .meta a{font-size:.86rem;font-weight:600}
 .left{font-family:var(--font-mono);font-size:.8rem;font-weight:500;white-space:nowrap;padding:3px 10px;border-radius:3px;background:var(--violet-soft);color:var(--violet)}
-.task.overdue .left{background:var(--red-soft);color:var(--red)}
 .task.today .left{background:var(--gold-soft);color:var(--gold)}
 .task.later .left{background:transparent;color:var(--muted);border:1px solid var(--line)}
-.task.done .left{background:transparent;color:var(--muted);border:1px solid var(--line)}
 @media (max-width:640px){
   .task{grid-template-columns:82px minmax(0,1fr);gap:12px;padding:12px 14px}
   .when{padding-right:8px}
@@ -206,15 +203,15 @@ footer b{font-family:var(--font-display);color:var(--foot-fg);font-size:1rem}
 
   <div id="board" hidden>
     <dl class="facts" aria-label="สรุปจำนวนงาน">
-      <div><dt>เลยกำหนด</dt><dd id="sOver">0</dd></div>
-      <div><dt>ถึงกำหนดภายใน 7 วัน</dt><dd id="sSoon">0</dd></div>
-      <div><dt>ยังไม่เสร็จทั้งหมด</dt><dd id="sOpen">0</dd></div>
-      <div><dt>เสร็จแล้ว</dt><dd id="sDone">0</dd></div>
+      <div><dt>วันนี้</dt><dd id="sToday">0</dd></div>
+      <div><dt>ภายใน 7 วัน</dt><dd id="sSoon">0</dd></div>
+      <div><dt>ต้องทำต่อไปทั้งหมด</dt><dd id="sOpen">0</dd></div>
+      <div><dt>ผ่านไปแล้ว</dt><dd id="sPast">0</dd></div>
     </dl>
     <div class="toolbar">
       <div class="seg" role="group" aria-label="เลือกสถานะงาน">
-        <button type="button" data-view="open" aria-pressed="true">ยังไม่เสร็จ</button>
-        <button type="button" data-view="done" aria-pressed="false">เสร็จแล้ว</button>
+        <button type="button" data-view="open" aria-pressed="true">ต้องทำต่อไป</button>
+        <button type="button" data-view="past" aria-pressed="false">ผ่านไปแล้ว</button>
         <button type="button" data-view="all" aria-pressed="false">ทั้งหมด</button>
       </div>
       <div class="chips" id="chips" role="group" aria-label="เลือกหมวดหมู่"></div>
@@ -369,15 +366,15 @@ footer b{font-family:var(--font-display);color:var(--foot-fg);font-size:1rem}
     return data.tasks.map(function(t, i){
       var diff = t.due ? diffDays(today, t.due) : null;
       var done = isDone(t);
-      var cls = done ? 'done' : diff === null ? 'nodate' : diff < 0 ? 'overdue' : diff === 0 ? 'today' : diff <= 7 ? 'soon' : 'later';
-      return { t: t, diff: diff, done: done, cls: cls, i: i };
+      // งานที่วันผ่านไปแล้ว หรือทำเสร็จแล้ว อยู่ในกลุ่ม "ผ่านไปแล้ว" (ไม่แจ้งว่าเลยกำหนด)
+      var past = done || (diff !== null && diff < 0);
+      var cls = past ? 'past' : diff === null ? 'nodate' : diff === 0 ? 'today' : diff <= 7 ? 'soon' : 'later';
+      return { t: t, diff: diff, done: done, past: past, cls: cls, i: i };
     });
   }
 
   function leftLabel(x){
-    if(x.done) return 'เสร็จแล้ว';
-    if(x.diff === null) return '';
-    if(x.diff < 0) return 'เลยมา ' + (-x.diff) + ' วัน';
+    if(x.past || x.diff === null) return '';
     if(x.diff === 0) return 'วันนี้';
     if(x.diff === 1) return 'พรุ่งนี้';
     return 'อีก ' + x.diff + ' วัน';
@@ -403,8 +400,8 @@ footer b{font-family:var(--font-display);color:var(--foot-fg);font-size:1rem}
     what.appendChild(el('h3', '', t.title));
     if(t.detail) what.appendChild(el('p', 'detail', t.detail));
     var meta = el('div', 'meta');
-    if(t.urgent && !x.done) meta.appendChild(el('span', 'tag g', 'เร่งด่วน'));
-    if(!x.done) meta.appendChild(el('span', 'tag v', t.status));
+    if(t.urgent && !x.past) meta.appendChild(el('span', 'tag g', 'เร่งด่วน'));
+    if(!x.past) meta.appendChild(el('span', 'tag v', t.status));
     if(t.category) meta.appendChild(el('span', 'tag', t.category));
     if(t.time) meta.appendChild(el('span', 'time', t.time));
     if(t.link){
@@ -502,12 +499,11 @@ footer b{font-family:var(--font-display);color:var(--foot-fg);font-size:1rem}
     }
 
     var items = annotate(data, today);
-    var open = items.filter(function(x){ return !x.done; });
-    $('sOver').textContent = open.filter(function(x){ return x.cls === 'overdue'; }).length;
-    $('sOver').className = open.some(function(x){ return x.cls === 'overdue'; }) ? 'alert' : '';
-    $('sSoon').textContent = open.filter(function(x){ return x.diff !== null && x.diff >= 0 && x.diff <= 7; }).length;
+    var open = items.filter(function(x){ return !x.past; });
+    $('sToday').textContent = open.filter(function(x){ return x.cls === 'today'; }).length;
+    $('sSoon').textContent = open.filter(function(x){ return x.cls === 'soon'; }).length;
     $('sOpen').textContent = open.length;
-    $('sDone').textContent = items.length - open.length;
+    $('sPast').textContent = items.length - open.length;
 
     // หมวดหมู่ (แสดงตัวเลือกเมื่อมีตั้งแต่ 2 หมวด)
     var cats = [];
@@ -531,25 +527,36 @@ footer b{font-family:var(--font-display);color:var(--foot-fg);font-size:1rem}
     var shown = items.filter(function(x){ return !state.cat || x.t.category === state.cat; });
     var by = function(cls){ return shown.filter(function(x){ return x.cls === cls; }); };
     var out = [];
-    if(state.view !== 'done'){
-      [['overdue', 'เลยกำหนด'], ['today', 'วันนี้'], ['soon', 'ภายใน 7 วัน'], ['later', 'ถัดไป'], ['nodate', 'ยังไม่กำหนดวัน']]
+    if(state.view !== 'past'){
+      [['today', 'วันนี้'], ['soon', 'ภายใน 7 วัน'], ['later', 'ถัดไป'], ['nodate', 'ยังไม่กำหนดวัน']]
         .forEach(function(g){ var list = by(g[0]); if(list.length) out.push(groupEl(g[0], g[1], list, term)); });
     }
     if(state.view !== 'open'){
-      var done = by('done').sort(function(a, b){
+      // ผ่านไปแล้ว: ใหม่อยู่บน แบ่งตามสัปดาห์ของภาคเรียน (นอกภาคเรียนแบ่งตามเดือน)
+      var past = by('past').sort(function(a, b){
         if(a.t.due === b.t.due) return a.i - b.i;
         if(!a.t.due) return 1;
         if(!b.t.due) return -1;
         return a.t.due < b.t.due ? 1 : -1;
       });
-      if(done.length) out.push(groupEl('done', 'เสร็จแล้ว', done, term));
+      var labels = [], buckets = {};
+      past.forEach(function(x){
+        var lb = 'ผ่านไปแล้ว · ไม่ระบุวัน';
+        if(x.t.due){
+          var w = weekOf(x.t.due, term), p = split(x.t.due);
+          lb = w ? 'ผ่านไปแล้ว · สัปดาห์ที่ ' + w : 'ผ่านไปแล้ว · ' + MONTHS[p.m - 1] + ' ' + (p.y + 543);
+        }
+        if(!buckets[lb]){ buckets[lb] = []; labels.push(lb); }
+        buckets[lb].push(x);
+      });
+      labels.forEach(function(lb){ out.push(groupEl('past', lb, buckets[lb], term)); });
     }
     if(out.length){
       out.forEach(function(g){ groups.appendChild(g); });
     } else {
       groups.appendChild(el('p', 'empty',
-        state.view === 'done' ? 'ยังไม่มีงานที่ทำเสร็จ' :
-        state.view === 'open' ? 'ไม่มีงานค้างในขณะนี้' : 'ยังไม่มีงานที่เผยแพร่'));
+        state.view === 'past' ? 'ยังไม่มีงานที่ผ่านไป' :
+        state.view === 'open' ? 'ไม่มีงานที่ต้องทำในขณะนี้' : 'ยังไม่มีงานที่เผยแพร่'));
     }
   }
 
